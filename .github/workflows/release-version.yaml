@@ -1,0 +1,55 @@
+name: Release Ruby SDK Gem
+on: [workflow_dispatch]
+
+jobs:
+  release-version:
+    runs-on: ubuntu-latest
+    name: Release sdk
+    env:
+      GEM_HOST_API_KEY: ${{ secrets.FATTUREINCLOUD_RUBYGEMS_API_KEY }}
+    steps:
+      - id: checkout
+        name: Checkout repo
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.FATTUREINCLOUD_BOT_TOKEN }}
+
+      - id: setup-ruby
+        name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1.0
+
+      - id: setup-libraries
+        name: Install libraries
+        run: |
+          sudo add-apt-repository ppa:rmescandon/yq -y
+          sudo apt update
+          sudo apt install yq -y
+
+      # We read the version from the sdk-version.yaml file and create the tag
+      # If it is needed to bump version, launch the related workflow
+      - id: read-ruby-sdk-version
+        name: Read Ruby SDK version
+        run: |
+          SDK_VERSION=$(yq e '.info.version' ./sdk-version.yaml)
+          echo "Releasing version: $SDK_VERSION"
+          echo "sdk_version=$SDK_VERSION" >> $GITHUB_ENV
+
+      - id: create-tag
+        name: Create tag
+        uses: actions/github-script@v3
+        with:
+          github-token: ${{ github.token }}
+          script: |
+            github.git.createRef({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: "refs/tags/v${{ env.sdk_version }}",
+              sha: context.sha
+            })
+
+      - name: Push to rubygems.org
+        run: |
+          gem build *.gemspec
+          gem push *.gem
