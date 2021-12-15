@@ -20,6 +20,19 @@ describe 'CashbookApi' do
   before do
     # run before each test
     @api_instance = FattureInCloud_Ruby_Sdk::CashbookApi.new
+
+    @create_cashbook_entry_response_obj = {"data":{"date":"2021-08-24","amount_out":122,"payment_account_out":{"id":333},"description":"Fattura n. 201\/2021","entity_name":"Rossi S.r.l.","kind":"issued_document","document":{"id":54321},"type":"out"}}
+    allow(@api_instance).to receive(:create_cashbook_entry) {@create_cashbook_entry_response_obj}
+
+    @get_cashbook_entry_response_obj = {"data":{"date":"2021-08-24","amount_out":122,"payment_account_out":{"id":333},"description":"Fattura n. 201\/2021","entity_name":"Rossi S.r.l.","kind":"issued_document","document":{"id":54321},"type":"out"}}
+    allow(@api_instance).to receive(:get_cashbook_entry) {@get_cashbook_entry_response_obj}
+
+    @modify_cashbook_entry_response_obj = {"data":{"date":"2021-08-24","amount_out":122,"payment_account_out":{"id":333},"description":"Fattura n. 201\/2021","entity_name":"Rossi S.r.l.","kind":"issued_document","document":{"id":54321},"type":"out"}};
+    allow(@api_instance).to receive(:modify_cashbook_entry) {@modify_cashbook_entry_response_obj}
+
+    @list_cashbook_entries_response_obj = {"data":[{"date":"2021-08-24","amount_in":122,"payment_account_in":{"id":333},"description":"Fattura n. 201\/2021","entity_name":"Rossi S.r.l.","kind":"issued_document","document":{"id":54321},"type":"in"},{"date":"2021-08-29","amount_out":211,"payment_account_out":{"id":444},"description":"Fattura n. 202\/2021","entity_name":"Red S.r.l.","kind":"issued_document","document":{"id":12345},"type":"out"}]}
+    allow(@api_instance).to receive(:list_cashbook_entries) {@list_cashbook_entries_response_obj}
+
   end
 
   after do
@@ -41,7 +54,13 @@ describe 'CashbookApi' do
   # @return [CreateCashbookEntryResponse]
   describe 'create_cashbook_entry test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      opts = {"data":{"date":"2021-08-24","amount_in":122,"payment_account_in":{"id":21},"description":"Fattura n. 201\/2021","entity_name":"Rossi S.r.l.","kind":"issued_document","document":{"id":54321},"type":"in"}}
+      response = @api_instance.create_cashbook_entry(2, opts)
+      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
+      expected_json = @create_cashbook_entry_response_obj.to_json
+      actual_json = response.to_json
+
+      expect(actual_json).to eq(expected_json)
     end
   end
 
@@ -54,7 +73,7 @@ describe 'CashbookApi' do
   # @return [nil]
   describe 'delete_cashbook_entry test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      expect(true).to eq(true)
     end
   end
 
@@ -69,7 +88,12 @@ describe 'CashbookApi' do
   # @return [GetCashbookEntryResponse]
   describe 'get_cashbook_entry test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      response = @api_instance.get_cashbook_entry(2, 22)
+      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
+      expected_json = @get_cashbook_entry_response_obj.to_json
+      actual_json = response.to_json
+
+      expect(actual_json).to eq(expected_json)
     end
   end
 
@@ -86,7 +110,12 @@ describe 'CashbookApi' do
   # @return [ListCashbookEntriesResponse]
   describe 'list_cashbook_entries test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      response = @api_instance.list_cashbook_entries(2, "2020-12-12", "2021-12-12")
+      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
+      expected_json = @list_cashbook_entries_response_obj.to_json
+      actual_json = response.to_json
+
+      expect(actual_json).to eq(expected_json)
     end
   end
 
@@ -100,7 +129,13 @@ describe 'CashbookApi' do
   # @return [ModifyCashbookEntryResponse]
   describe 'modify_cashbook_entry test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      opts = {"data":{"date":"2021-08-24","amount_in":122,"payment_account_in":{"id":21},"description":"Fattura n. 201\/2021","entity_name":"Rossi S.r.l.","kind":"issued_document","document":{"id":54321},"type":"in"}}
+      response = @api_instance.modify_cashbook_entry(2, opts)
+      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
+      expected_json = @modify_cashbook_entry_response_obj.to_json
+      actual_json = response.to_json
+
+      expect(actual_json).to eq(expected_json)
     end
   end
 

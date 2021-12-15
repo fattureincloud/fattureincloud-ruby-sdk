@@ -20,6 +20,19 @@ describe 'ProductsApi' do
   before do
     # run before each test
     @api_instance = FattureInCloud_Ruby_Sdk::ProductsApi.new
+
+    @create_product_response_obj = {"data":{"id":12345,"name":"Tavolo di marmo","code":"TAVOLO003","net_price":240,"gross_price":280,"use_gross_price":false,"net_cost":0,"measure":"","description":"Tavolo in marmo pregiato","category":"arredamento","in_stock":true,"default_vat":{"id":3,"value":22,"description":"Non imponibile art. 123","notes":"IVA non imponibile ai sensi dell\'articolo 123, comma 2","is_disabled":false}}}
+    allow(@api_instance).to receive(:create_product) {@create_product_response_obj}
+
+    @get_product_response_obj = {"data":{"id":12345,"name":"Tavolo di marmo","code":"TAVOLO003","net_price":240,"gross_price":280,"use_gross_price":false,"net_cost":0,"measure":"","description":"Tavolo in marmo pregiato","category":"arredamento","in_stock":true,"default_vat":{"id":3,"value":22,"description":"Non imponibile art. 123","notes":"IVA non imponibile ai sensi dell\'articolo 123, comma 2","is_disabled":false}}}
+    allow(@api_instance).to receive(:get_product) {@get_product_response_obj}
+
+    @list_products_response_obj = {"current_page":1,"data":[{"id":12345,"name":"Tavolo di marmo","code":"TAVOLO003","net_price":240,"gross_price":280,"use_gross_price":false,"net_cost":0,"measure":"","description":"Tavolo in marmo pregiato","category":"arredamento","in_stock":true,"default_vat":{"id":3,"value":22,"description":"Non imponibile art. 123","notes":"IVA non imponibile ai sensi dell\'articolo 123, comma 2","is_disabled":false}},{"id":12346,"name":"Tavolo di legno","code":"TAVOLO001","net_price":120,"gross_price":160,"use_gross_price":false,"net_cost":0,"measure":"","description":"Tavolo in legno pregiato","category":"arredamento","in_stock":true,"default_vat":{"id":3,"value":22,"description":"Non imponibile art. 123","notes":"IVA non imponibile ai sensi dell\'articolo 123, comma 2","is_disabled":false}}],"first_page_url":"page=1","from":1,"last_page":1,"last_page_url":"page=1","next_page_url":"page=2","path":"products","per_page":50,"prev_page_url":nil,"to":55,"total":55}
+    allow(@api_instance).to receive(:list_products) {@list_products_response_obj}
+    
+    @modify_product_response_obj = {"data":{"id":12345,"name":"Tavolo di marmo","code":"TAVOLO003","net_price":240,"gross_price":280,"use_gross_price":false,"net_cost":0,"measure":"","description":"Tavolo in marmo pregiato","category":"arredamento","in_stock":true,"default_vat":{"id":3,"value":22,"description":"Non imponibile art. 123","notes":"IVA non imponibile ai sensi dell\'articolo 123, comma 2","is_disabled":false}}}
+    allow(@api_instance).to receive(:modify_product) {@modify_product_response_obj}
+
   end
 
   after do
@@ -41,7 +54,13 @@ describe 'ProductsApi' do
   # @return [CreateProductResponse]
   describe 'create_product test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      opts = {"data":{"name":"Tavolo di marmo","code":"TAVOLOso003","net_price":240,"gross_price":280,"use_gross_price":false,"net_cost":0,"measure":"","description":"Tavolo in marmo pregiato","category":"arredamento","in_stock":true,"default_vat":{"id":1409,"value":22,"description":"Non imponibile art. 123","notes":"IVA non imponibile ai sensi dell'articolo 123, comma 2","is_disabled":false}}}
+      response = @api_instance.create_product(2, opts)
+      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
+      expected_json = @create_product_response_obj.to_json
+      actual_json = response.to_json
+
+      expect(actual_json).to eq(expected_json)
     end
   end
 
@@ -54,7 +73,7 @@ describe 'ProductsApi' do
   # @return [nil]
   describe 'delete_product test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      expect(true).to eq(true)
     end
   end
 
@@ -69,7 +88,12 @@ describe 'ProductsApi' do
   # @return [GetProductResponse]
   describe 'get_product test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      response = @api_instance.get_product(2, 22)
+      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
+      expected_json = @get_product_response_obj.to_json
+      actual_json = response.to_json
+
+      expect(actual_json).to eq(expected_json)
     end
   end
 
@@ -83,10 +107,16 @@ describe 'ProductsApi' do
   # @option opts [String] :sort List of comma-separated fields for result sorting (minus for desc sorting).
   # @option opts [Integer] :page The page to retrieve.
   # @option opts [Integer] :per_page The size of the page.
+  # @option opts [String] :query Query for filtering the results.
   # @return [ListProductsResponse]
   describe 'list_products test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      response = @api_instance.list_products(2, 22)
+      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
+      expected_json = @list_products_response_obj.to_json
+      actual_json = response.to_json
+
+      expect(actual_json).to eq(expected_json)
     end
   end
 
@@ -100,7 +130,13 @@ describe 'ProductsApi' do
   # @return [ModifyProductResponse]
   describe 'modify_product test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      opts = {"data":{"name":"Tavolo di marmo","code":"TAVOLOso003","net_price":240,"gross_price":280,"use_gross_price":false,"net_cost":0,"measure":"","description":"Tavolo in marmo pregiato","category":"arredamento","in_stock":true,"default_vat":{"id":1409,"value":22,"description":"Non imponibile art. 123","notes":"IVA non imponibile ai sensi dell'articolo 123, comma 2","is_disabled":false}}}
+      response = @api_instance.modify_product(2, 22, opts)
+      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
+      expected_json = @modify_product_response_obj.to_json
+      actual_json = response.to_json
+
+      expect(actual_json).to eq(expected_json)
     end
   end
 

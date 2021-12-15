@@ -20,6 +20,34 @@ describe 'SettingsApi' do
   before do
     # run before each test
     @api_instance = FattureInCloud_Ruby_Sdk::SettingsApi.new
+
+    @create_payment_account_response_obj = {"data":{"id":12345,"name":"Indesa","type":"bank","iban":"IT17Q0051343200000003497636","sia":"T1234","virtual":false}}
+    allow(@api_instance).to receive(:create_payment_account) {@create_payment_account_response_obj}
+    
+    @create_payment_method_response_obj = {"data":{"id":386683,"name":"Bonifico bancario","is_default":true,"type":"standard","details":[{"title":"Banca","description":"Sao Paulo"}],"default_payment_account":{"id":12345,"name":"conto banca SP"}}}
+    allow(@api_instance).to receive(:create_payment_method) {@create_payment_method_response_obj}
+    
+    @create_vat_type_response_obj = {"data":{"id":0,"value":22,"description":"Non imponibile art. 123","notes":"IVA non imponibile ai sensi dell'articolo 123, comma 2","e_invoice":true,"ei_type":2,"ei_description":"string","editable":true,"is_disabled":true}}
+    allow(@api_instance).to receive(:create_vat_type) {@create_vat_type_response_obj}
+
+    @get_payment_account_response_obj = {"data":{"id":12345,"name":"Indesa","type":"bank","iban":"IT17Q0051343200000003497636","sia":"T1234","virtual":false}}
+    allow(@api_instance).to receive(:get_payment_account) {@get_payment_account_response_obj}
+    
+    @get_payment_method_response_obj = {"data":{"id":386683,"name":"Bonifico bancario","is_default":true,"type":"standard","details":[{"title":"Banca","description":"Sao Paulo"}],"default_payment_account":{"id":12345,"name":"conto banca SP"}}}
+    allow(@api_instance).to receive(:get_payment_method) {@get_payment_method_response_obj}
+
+    @get_vat_type_response_obj = {"data":{"id":0,"value":22,"description":"Non imponibile art. 123","notes":"IVA non imponibile ai sensi dell'articolo 123, comma 2","e_invoice":true,"ei_type":2,"ei_description":"string","editable":true,"is_disabled":true}}
+    allow(@api_instance).to receive(:get_vat_type) {@get_vat_type_response_obj}
+
+    @modify_payment_account_response_obj = {"data":{"id":12345,"name":"Indesa","type":"bank","iban":"IT17Q0051343200000003497636","sia":"T1234","virtual":false}}
+    allow(@api_instance).to receive(:modify_payment_account) {@modify_payment_account_response_obj}
+    
+    @modify_payment_method_response_obj = {"data":{"id":386683,"name":"Bonifico bancario","is_default":true,"type":"standard","details":[{"title":"Banca","description":"Sao Paulo"}],"default_payment_account":{"id":12345,"name":"conto banca SP"}}}
+    allow(@api_instance).to receive(:modify_payment_method) {@modify_payment_method_response_obj}
+
+    @modify_vat_type_response_obj = {"data":{"id":0,"value":22,"description":"Non imponibile art. 123","notes":"IVA non imponibile ai sensi dell'articolo 123, comma 2","e_invoice":true,"ei_type":2,"ei_description":"string","editable":true,"is_disabled":true}}
+    allow(@api_instance).to receive(:modify_vat_type) {@modify_vat_type_response_obj}
+
   end
 
   after do
@@ -41,7 +69,13 @@ describe 'SettingsApi' do
   # @return [CreatePaymentAccountResponse]
   describe 'create_payment_account test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      opts = {"data":{"name":"Indesa","type":"bank","iban":"IT17Q0051343200000003497636","sia":"T1234","virtual":false}}
+      response = @api_instance.create_payment_account(2, opts)
+      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
+      expected_json = @create_payment_account_response_obj.to_json
+      actual_json = response.to_json
+
+      expect(actual_json).to eq(expected_json)
     end
   end
 
@@ -54,7 +88,13 @@ describe 'SettingsApi' do
   # @return [CreatePaymentMethodResponse]
   describe 'create_payment_method test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      opts = {"data":{"name":"Bonifico bancario","is_default":true,"type":"standard","details":[{"title":"Banca","description":"Sao Paulo"}],"default_payment_account":{"id":12345,"name":"conto banca SP"}}}
+      response = @api_instance.create_payment_method(2, opts)
+      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
+      expected_json = @create_payment_method_response_obj.to_json
+      actual_json = response.to_json
+
+      expect(actual_json).to eq(expected_json)
     end
   end
 
@@ -67,7 +107,13 @@ describe 'SettingsApi' do
   # @return [CreateVatTypeResponse]
   describe 'create_vat_type test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      opts = {"data":{"id":0,"value":22,"description":"Non imponibile art. 123","notes":"IVA non imponibile ai sensi dell'articolo 123, comma 2","e_invoice":true,"ei_type":2,"ei_description":"string","editable":true,"is_disabled":true}}
+      response = @api_instance.create_vat_type(2, opts)
+      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
+      expected_json = @create_vat_type_response_obj.to_json
+      actual_json = response.to_json
+
+      expect(actual_json).to eq(expected_json)
     end
   end
 
@@ -80,7 +126,7 @@ describe 'SettingsApi' do
   # @return [nil]
   describe 'delete_payment_account test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      expect(true).to eq(true)
     end
   end
 
@@ -93,7 +139,7 @@ describe 'SettingsApi' do
   # @return [nil]
   describe 'delete_payment_method test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      expect(true).to eq(true)
     end
   end
 
@@ -106,7 +152,7 @@ describe 'SettingsApi' do
   # @return [nil]
   describe 'delete_vat_type test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      expect(true).to eq(true)
     end
   end
 
@@ -121,7 +167,12 @@ describe 'SettingsApi' do
   # @return [GetPaymentAccountResponse]
   describe 'get_payment_account test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      response = @api_instance.get_payment_account(2, 22)
+      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
+      expected_json = @get_payment_account_response_obj.to_json
+      actual_json = response.to_json
+
+      expect(actual_json).to eq(expected_json)
     end
   end
 
@@ -136,7 +187,12 @@ describe 'SettingsApi' do
   # @return [GetPaymentMethodResponse]
   describe 'get_payment_method test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      response = @api_instance.get_payment_method(2, 22)
+      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
+      expected_json = @get_payment_method_response_obj.to_json
+      actual_json = response.to_json
+
+      expect(actual_json).to eq(expected_json)
     end
   end
 
@@ -149,7 +205,12 @@ describe 'SettingsApi' do
   # @return [GetVatTypeResponse]
   describe 'get_vat_type test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      response = @api_instance.get_vat_type(2, 22)
+      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
+      expected_json = @get_vat_type_response_obj.to_json
+      actual_json = response.to_json
+
+      expect(actual_json).to eq(expected_json)
     end
   end
 
@@ -163,7 +224,13 @@ describe 'SettingsApi' do
   # @return [ModifyPaymentAccountResponse]
   describe 'modify_payment_account test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      opts = {"data":{"name":"Indesa","type":"bank","iban":"IT17Q0051343200000003497636","sia":"T1234","virtual":false}}
+      response = @api_instance.modify_payment_account(2, 22, opts)
+      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
+      expected_json = @modify_payment_account_response_obj.to_json
+      actual_json = response.to_json
+
+      expect(actual_json).to eq(expected_json)
     end
   end
 
@@ -177,7 +244,13 @@ describe 'SettingsApi' do
   # @return [ModifyPaymentMethodResponse]
   describe 'modify_payment_method test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      opts = {"data":{"name":"Bonifico bancario","is_default":true,"type":"standard","details":[{"title":"Banca","description":"Sao Paulo"}],"default_payment_account":{"id":12345,"name":"conto banca SP"}}}
+      response = @api_instance.modify_payment_method(2, 22, opts)
+      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
+      expected_json = @modify_payment_method_response_obj.to_json
+      actual_json = response.to_json
+
+      expect(actual_json).to eq(expected_json)
     end
   end
 
@@ -191,7 +264,13 @@ describe 'SettingsApi' do
   # @return [ModifyVatTypeResponse]
   describe 'modify_vat_type test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      opts = {"data":{"id":0,"value":22,"description":"Non imponibile art. 123","notes":"IVA non imponibile ai sensi dell'articolo 123, comma 2","e_invoice":true,"ei_type":2,"ei_description":"string","editable":true,"is_disabled":true}}
+      response = @api_instance.modify_vat_type(2, 22, opts)
+      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
+      expected_json = @modify_vat_type_response_obj.to_json
+      actual_json = response.to_json
+
+      expect(actual_json).to eq(expected_json)
     end
   end
 
