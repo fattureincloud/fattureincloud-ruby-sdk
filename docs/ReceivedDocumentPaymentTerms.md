@@ -1,0 +1,9 @@
+# FattureInCloud_Ruby_Sdk::ReceivedDocumentPaymentTerms
+
+## Properties
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **days** | **Float** | Number of days. | [optional] |
+| **type** | **String** |  | [optional] |
+
