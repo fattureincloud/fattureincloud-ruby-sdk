@@ -20,8 +20,23 @@ describe 'ArchiveApi' do
   before do
     # run before each test
     @api_instance = FattureInCloud_Ruby_Sdk::ArchiveApi.new
-  end
 
+    @create_archive_document_response_obj = {"data":{"id":12345,"date":"2021-08-20","category":"Altri documenti","description":"spesa 2","attachment_url":"spesa2.pdf"}}
+    allow(@api_instance).to receive(:create_archive_document) {@create_archive_document_response_obj}
+
+    @get_archive_document_response_obj = {"data":{"id":12345,"date":"2021-08-20","category":"Altri documenti","description":"spesa 2","attachment_url":"spesa2.pdf"}}
+    allow(@api_instance).to receive(:get_archive_document) {@get_archive_document_response_obj}
+
+    @list_archive_documents_response_obj = {"current_page":1,"data":[{"id":12345,"date":"2021-08-20","category":"Altri documenti","description":"spesa 2","attachment_url":"spesa2.pdf"},{"id":12346,"date":"2021-08-19","category":"Altri documenti","description":"spesa 1","attachment_url":"spesa1.pdf"}],"first_page_url":"page=1","from":1,"last_page":1,"last_page_url":"page=1","next_page_url":nil,"path":"\/archive","per_page":50,"prev_page_url":nil,"to":2,"total":2}
+    allow(@api_instance).to receive(:list_archive_documents) {@list_archive_documents_response_obj}
+  
+    @modify_archive_document_response_obj = {"data":{"id":12345,"date":"2021-08-20","category":"Altri documenti","description":"spesa 2","attachment_url":"spesa2.pdf"}}
+    allow(@api_instance).to receive(:modify_archive_document) {@modify_archive_document_response_obj}
+
+    @upload_archive_document_attachment_response_obj = {"data":{"attachment_token":"YmMyNWYxYzIwMTU3N2Y4ZGE3ZjZiMzg5OWY0ODNkZDQveXl5LmRvYw"}}
+    allow(@api_instance).to receive(:upload_archive_document_attachment) {@upload_archive_document_attachment_response_obj}
+
+  end
   after do
     # run after each test
   end
@@ -41,7 +56,13 @@ describe 'ArchiveApi' do
   # @return [CreateArchiveDocumentResponse]
   describe 'create_archive_document test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      opts = {"data":{"date":"2021-08-20","category":"Altri documenti","description":"spesa 1","attachment_token":"YjFrbmNlc3E0NmNuaW5ocXQ0b2p0c202NG1ncWx6ZmsvZmlsZW5hbWU"}}
+      response = @api_instance.create_archive_document(2, opts)
+      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
+      expected_json = @create_archive_document_response_obj.to_json
+      actual_json = response.to_json
+
+      expect(actual_json).to eq(expected_json)
     end
   end
 
@@ -54,7 +75,7 @@ describe 'ArchiveApi' do
   # @return [nil]
   describe 'delete_archive_document test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      expect(true).to eq(true)
     end
   end
 
@@ -69,7 +90,12 @@ describe 'ArchiveApi' do
   # @return [GetArchiveDocumentResponse]
   describe 'get_archive_document test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      response = @api_instance.get_archive_document(2, 22)
+      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
+      expected_json = @get_archive_document_response_obj.to_json
+      actual_json = response.to_json
+
+      expect(actual_json).to eq(expected_json)
     end
   end
 
@@ -83,10 +109,16 @@ describe 'ArchiveApi' do
   # @option opts [String] :sort List of comma-separated fields for result sorting (minus for desc sorting).
   # @option opts [Integer] :page The page to retrieve.
   # @option opts [Integer] :per_page The size of the page.
+  # @option opts [String] :query Query for filtering the results.
   # @return [ListArchiveDocumentsResponse]
   describe 'list_archive_documents test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      response = @api_instance.list_archive_documents(2)
+      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
+      expected_json = @list_archive_documents_response_obj.to_json
+      actual_json = response.to_json
+
+      expect(actual_json).to eq(expected_json)
     end
   end
 
@@ -100,7 +132,12 @@ describe 'ArchiveApi' do
   # @return [ModifyArchiveDocumentResponse]
   describe 'modify_archive_document test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      response = @api_instance.modify_archive_document(2, 22)
+      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
+      expected_json = @modify_archive_document_response_obj.to_json
+      actual_json = response.to_json
+
+      expect(actual_json).to eq(expected_json)
     end
   end
 
@@ -114,7 +151,13 @@ describe 'ArchiveApi' do
   # @return [UploadArchiveAttachmentResponse]
   describe 'upload_archive_document_attachment test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      opts = {}
+      response = @api_instance.upload_archive_document_attachment(2, opts)
+      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
+      expected_json = @upload_archive_document_attachment_response_obj.to_json
+      actual_json = response.to_json
+
+      expect(actual_json).to eq(expected_json)
     end
   end
 

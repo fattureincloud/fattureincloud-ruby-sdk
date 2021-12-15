@@ -20,6 +20,13 @@ describe 'IssuedEInvoicesApi' do
   before do
     # run before each test
     @api_instance = FattureInCloud_Ruby_Sdk::IssuedEInvoicesApi.new
+
+    @send_e_invoice_response_obj = {"data":{"name":"CARICATO","date":"2021-08-23 10:38:03"}};
+    allow(@api_instance).to receive(:send_e_invoice) {@send_e_invoice_response_obj}
+  
+    @verify_e_invoice_xml_response_obj = {"data":{"success":true}};
+    allow(@api_instance).to receive(:verify_e_invoice_xml) {@verify_e_invoice_xml_response_obj}
+
   end
 
   after do
@@ -42,7 +49,12 @@ describe 'IssuedEInvoicesApi' do
   # @return [SendEInvoiceResponse]
   describe 'send_e_invoice test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      response = @api_instance.send_e_invoice(2, 22)
+      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
+      expected_json = @send_e_invoice_response_obj.to_json
+      actual_json = response.to_json
+
+      expect(actual_json).to eq(expected_json)
     end
   end
 
@@ -55,7 +67,12 @@ describe 'IssuedEInvoicesApi' do
   # @return [VerifyEInvoiceXmlResponse]
   describe 'verify_e_invoice_xml test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      response = @api_instance.verify_e_invoice_xml(2, 22)
+      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
+      expected_json = @verify_e_invoice_xml_response_obj.to_json
+      actual_json = response.to_json
+
+      expect(actual_json).to eq(expected_json)
     end
   end
 

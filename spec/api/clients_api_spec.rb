@@ -20,6 +20,19 @@ describe 'ClientsApi' do
   before do
     # run before each test
     @api_instance = FattureInCloud_Ruby_Sdk::ClientsApi.new
+
+    @create_client_response_obj = {"data":{"id":16451,"code":"AE86","name":"Avv. Maria Rossi","type":"person","first_name":"Maria","last_name":"Rossi","contact_person":"","vat_number":"IT12345640962","tax_code":"BLTGNI5ABCDA794E","address_street":"Via Roma, 1","address_postal_code":"20900","address_city":"Milano","address_province":"MI","address_extra":"","country":"Italia","email":"maria.rossi@example.com","certified_email":"maria.rossi@pec.example.com","phone":"1234567890","fax":"","notes":"","created_at":"2021-04-29 08:53:07","updated_at":"2021-04-29 08:53:07","default_payment_terms":1,"default_payment_terms_type":"standard","bank_name":"Indesa","bank_iban":"IT40P123456781000000123456","bank_swift_code":"AK86PCT","shipping_address":"Corso Magellano 4","e_invoice":true,"ei_code":"111111","default_vat":{"id":54321,"value":45,"description":"","is_disabled":false},"default_payment_method":{"id":386092,"name":"Credit card"}}}
+    allow(@api_instance).to receive(:create_client) {@create_client_response_obj}
+  
+    @get_client_response_obj = {"data":{"id":16451,"code":"GB01","name":"Avv. Gino Belotti","type":"person","first_name":"","last_name":"","contact_person":"","vat_number":"IT05548040962","tax_code":"BLTGNI54R25A794E","address_street":"Via del froschio, 3","address_postal_code":"20900","address_city":"Monza","address_province":"MB","address_extra":"","country":"Italia","email":"","certified_email":"gigino54@pec.example.com","phone":"","fax":"","notes":"","created_at":nil,"updated_at":"2021-04-29 08:53:07","default_payment_terms":1,"default_payment_terms_type":"standard","bank_name":"","bank_iban":"IT40S0542811101000000123456","bank_swift_code":"","shipping_address":"Via le mani dal Naso 2","e_invoice":true,"ei_code":"","default_vat":nil,"default_payment_method":{"id":386692,"name":"Teeest 2"}}}
+    allow(@api_instance).to receive(:get_client) {@get_client_response_obj}
+  
+    @list_clients_response_obj = {"current_page":1,"data":[{"id":16451,"code":"AE86","name":"Avv. Maria Rossi","type":"person","first_name":"Maria","last_name":"Rossi","contact_person":"","vat_number":"IT12345640962","tax_code":"BLTGNI5ABCDA794E","address_street":"Via Roma, 1","address_postal_code":"20900","address_city":"Milano","address_province":"MI","address_extra":"","country":"Italia","email":"maria.rossi@example.com","certified_email":"maria.rossi@pec.example.com","phone":"1234567890","fax":"","notes":"","created_at":"2021-04-29 08:53:07","updated_at":"2021-04-29 08:53:07","default_payment_terms":1,"default_payment_terms_type":"standard","bank_name":"Indesa","bank_iban":"IT40P123456781000000123456","bank_swift_code":"AK86PCT","shipping_address":"Corso Magellano 4","e_invoice":true,"ei_code":"111111","default_vat":{"id":54321,"value":45,"description":"","is_disabled":false},"default_payment_method":{"id":386092,"name":"Credit card"}},{"id":25330696,"code":"PD00","name":"Mario Rossi","type":"person","first_name":"Mario","last_name":"Rossi","contact_person":"","vat_number":"IT1234567890","tax_code":"ABCDEF12G34H567I","address_street":"Via largo augusto 123","address_postal_code":"21012","address_city":"Bergamo","address_province":"BG","address_extra":"","country":"Italia","email":"info@mariorossi.it","certified_email":"info@pec.mariorossi.it","phone":"012345678","fax":"012345678","notes":"","created_at":"2021-04-29 08:53:07","default_payment_terms":0,"default_payment_terms_type":"standard","bank_name":"Monte dei Pascoli","bank_iban":"IT00P123456781000000123456","bank_swift_code":"APL86PCT","shipping_address":"Via Miilano 4","e_invoice":false,"ei_code":"7654321","default_vat":{"id":66,"value":22,"description":"","is_disabled":false},"default_payment_method":nil}],"first_page_url":"page=1","from":1,"last_page":2,"last_page_url":"page=2","next_page_url":"page=2","path":"entities\/clients","per_page":5,"prev_page_url":nil,"to":50,"total":8}
+    allow(@api_instance).to receive(:list_clients) {@list_clients_response_obj}
+ 
+    @modify_client_response_obj = {"data":{"id":16451,"code":"GB01","name":"Avv. Gino Belotti","type":"person","first_name":"","last_name":"","contact_person":"","vat_number":"IT05548040962","tax_code":"BLTGNI54R25A794E","address_street":"Via del froschio, 3","address_postal_code":"20900","address_city":"Monza","address_province":"MB","address_extra":"","country":"Italia","email":"","certified_email":"gigino54@pec.example.com","phone":"","fax":"","notes":"","created_at":nil,"updated_at":"2021-04-29 08:53:07","default_payment_terms":1,"default_payment_terms_type":"standard","bank_name":"","bank_iban":"IT40S0542811101000000123456","bank_swift_code":"","shipping_address":"Via le mani dal Naso 2","e_invoice":true,"ei_code":"","default_vat":nil,"default_payment_method":{"id":386692,"name":"Teeest 2"}}}
+    allow(@api_instance).to receive(:modify_client) {@modify_client_response_obj}
+  
   end
 
   after do
@@ -41,7 +54,13 @@ describe 'ClientsApi' do
   # @return [CreateClientResponse]
   describe 'create_client test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      opts = {"data":{"date":"2021-08-24","amount_in":122,"payment_account_in":{"id":21},"description":"Fattura n. 201\/2021","entity_name":"Rossi S.r.l.","kind":"issued_document","document":{"id":54321},"type":"in"}}
+      response = @api_instance.create_client(2, opts)
+      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
+      expected_json = @create_client_response_obj.to_json
+      actual_json = response.to_json
+
+      expect(actual_json).to eq(expected_json)
     end
   end
 
@@ -54,7 +73,7 @@ describe 'ClientsApi' do
   # @return [nil]
   describe 'delete_client test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      expect(true).to eq(true)
     end
   end
 
@@ -69,7 +88,12 @@ describe 'ClientsApi' do
   # @return [GetClientResponse]
   describe 'get_client test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      response = @api_instance.get_client(2, 22)
+      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
+      expected_json = @get_client_response_obj.to_json
+      actual_json = response.to_json
+
+      expect(actual_json).to eq(expected_json)
     end
   end
 
@@ -83,10 +107,16 @@ describe 'ClientsApi' do
   # @option opts [String] :sort List of comma-separated fields for result sorting (minus for desc sorting).
   # @option opts [Integer] :page The page to retrieve.
   # @option opts [Integer] :per_page The size of the page.
+  # @option opts [String] :query Query for filtering the results.
   # @return [ListClientsResponse]
   describe 'list_clients test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      response = @api_instance.list_clients(2)
+      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
+      expected_json = @list_clients_response_obj.to_json
+      actual_json = response.to_json
+
+      expect(actual_json).to eq(expected_json)
     end
   end
 
@@ -100,7 +130,13 @@ describe 'ClientsApi' do
   # @return [ModifyClientResponse]
   describe 'modify_client test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      opts = {"data":{"date":"2021-08-24","amount_in":122,"payment_account_in":{"id":21},"description":"Fattura n. 201\/2021","entity_name":"Rossi S.r.l.","kind":"issued_document","document":{"id":54321},"type":"in"}}
+      response = @api_instance.modify_client(2, opts)
+      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
+      expected_json = @modify_client_response_obj.to_json
+      actual_json = response.to_json
+
+      expect(actual_json).to eq(expected_json)
     end
   end
 
