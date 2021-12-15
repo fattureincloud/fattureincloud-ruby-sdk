@@ -1,0 +1,20 @@
+# FattureInCloudSdk::VerifyEInvoiceXmlErrorResponse
+
+## Properties
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **error** | [**VerifyEInvoiceXmlErrorResponseError**](VerifyEInvoiceXmlErrorResponseError.md) |  | [optional] |
+| **extra** | [**VerifyEInvoiceXmlErrorResponseExtra**](VerifyEInvoiceXmlErrorResponseExtra.md) |  | [optional] |
+
+## Example
+
+```ruby
+require 'fattureincloud-ruby-sdk'
+
+instance = FattureInCloudSdk::VerifyEInvoiceXmlErrorResponse.new(
+  error: null,
+  extra: null
+)
+```
+

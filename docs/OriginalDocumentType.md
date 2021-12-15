@@ -1,0 +1,15 @@
+# FattureInCloudSdk::OriginalDocumentType
+
+## Properties
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+
+## Example
+
+```ruby
+require 'fattureincloud-ruby-sdk'
+
+instance = FattureInCloudSdk::OriginalDocumentType.new()
+```
+
