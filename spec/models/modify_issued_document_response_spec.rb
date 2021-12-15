@@ -139,7 +139,7 @@ describe FattureInCloud_Ruby_Sdk::ModifyIssuedDocumentResponse do
   end
   describe 'test attribute "data"' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      expect(instance.data).to be_a_kind_of(Object)
     end
   end
 
