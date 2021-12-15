@@ -1,0 +1,22 @@
+# FattureInCloud::Ruby::Sdk::City
+
+## Properties
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **postal_code** | **String** | City postal code. |  |
+| **city** | **String** | City name. |  |
+| **province** | **String** | Province. |  |
+
+## Example
+
+```ruby
+require 'fattureincloud-ruby-sdk'
+
+instance = FattureInCloud::Ruby::Sdk::City.new(
+  postal_code: null,
+  city: null,
+  province: null
+)
+```
+
