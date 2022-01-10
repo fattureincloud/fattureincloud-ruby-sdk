@@ -18,7 +18,7 @@
 | **amount_other_withholding_tax** | **Float** | Other withholding tax amount. | [optional] |
 | **stamp_duty** | **Float** | Stamp duty value [0 if not present]. | [optional] |
 | **amount_due** | **Float** | Total amount due. |  |
-| **is_enasarco_maximal_exceeded** | **Boolean** |  |  |
+| **is_enasarco_maximal_exceeded** | **Boolean** |  | [optional] |
 | **payments_sum** | **Float** | Payments sum. |  |
 | **vat_list** | [**IssuedDocumentTotalsVatList**](IssuedDocumentTotalsVatList.md) |  | [optional] |
 

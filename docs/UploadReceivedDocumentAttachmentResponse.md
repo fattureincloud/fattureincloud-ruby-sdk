@@ -4,5 +4,5 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **data** | [**UploadReceivedDocumentAttachmentResponseData**](UploadReceivedDocumentAttachmentResponseData.md) |  |  |
+| **data** | [**AttachmentData**](AttachmentData.md) |  | [optional] |
 

@@ -14,14 +14,14 @@ require 'date'
 require 'time'
 
 module FattureInCloud_Ruby_Sdk
-  # 
-  class ListCountriesResponse
-    attr_accessor :data
+  class AttachmentData
+    # Uploaded attachment token.
+    attr_accessor :attachment_token
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'data' => :'data'
+        :'attachment_token' => :'attachment_token'
       }
     end
 
@@ -33,7 +33,7 @@ module FattureInCloud_Ruby_Sdk
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'data' => :'Array<String>'
+        :'attachment_token' => :'String'
       }
     end
 
@@ -47,21 +47,19 @@ module FattureInCloud_Ruby_Sdk
     # @param [Hash] attributes Model attributes in the form of hash
     def initialize(attributes = {})
       if (!attributes.is_a?(Hash))
-        fail ArgumentError, "The input argument (attributes) must be a hash in `FattureInCloud_Ruby_Sdk::ListCountriesResponse` initialize method"
+        fail ArgumentError, "The input argument (attributes) must be a hash in `FattureInCloud_Ruby_Sdk::AttachmentData` initialize method"
       end
 
       # check to see if the attribute exists and convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h|
         if (!self.class.attribute_map.key?(k.to_sym))
-          fail ArgumentError, "`#{k}` is not a valid attribute in `FattureInCloud_Ruby_Sdk::ListCountriesResponse`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
+          fail ArgumentError, "`#{k}` is not a valid attribute in `FattureInCloud_Ruby_Sdk::AttachmentData`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
         end
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'data')
-        if (value = attributes[:'data']).is_a?(Array)
-          self.data = value
-        end
+      if attributes.key?(:'attachment_token')
+        self.attachment_token = attributes[:'attachment_token']
       end
     end
 
@@ -69,12 +67,17 @@ module FattureInCloud_Ruby_Sdk
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @attachment_token.nil?
+        invalid_properties.push('invalid value for "attachment_token", attachment_token cannot be nil.')
+      end
+
       invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @attachment_token.nil?
       true
     end
 
@@ -83,7 +86,7 @@ module FattureInCloud_Ruby_Sdk
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          data == o.data
+          attachment_token == o.attachment_token
     end
 
     # @see the `==` method
@@ -95,7 +98,7 @@ module FattureInCloud_Ruby_Sdk
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [data].hash
+      [attachment_token].hash
     end
 
     # Builds the object from hash

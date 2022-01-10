@@ -233,7 +233,7 @@ end
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, application/xml, multipart/form-data
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 
