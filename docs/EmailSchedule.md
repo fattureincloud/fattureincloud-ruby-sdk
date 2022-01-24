@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **sender_id** | **Float** | Sender id. Required if &#x60;sender_email&#x60; is not specified | [optional] |
+| **sender_id** | **Integer** | Sender id. Required if &#x60;sender_email&#x60; is not specified | [optional] |
 | **sender_email** | **String** | Sender email. Required if &#x60;sender_id&#x60; is not specified | [optional] |
 | **recipient_email** | **String** | One or more comma separated recipient emails |  |
 | **subject** | **String** | Email subject |  |

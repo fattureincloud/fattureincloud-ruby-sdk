@@ -1,4 +1,4 @@
-# FattureInCloud_Ruby_Sdk::Company
+# FattureInCloud_Ruby_Sdk::ControlledCompany
 
 ## Properties
 
@@ -8,7 +8,6 @@
 | **name** | **String** | Company name. | [optional] |
 | **type** | [**CompanyType**](CompanyType.md) |  | [optional] |
 | **access_token** | **String** | CompanyAuthentication token for this company. [Only if type&#x3D;company] | [optional] |
-| **controlled_companies** | [**Array&lt;ControlledCompany&gt;**](ControlledCompany.md) | List of controlled companies. [Only if type&#x3D;accountant] | [optional] |
-| **connection_id** | **Integer** | Company connection id. | [optional] |
+| **connection_id** | **Float** | Company connection id. | [optional] |
 | **tax_code** | **String** | Tax code. | [optional] |
 

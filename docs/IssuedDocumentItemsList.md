@@ -7,6 +7,7 @@
 | **product_id** | **Integer** | Unique identifier of the product. | [optional] |
 | **code** | **String** | Product code. | [optional] |
 | **name** | **String** | Product name. | [optional] |
+| **category** | **String** | Product category | [optional] |
 | **description** | **String** | Product description. | [optional] |
 | **qty** | **Float** | Items quantity, | [optional] |
 | **measure** | **String** | Item measure. | [optional] |

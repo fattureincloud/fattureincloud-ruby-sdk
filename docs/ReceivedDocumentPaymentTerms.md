@@ -4,6 +4,6 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **days** | **Float** | Number of days. | [optional] |
+| **days** | **Integer** | Number of days. | [optional] |
 | **type** | **String** |  | [optional] |
 
