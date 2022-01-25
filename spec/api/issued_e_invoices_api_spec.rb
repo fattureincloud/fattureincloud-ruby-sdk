@@ -27,6 +27,9 @@ describe 'IssuedEInvoicesApi' do
     @verify_e_invoice_xml_response_obj = {"data":{"success":true}};
     allow(@api_instance).to receive(:verify_e_invoice_xml) {@verify_e_invoice_xml_response_obj}
 
+    @get_e_invoice_xml_response = "<xml-fattura>fields</xml-fattura>";
+    allow(@api_instance).to receive(:get_e_invoice_xml) {@get_e_invoice_xml_response}
+
   end
 
   after do
@@ -73,6 +76,23 @@ describe 'IssuedEInvoicesApi' do
       actual_json = response.to_json
 
       expect(actual_json).to eq(expected_json)
+    end
+  end
+
+  # unit tests for get_e_invoice_xml
+  # Get e-invoice XML
+  # Downloads the e-invoice in XML format.
+  # @param company_id The ID of the company.
+  # @param document_id The ID of the document.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Boolean] :include_attachment Include the attachment to the XML e-invoice.
+  # @return [String]
+  describe 'get_e_invoice_xml test' do
+    it 'should work' do
+      response = @api_instance.get_e_invoice_xml(2, 22, true)
+      expected = @get_e_invoice_xml_response
+
+      expect(response).to eq(expected)
     end
   end
 

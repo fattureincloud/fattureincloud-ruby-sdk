@@ -23,6 +23,7 @@ describe FattureInCloud_Ruby_Sdk::IssuedDocumentItemsList do
   instance.code = "cod3"
   instance.name = "prod 1"
   instance.description = "product number uan"
+  instance.category = "cat5"
   instance.qty = 44
   instance.measure = "very big"
   instance.net_price = 10.0
@@ -66,6 +67,12 @@ describe FattureInCloud_Ruby_Sdk::IssuedDocumentItemsList do
   describe 'test attribute "description"' do
     it 'should work' do
       expect(instance.description).to be_a_kind_of(String)
+    end
+  end
+
+  describe 'test attribute "category"' do
+    it 'should work' do
+      expect(instance.category).to be_a_kind_of(String)
     end
   end
 
