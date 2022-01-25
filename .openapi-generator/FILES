@@ -31,6 +31,7 @@ docs/CompanyInfoPlanInfoFunctions.md
 docs/CompanyInfoPlanInfoFunctionsStatus.md
 docs/CompanyInfoPlanInfoLimits.md
 docs/CompanyType.md
+docs/ControlledCompany.md
 docs/CreateArchiveDocumentRequest.md
 docs/CreateArchiveDocumentResponse.md
 docs/CreateCashbookEntryRequest.md
@@ -271,6 +272,7 @@ lib/fattureincloud_ruby_sdk/models/company_info_plan_info_functions.rb
 lib/fattureincloud_ruby_sdk/models/company_info_plan_info_functions_status.rb
 lib/fattureincloud_ruby_sdk/models/company_info_plan_info_limits.rb
 lib/fattureincloud_ruby_sdk/models/company_type.rb
+lib/fattureincloud_ruby_sdk/models/controlled_company.rb
 lib/fattureincloud_ruby_sdk/models/create_archive_document_request.rb
 lib/fattureincloud_ruby_sdk/models/create_archive_document_response.rb
 lib/fattureincloud_ruby_sdk/models/create_cashbook_entry_request.rb
@@ -462,5 +464,5 @@ lib/fattureincloud_ruby_sdk/models/verify_e_invoice_xml_response_data.rb
 lib/fattureincloud_ruby_sdk/version.rb
 spec/api_client_spec.rb
 spec/configuration_spec.rb
-spec/models/attachment_data_spec.rb
+spec/models/controlled_company_spec.rb
 spec/spec_helper.rb

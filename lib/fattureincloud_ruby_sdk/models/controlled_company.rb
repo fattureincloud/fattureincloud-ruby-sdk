@@ -14,22 +14,34 @@ require 'date'
 require 'time'
 
 module FattureInCloud_Ruby_Sdk
-  class DocumentTemplate
-    # Unique identifier.
+  # 
+  class ControlledCompany
+    # Company unique identifier.
     attr_accessor :id
 
-    # Template name.
+    # Company name.
     attr_accessor :name
 
-    # Template type.
     attr_accessor :type
+
+    # CompanyAuthentication token for this company. [Only if type=company]
+    attr_accessor :access_token
+
+    # Company connection id.
+    attr_accessor :connection_id
+
+    # Tax code.
+    attr_accessor :tax_code
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'id' => :'id',
         :'name' => :'name',
-        :'type' => :'type'
+        :'type' => :'type',
+        :'access_token' => :'access_token',
+        :'connection_id' => :'connection_id',
+        :'tax_code' => :'tax_code'
       }
     end
 
@@ -43,7 +55,10 @@ module FattureInCloud_Ruby_Sdk
       {
         :'id' => :'Integer',
         :'name' => :'String',
-        :'type' => :'String'
+        :'type' => :'CompanyType',
+        :'access_token' => :'String',
+        :'connection_id' => :'Float',
+        :'tax_code' => :'String'
       }
     end
 
@@ -57,13 +72,13 @@ module FattureInCloud_Ruby_Sdk
     # @param [Hash] attributes Model attributes in the form of hash
     def initialize(attributes = {})
       if (!attributes.is_a?(Hash))
-        fail ArgumentError, "The input argument (attributes) must be a hash in `FattureInCloud_Ruby_Sdk::DocumentTemplate` initialize method"
+        fail ArgumentError, "The input argument (attributes) must be a hash in `FattureInCloud_Ruby_Sdk::ControlledCompany` initialize method"
       end
 
       # check to see if the attribute exists and convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h|
         if (!self.class.attribute_map.key?(k.to_sym))
-          fail ArgumentError, "`#{k}` is not a valid attribute in `FattureInCloud_Ruby_Sdk::DocumentTemplate`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
+          fail ArgumentError, "`#{k}` is not a valid attribute in `FattureInCloud_Ruby_Sdk::ControlledCompany`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
         end
         h[k.to_sym] = v
       }
@@ -78,6 +93,18 @@ module FattureInCloud_Ruby_Sdk
 
       if attributes.key?(:'type')
         self.type = attributes[:'type']
+      end
+
+      if attributes.key?(:'access_token')
+        self.access_token = attributes[:'access_token']
+      end
+
+      if attributes.key?(:'connection_id')
+        self.connection_id = attributes[:'connection_id']
+      end
+
+      if attributes.key?(:'tax_code')
+        self.tax_code = attributes[:'tax_code']
       end
     end
 
@@ -101,7 +128,10 @@ module FattureInCloud_Ruby_Sdk
       self.class == o.class &&
           id == o.id &&
           name == o.name &&
-          type == o.type
+          type == o.type &&
+          access_token == o.access_token &&
+          connection_id == o.connection_id &&
+          tax_code == o.tax_code
     end
 
     # @see the `==` method
@@ -113,7 +143,7 @@ module FattureInCloud_Ruby_Sdk
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [id, name, type].hash
+      [id, name, type, access_token, connection_id, tax_code].hash
     end
 
     # Builds the object from hash
