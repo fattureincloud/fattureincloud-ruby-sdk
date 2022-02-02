@@ -16,5 +16,5 @@
 | **to** | **Integer** | Last result of the page. | [optional] |
 | **total** | **Integer** | Total number of results | [optional] |
 | **data** | [**Array&lt;F24&gt;**](F24.md) |  | [optional] |
-| **aggregated_data** | [**ListF24ResponseAggregatedDataAggregatedData**](ListF24ResponseAggregatedDataAggregatedData.md) |  | [optional] |
+| **aggregated_data** | [**ListF24ResponseAggregatedData**](ListF24ResponseAggregatedData.md) |  | [optional] |
 
