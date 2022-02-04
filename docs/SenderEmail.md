@@ -1,4 +1,4 @@
-# FattureInCloud_Ruby_Sdk::EmailDataSenderEmailsList
+# FattureInCloud_Ruby_Sdk::SenderEmail
 
 ## Properties
 

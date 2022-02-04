@@ -1,9 +1,10 @@
-# FattureInCloud_Ruby_Sdk::IssuedDocumentPaymentsList
+# FattureInCloud_Ruby_Sdk::IssuedDocumentPaymentsListItem
 
 ## Properties
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **id** | **Integer** | Unique identifier. | [optional] |
 | **due_date** | **Date** | Due date. | [optional] |
 | **amount** | **Float** | Payment amount. | [optional] |
 | **status** | [**IssuedDocumentStatus**](IssuedDocumentStatus.md) |  | [optional][default to &#39;not_paid&#39;] |

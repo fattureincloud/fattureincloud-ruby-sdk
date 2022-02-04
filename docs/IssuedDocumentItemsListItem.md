@@ -1,9 +1,10 @@
-# FattureInCloud_Ruby_Sdk::IssuedDocumentItemsList
+# FattureInCloud_Ruby_Sdk::IssuedDocumentItemsListItem
 
 ## Properties
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **id** | **Integer** | Unique identifier. | [optional] |
 | **product_id** | **Integer** | Unique identifier of the product. | [optional] |
 | **code** | **String** | Product code. | [optional] |
 | **name** | **String** | Product name. | [optional] |

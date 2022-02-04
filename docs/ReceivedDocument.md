@@ -25,8 +25,8 @@
 | **currency** | [**Currency**](Currency.md) |  | [optional] |
 | **tax_deductibility** | **Float** | Tax deducibility percentage. | [optional] |
 | **vat_deductibility** | **Float** | Vat deducibility percentage. | [optional] |
-| **items_list** | [**Array&lt;ReceivedDocumentItemsList&gt;**](ReceivedDocumentItemsList.md) |  | [optional] |
-| **payments_list** | [**Array&lt;ReceivedDocumentPaymentsList&gt;**](ReceivedDocumentPaymentsList.md) |  | [optional] |
+| **items_list** | [**Array&lt;ReceivedDocumentItemsListItem&gt;**](ReceivedDocumentItemsListItem.md) |  | [optional] |
+| **payments_list** | [**Array&lt;ReceivedDocumentPaymentsListItem&gt;**](ReceivedDocumentPaymentsListItem.md) |  | [optional] |
 | **attachment_url** | **String** | [Read Only] Attachment url. | [optional][readonly] |
 | **attachment_preview_url** | **String** | [Read Only] Attachment preview url. | [optional][readonly] |
 | **attachment_token** | **String** | Uploaded attachement token. | [optional] |

@@ -42,8 +42,8 @@
 | **ei_withholding_tax_causal** | **String** | Einvoice withholding tax causal | [optional] |
 | **ei_other_withholding_tax_type** | **String** | Einvoice other withholding tax type | [optional] |
 | **ei_other_withholding_tax_causal** | **String** | Einvoice other withholding tax causal | [optional] |
-| **items_list** | [**Array&lt;IssuedDocumentItemsList&gt;**](IssuedDocumentItemsList.md) |  | [optional] |
-| **payments_list** | [**Array&lt;IssuedDocumentPaymentsList&gt;**](IssuedDocumentPaymentsList.md) |  | [optional] |
+| **items_list** | [**Array&lt;IssuedDocumentItemsListItem&gt;**](IssuedDocumentItemsListItem.md) |  | [optional] |
+| **payments_list** | [**Array&lt;IssuedDocumentPaymentsListItem&gt;**](IssuedDocumentPaymentsListItem.md) |  | [optional] |
 | **template** | [**DocumentTemplate**](DocumentTemplate.md) |  | [optional] |
 | **delivery_note_template** | [**DocumentTemplate**](DocumentTemplate.md) |  | [optional] |
 | **acc_inv_template** | [**DocumentTemplate**](DocumentTemplate.md) |  | [optional] |
@@ -65,7 +65,6 @@
 | **dn_ai_destination** | **String** | Destination (for the attached delivery note). | [optional] |
 | **dn_ai_transporter** | **String** | Transporter (for the attached delivery note). | [optional] |
 | **dn_ai_notes** | **String** | Notes (for the attached delivery note). | [optional] |
-| **refers_to** | [**IssuedDocumentRefersTo**](IssuedDocumentRefersTo.md) |  | [optional] |
 | **is_marked** | **Boolean** | This is true if the document is marked. | [optional] |
 | **amount_net** | **Float** | [Read Only] Total net amount (competenze). | [optional][readonly] |
 | **amount_vat** | **Float** | [Read Only] Total vat amount (IVA). | [optional][readonly] |
@@ -85,4 +84,5 @@
 | **attachment_url** | **String** | [Read Only] Public url of the attached file. Authomatically set if a valid attachment token is passed via POST /issued_documents or PUT /issued_documents/{documentId}. | [optional][readonly] |
 | **attachment_token** | **String** | [Write Only] Attachment token returned by POST /issued_documents/attachment. Used to attach the file already uploaded. | [optional] |
 | **ei_raw** | **Object** | Advanced raw attributes for e-invoices. | [optional] |
+| **ei_status** | **String** | [Read only] Status of the e-invoice.   * &#x60;attempt&#x60; - We are trying to send the invoice, please wait up to 2 hours   * &#x60;missing&#x60; - The invoice is missing   * &#x60;not_sent&#x60; - The invoice has yet to be sent   * &#x60;pending&#x60; - The checks for the digital signature and sending are in progress   * &#x60;processing&#x60; - The SDI is delivering the invoice to the customer   * &#x60;error&#x60; - An error occurred while handling the invoice, please try to resend it or contact support   * &#x60;discarded&#x60; - The invoice has been rejected by the SDI, so it must be corrected and re-sent   * &#x60;not_delivered&#x60; - The SDI was unable to deliver the invoice   * &#x60;accepted&#x60; - The customer accepted the invoice   * &#x60;rejected&#x60; - The customer rejected the invoice, so it must be corrected   * &#x60;no_response&#x60; - A response has not yet been received whithin the deadline, contact the customer to ascertain the status of the invoice  | [optional] |
 

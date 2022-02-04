@@ -1,10 +1,10 @@
-# FattureInCloud_Ruby_Sdk::ReceivedDocumentItemsList
+# FattureInCloud_Ruby_Sdk::ReceivedDocumentItemsListItem
 
 ## Properties
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **id** | **Integer** |  | [optional] |
+| **id** | **Integer** | Unique identifier. | [optional] |
 | **product_id** | **Integer** | Unique identifier of the product | [optional] |
 | **code** | **String** | Product code. | [optional] |
 | **name** | **String** | Product name. | [optional] |

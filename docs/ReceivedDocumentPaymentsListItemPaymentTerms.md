@@ -1,4 +1,4 @@
-# FattureInCloud_Ruby_Sdk::ReceivedDocumentPaymentTerms
+# FattureInCloud_Ruby_Sdk::ReceivedDocumentPaymentsListItemPaymentTerms
 
 ## Properties
 
