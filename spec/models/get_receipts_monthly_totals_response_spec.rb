@@ -19,6 +19,68 @@ require 'date'
 # Please update as you see appropriate
 describe FattureInCloud_Ruby_Sdk::GetReceiptsMonthlyTotalsResponse do
   instance = FattureInCloud_Ruby_Sdk::GetReceiptsMonthlyTotalsResponse.new
+  instance.data = [
+    {
+      net: 15000,
+      gross: 18000,
+      count: 10
+    },
+    {
+      net: 18000,
+      gross: 22000,
+      count: 20
+    },
+    {
+      net: 20000,
+      gross: 24400,
+      count: 30
+    },
+    {
+      net: 19000,
+      gross: 22000,
+      count: 20
+    },
+    {
+      net: 17000,
+      gross: 20000,
+      count: 10
+    },
+    {
+      net: 18000,
+      gross: 24000,
+      count: 21
+    },
+    {
+      net: 22000,
+      gross: 25000,
+      count: 30
+    },
+    {
+      net: 17000,
+      gross: 21000,
+      count: 21
+    },
+    {
+      net: 0,
+      gross: 0,
+      count: 10
+    },
+    {
+      net: 0,
+      gross: 0,
+      count: 20
+    },
+    {
+      net: 0,
+      gross: 0,
+      count: 30
+    },
+    {
+      net: 0,
+      gross: 0,
+      count: 21
+    }
+  ];
 
   describe 'test an instance of GetReceiptsMonthlyTotalsResponse' do
     it 'should create an instance of GetReceiptsMonthlyTotalsResponse' do
@@ -27,7 +89,7 @@ describe FattureInCloud_Ruby_Sdk::GetReceiptsMonthlyTotalsResponse do
   end
   describe 'test attribute "data"' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      expect(instance.data).to be_a_kind_of(Object)
     end
   end
 
