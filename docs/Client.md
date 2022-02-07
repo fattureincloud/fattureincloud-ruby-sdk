@@ -34,6 +34,8 @@
 | **shipping_address** | **String** | Client shipping address. | [optional] |
 | **e_invoice** | **Boolean** | Use e-invoices for this entity | [optional][default to false] |
 | **ei_code** | **String** | E-invoice code | [optional] |
+| **discount_highlight** | **Boolean** | Discount Highlight. | [optional] |
+| **default_discount** | **Float** | Default discount. | [optional] |
 | **created_at** | **String** |  | [optional] |
 | **updated_at** | **String** |  | [optional] |
 

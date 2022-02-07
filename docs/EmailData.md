@@ -6,7 +6,7 @@
 | ---- | ---- | ----------- | ----- |
 | **recipient_email** | **String** | Recipient&#39;s email |  |
 | **default_sender_email** | [**EmailDataDefaultSenderEmail**](EmailDataDefaultSenderEmail.md) |  |  |
-| **sender_emails_list** | [**Array&lt;EmailDataSenderEmailsList&gt;**](EmailDataSenderEmailsList.md) | List of all emails from which the document can be sent |  |
+| **sender_emails_list** | [**Array&lt;SenderEmail&gt;**](SenderEmail.md) | List of all emails from which the document can be sent |  |
 | **cc_email** | **String** | By default is the logged company email. This is the email address to which a copy will be sent. |  |
 | **subject** | **String** | Email subject |  |
 | **body** | **String** | Email body |  |
