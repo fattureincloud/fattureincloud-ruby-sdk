@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 2.0.4 (2022-02-08)
+
+
+### Bug Fixes
+
+* added einvoice rejection reason and refactor cashbook ([615496c](https://github.com/fattureincloud/fattureincloud-ruby-sdk/commit/615496ca267c03509f8d24ba28c41f8f0972de64))
+
 ### 2.0.3 (2022-01-25)
 
 
