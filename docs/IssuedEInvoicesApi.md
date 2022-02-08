@@ -4,9 +4,81 @@ All URIs are relative to *https://api-v2.fattureincloud.it*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
+| [**get_e_invoice_rejection_reason**](IssuedEInvoicesApi.md#get_e_invoice_rejection_reason) | **GET** /c/{company_id}/issued_documents/{document_id}/e_invoice/error_reason | Get EInvoice rejection reason |
 | [**get_e_invoice_xml**](IssuedEInvoicesApi.md#get_e_invoice_xml) | **GET** /c/{company_id}/issued_documents/{document_id}/e_invoice/xml | Get e-invoice XML |
 | [**send_e_invoice**](IssuedEInvoicesApi.md#send_e_invoice) | **POST** /c/{company_id}/issued_documents/{document_id}/e_invoice/send | Send the e-invoice |
 | [**verify_e_invoice_xml**](IssuedEInvoicesApi.md#verify_e_invoice_xml) | **GET** /c/{company_id}/issued_documents/{document_id}/e_invoice/xml_verify | Verify e-invoice xml |
+
+
+## get_e_invoice_rejection_reason
+
+> <GetEInvoiceRejectionReasonResponse> get_e_invoice_rejection_reason(company_id, document_id)
+
+Get EInvoice rejection reason
+
+Get EInvoice rejection reason
+
+### Examples
+
+```ruby
+require 'time'
+require 'fattureincloud_ruby_sdk'
+# setup authorization
+FattureInCloud_Ruby_Sdk.configure do |config|
+  # Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
+  config.access_token = 'YOUR ACCESS TOKEN'
+end
+
+api_instance = FattureInCloud_Ruby_Sdk::IssuedEInvoicesApi.new
+company_id = 12345 # Integer | The ID of the company.
+document_id = 56 # Integer | The ID of the document.
+
+begin
+  # Get EInvoice rejection reason
+  result = api_instance.get_e_invoice_rejection_reason(company_id, document_id)
+  p result
+rescue FattureInCloud_Ruby_Sdk::ApiError => e
+  puts "Error when calling IssuedEInvoicesApi->get_e_invoice_rejection_reason: #{e}"
+end
+```
+
+#### Using the get_e_invoice_rejection_reason_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<GetEInvoiceRejectionReasonResponse>, Integer, Hash)> get_e_invoice_rejection_reason_with_http_info(company_id, document_id)
+
+```ruby
+begin
+  # Get EInvoice rejection reason
+  data, status_code, headers = api_instance.get_e_invoice_rejection_reason_with_http_info(company_id, document_id)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <GetEInvoiceRejectionReasonResponse>
+rescue FattureInCloud_Ruby_Sdk::ApiError => e
+  puts "Error when calling IssuedEInvoicesApi->get_e_invoice_rejection_reason_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **company_id** | **Integer** | The ID of the company. |  |
+| **document_id** | **Integer** | The ID of the document. |  |
+
+### Return type
+
+[**GetEInvoiceRejectionReasonResponse**](GetEInvoiceRejectionReasonResponse.md)
+
+### Authorization
+
+[OAuth2AuthenticationCodeFlow](../README.md#OAuth2AuthenticationCodeFlow)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
 ## get_e_invoice_xml

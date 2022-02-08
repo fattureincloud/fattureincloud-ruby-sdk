@@ -1,49 +1,18 @@
 # FattureInCloud_Ruby_Sdk::CashbookEntry
 
-## Class instance methods
+## Properties
 
-### `openapi_one_of`
-
-Returns the list of classes defined in oneOf.
-
-#### Example
-
-```ruby
-require 'fattureincloud_ruby_sdk'
-
-FattureInCloud_Ruby_Sdk::CashbookEntry.openapi_one_of
-# =>
-# [
-#   :'CashbookEntryIn',
-#   :'CashbookEntryOut'
-# ]
-```
-
-### build
-
-Find the appropriate object from the `openapi_one_of` list and casts the data into it.
-
-#### Example
-
-```ruby
-require 'fattureincloud_ruby_sdk'
-
-FattureInCloud_Ruby_Sdk::CashbookEntry.build(data)
-# => #<CashbookEntryIn:0x00007fdd4aab02a0>
-
-FattureInCloud_Ruby_Sdk::CashbookEntry.build(data_that_doesnt_match)
-# => nil
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| **data** | **Mixed** | data to be matched against the list of oneOf items |
-
-#### Return type
-
-- `CashbookEntryIn`
-- `CashbookEntryOut`
-- `nil` (if no type matches)
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **id** | **String** | Cashbook unique identifier. |  |
+| **date** | **Date** | Cashbook date. |  |
+| **description** | **String** | Cashbook description. |  |
+| **kind** | [**CashbookEntryKind**](CashbookEntryKind.md) |  |  |
+| **type** | [**CashbookEntryType**](CashbookEntryType.md) |  | [optional] |
+| **entity_name** | **String** | Entity name. | [optional] |
+| **document** | [**CashbookEntryDocument**](CashbookEntryDocument.md) |  | [optional] |
+| **amount_in** | **Float** | [Only for cashbook entry in] Total amount in. | [optional] |
+| **payment_account_in** | [**PaymentAccount**](PaymentAccount.md) |  | [optional] |
+| **amount_out** | **Float** | [Only for cashbook entry out] Total amount out. | [optional] |
+| **payment_account_out** | [**PaymentAccount**](PaymentAccount.md) |  | [optional] |
 

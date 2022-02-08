@@ -19,17 +19,16 @@ require 'date'
 # Please update as you see appropriate
 describe FattureInCloud_Ruby_Sdk::ListF24ResponseAggregatedData do
   instance = FattureInCloud_Ruby_Sdk::ListF24ResponseAggregatedData.new
-  instance.aggregated_data = {
-    amount: 5
-  }
+  instance.amount = 6438.96;
+
   describe 'test an instance of ListF24ResponseAggregatedData' do
     it 'should create an instance of ListF24ResponseAggregatedData' do
       expect(instance).to be_instance_of(FattureInCloud_Ruby_Sdk::ListF24ResponseAggregatedData)
     end
   end
-  describe 'test attribute "aggregated_data"' do
+  describe 'test attribute "amount"' do
     it 'should work' do
-      expect(instance.aggregated_data).to be_a_kind_of(Object)
+      expect(instance.amount).to be_a_kind_of(Float)
     end
   end
 

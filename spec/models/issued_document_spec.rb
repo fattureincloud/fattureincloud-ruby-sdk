@@ -156,9 +156,6 @@ describe FattureInCloud_Ruby_Sdk::IssuedDocument do
   instance.extra_data = {
    ts_status: 1
     },
-  instance.refers_to = {
-   id: 7
-    },
   instance.acc_inv_template = {
    id: 4
     },
@@ -444,12 +441,6 @@ describe FattureInCloud_Ruby_Sdk::IssuedDocument do
   describe 'test attribute "dn_ai_notes"' do
     it 'should work' do
       expect(instance.dn_ai_notes).to be_a_kind_of(String)
-    end
-  end
-
-  describe 'test attribute "refers_to"' do
-    it 'should work' do
-      expect(instance.refers_to).to be_a_kind_of(Object)
     end
   end
 
