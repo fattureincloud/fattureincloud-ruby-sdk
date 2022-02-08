@@ -30,6 +30,9 @@ describe 'IssuedEInvoicesApi' do
     @get_e_invoice_xml_response = "<xml-fattura>fields</xml-fattura>";
     allow(@api_instance).to receive(:get_e_invoice_xml) {@get_e_invoice_xml_response}
 
+    @get_e_invoice_rejection_reason_response_obj = {"data":{"reason": "invalid data"}};
+    allow(@api_instance).to receive(:get_e_invoice_rejection_reason) {@get_e_invoice_rejection_reason_response_obj}
+
   end
 
   after do
@@ -93,6 +96,24 @@ describe 'IssuedEInvoicesApi' do
       expected = @get_e_invoice_xml_response
 
       expect(response).to eq(expected)
+    end
+  end
+
+  # unit tests for get_e_invoice_rejection_reason
+  # Get EInvoice rejection reason
+  # Get EInvoice rejection reason
+  # @param company_id The ID of the company.
+  # @param document_id The ID of the document.
+  # @param [Hash] opts the optional parameters
+  # @return [GetEInvoiceRejectionReasonResponse]
+  describe 'get_e_invoice_rejection_reason test' do
+    it 'should work' do
+      response = @api_instance.get_e_invoice_rejection_reason(2, 22)
+      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
+      expected_json = @get_e_invoice_rejection_reason_response_obj.to_json
+      actual_json = response.to_json
+
+      expect(actual_json).to eq(expected_json)
     end
   end
 
