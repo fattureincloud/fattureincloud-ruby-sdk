@@ -108,7 +108,24 @@ module FattureInCloud_Ruby_Sdk
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'archive',
+        :'cerved',
+        :'document_attachments',
+        :'e_invoice',
+        :'genius',
+        :'mail_tracking',
+        :'payment_notifications',
+        :'paypal',
+        :'receipts',
+        :'recurring',
+        :'smtp',
+        :'sofort',
+        :'stock',
+        :'subaccounts',
+        :'tessera_sanitaria',
+        :'ts_digital',
         :'ts_invoice_trading',
+        :'ts_pay'
       ])
     end
 

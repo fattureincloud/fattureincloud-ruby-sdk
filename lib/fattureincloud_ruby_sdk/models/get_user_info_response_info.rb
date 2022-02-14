@@ -47,6 +47,9 @@ module FattureInCloud_Ruby_Sdk
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'need_marketing_consents_confirmation',
+        :'need_password_change',
+        :'need_terms_of_service_confirmation'
       ])
     end
 

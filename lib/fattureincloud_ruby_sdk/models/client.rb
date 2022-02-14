@@ -198,8 +198,36 @@ module FattureInCloud_Ruby_Sdk
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'id',
+        :'code',
+        :'name',
         :'type',
+        :'first_name',
+        :'last_name',
+        :'contact_person',
+        :'vat_number',
+        :'tax_code',
+        :'address_street',
+        :'address_postal_code',
+        :'address_city',
+        :'address_province',
+        :'address_extra',
+        :'country',
+        :'email',
+        :'certified_email',
+        :'phone',
+        :'fax',
+        :'notes',
         :'default_vat',
+        :'default_payment_terms',
+        :'bank_name',
+        :'bank_iban',
+        :'bank_swift_code',
+        :'shipping_address',
+        :'e_invoice',
+        :'ei_code',
+        :'discount_highlight',
+        :'default_discount',
         :'created_at',
         :'updated_at'
       ])
@@ -278,8 +306,6 @@ module FattureInCloud_Ruby_Sdk
 
       if attributes.key?(:'country')
         self.country = attributes[:'country']
-      else
-        self.country = 'Italia'
       end
 
       if attributes.key?(:'email')
@@ -338,8 +364,6 @@ module FattureInCloud_Ruby_Sdk
 
       if attributes.key?(:'e_invoice')
         self.e_invoice = attributes[:'e_invoice']
-      else
-        self.e_invoice = false
       end
 
       if attributes.key?(:'ei_code')
@@ -367,17 +391,12 @@ module FattureInCloud_Ruby_Sdk
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @name.nil?
-        invalid_properties.push('invalid value for "name", name cannot be nil.')
-      end
-
       invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @name.nil?
       true
     end
 

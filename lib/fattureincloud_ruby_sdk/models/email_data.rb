@@ -91,6 +91,16 @@ module FattureInCloud_Ruby_Sdk
     def self.openapi_nullable
       Set.new([
         :'recipient_email',
+        :'default_sender_email',
+        :'sender_emails_list',
+        :'cc_email',
+        :'subject',
+        :'body',
+        :'document_exists',
+        :'delivery_note_exists',
+        :'attachment_exists',
+        :'accompanying_invoice_exists',
+        :'default_attach_pdf'
       ])
     end
 
@@ -160,62 +170,12 @@ module FattureInCloud_Ruby_Sdk
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @default_sender_email.nil?
-        invalid_properties.push('invalid value for "default_sender_email", default_sender_email cannot be nil.')
-      end
-
-      if @sender_emails_list.nil?
-        invalid_properties.push('invalid value for "sender_emails_list", sender_emails_list cannot be nil.')
-      end
-
-      if @cc_email.nil?
-        invalid_properties.push('invalid value for "cc_email", cc_email cannot be nil.')
-      end
-
-      if @subject.nil?
-        invalid_properties.push('invalid value for "subject", subject cannot be nil.')
-      end
-
-      if @body.nil?
-        invalid_properties.push('invalid value for "body", body cannot be nil.')
-      end
-
-      if @document_exists.nil?
-        invalid_properties.push('invalid value for "document_exists", document_exists cannot be nil.')
-      end
-
-      if @delivery_note_exists.nil?
-        invalid_properties.push('invalid value for "delivery_note_exists", delivery_note_exists cannot be nil.')
-      end
-
-      if @attachment_exists.nil?
-        invalid_properties.push('invalid value for "attachment_exists", attachment_exists cannot be nil.')
-      end
-
-      if @accompanying_invoice_exists.nil?
-        invalid_properties.push('invalid value for "accompanying_invoice_exists", accompanying_invoice_exists cannot be nil.')
-      end
-
-      if @default_attach_pdf.nil?
-        invalid_properties.push('invalid value for "default_attach_pdf", default_attach_pdf cannot be nil.')
-      end
-
       invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @default_sender_email.nil?
-      return false if @sender_emails_list.nil?
-      return false if @cc_email.nil?
-      return false if @subject.nil?
-      return false if @body.nil?
-      return false if @document_exists.nil?
-      return false if @delivery_note_exists.nil?
-      return false if @attachment_exists.nil?
-      return false if @accompanying_invoice_exists.nil?
-      return false if @default_attach_pdf.nil?
       true
     end
 

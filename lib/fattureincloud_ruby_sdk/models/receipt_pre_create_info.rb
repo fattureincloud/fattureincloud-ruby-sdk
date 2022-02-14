@@ -66,6 +66,12 @@ module FattureInCloud_Ruby_Sdk
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'numerations',
+        :'numerations_list',
+        :'rc_centers_list',
+        :'payment_accounts_list',
+        :'categories_list',
+        :'vat_types_list'
       ])
     end
 
@@ -123,42 +129,12 @@ module FattureInCloud_Ruby_Sdk
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @numerations.nil?
-        invalid_properties.push('invalid value for "numerations", numerations cannot be nil.')
-      end
-
-      if @numerations_list.nil?
-        invalid_properties.push('invalid value for "numerations_list", numerations_list cannot be nil.')
-      end
-
-      if @rc_centers_list.nil?
-        invalid_properties.push('invalid value for "rc_centers_list", rc_centers_list cannot be nil.')
-      end
-
-      if @payment_accounts_list.nil?
-        invalid_properties.push('invalid value for "payment_accounts_list", payment_accounts_list cannot be nil.')
-      end
-
-      if @categories_list.nil?
-        invalid_properties.push('invalid value for "categories_list", categories_list cannot be nil.')
-      end
-
-      if @vat_types_list.nil?
-        invalid_properties.push('invalid value for "vat_types_list", vat_types_list cannot be nil.')
-      end
-
       invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @numerations.nil?
-      return false if @numerations_list.nil?
-      return false if @rc_centers_list.nil?
-      return false if @payment_accounts_list.nil?
-      return false if @categories_list.nil?
-      return false if @vat_types_list.nil?
       true
     end
 

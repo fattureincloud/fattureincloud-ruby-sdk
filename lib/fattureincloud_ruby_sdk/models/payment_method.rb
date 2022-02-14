@@ -84,11 +84,14 @@ module FattureInCloud_Ruby_Sdk
     def self.openapi_nullable
       Set.new([
         :'id',
+        :'name',
+        :'is_default',
         :'default_payment_account',
         :'details',
         :'bank_iban',
         :'bank_name',
         :'bank_beneficiary',
+        :'ei_payment_method'
       ])
     end
 
@@ -156,10 +159,6 @@ module FattureInCloud_Ruby_Sdk
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @name.nil?
-        invalid_properties.push('invalid value for "name", name cannot be nil.')
-      end
-
       if !@details.nil? && @details.length > 5
         invalid_properties.push('invalid value for "details", number of items must be less than or equal to 5.')
       end
@@ -170,7 +169,6 @@ module FattureInCloud_Ruby_Sdk
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @name.nil?
       return false if !@details.nil? && @details.length > 5
       true
     end

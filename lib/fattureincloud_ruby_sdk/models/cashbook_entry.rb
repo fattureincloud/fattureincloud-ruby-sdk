@@ -85,8 +85,12 @@ module FattureInCloud_Ruby_Sdk
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'id',
+        :'date',
+        :'description',
         :'type',
         :'entity_name',
+        :'document',
         :'amount_in',
         :'payment_account_in',
         :'amount_out',
@@ -158,32 +162,12 @@ module FattureInCloud_Ruby_Sdk
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @id.nil?
-        invalid_properties.push('invalid value for "id", id cannot be nil.')
-      end
-
-      if @date.nil?
-        invalid_properties.push('invalid value for "date", date cannot be nil.')
-      end
-
-      if @description.nil?
-        invalid_properties.push('invalid value for "description", description cannot be nil.')
-      end
-
-      if @kind.nil?
-        invalid_properties.push('invalid value for "kind", kind cannot be nil.')
-      end
-
       invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @id.nil?
-      return false if @date.nil?
-      return false if @description.nil?
-      return false if @kind.nil?
       true
     end
 

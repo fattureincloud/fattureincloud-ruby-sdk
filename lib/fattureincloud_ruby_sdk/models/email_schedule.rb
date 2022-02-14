@@ -74,6 +74,14 @@ module FattureInCloud_Ruby_Sdk
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'sender_id',
+        :'sender_email',
+        :'recipient_email',
+        :'subject',
+        :'body',
+        :'include',
+        :'attach_pdf',
+        :'send_copy'
       ])
     end
 
@@ -129,42 +137,12 @@ module FattureInCloud_Ruby_Sdk
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @recipient_email.nil?
-        invalid_properties.push('invalid value for "recipient_email", recipient_email cannot be nil.')
-      end
-
-      if @subject.nil?
-        invalid_properties.push('invalid value for "subject", subject cannot be nil.')
-      end
-
-      if @body.nil?
-        invalid_properties.push('invalid value for "body", body cannot be nil.')
-      end
-
-      if @include.nil?
-        invalid_properties.push('invalid value for "include", include cannot be nil.')
-      end
-
-      if @attach_pdf.nil?
-        invalid_properties.push('invalid value for "attach_pdf", attach_pdf cannot be nil.')
-      end
-
-      if @send_copy.nil?
-        invalid_properties.push('invalid value for "send_copy", send_copy cannot be nil.')
-      end
-
       invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @recipient_email.nil?
-      return false if @subject.nil?
-      return false if @body.nil?
-      return false if @include.nil?
-      return false if @attach_pdf.nil?
-      return false if @send_copy.nil?
       true
     end
 

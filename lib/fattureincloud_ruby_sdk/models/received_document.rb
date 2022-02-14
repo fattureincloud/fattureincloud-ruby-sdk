@@ -158,9 +158,29 @@ module FattureInCloud_Ruby_Sdk
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'id',
+        :'entity',
+        :'date',
         :'category',
+        :'description',
+        :'amount_net',
+        :'amount_vat',
+        :'amount_withholding_tax',
+        :'amount_other_withholding_tax',
+        :'amount_gross',
+        :'amortization',
+        :'rc_center',
+        :'invoice_number',
+        :'is_marked',
+        :'is_detailed',
+        :'e_invoice',
         :'next_due_date',
+        :'tax_deductibility',
+        :'vat_deductibility',
         :'items_list',
+        :'payments_list',
+        :'attachment_url',
+        :'attachment_preview_url',
         :'attachment_token'
       ])
     end
@@ -295,66 +315,13 @@ module FattureInCloud_Ruby_Sdk
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @entity.nil?
-        invalid_properties.push('invalid value for "entity", entity cannot be nil.')
-      end
-
-      if !@tax_deductibility.nil? && @tax_deductibility > 100
-        invalid_properties.push('invalid value for "tax_deductibility", must be smaller than or equal to 100.')
-      end
-
-      if !@tax_deductibility.nil? && @tax_deductibility < 0
-        invalid_properties.push('invalid value for "tax_deductibility", must be greater than or equal to 0.')
-      end
-
-      if !@vat_deductibility.nil? && @vat_deductibility > 100
-        invalid_properties.push('invalid value for "vat_deductibility", must be smaller than or equal to 100.')
-      end
-
-      if !@vat_deductibility.nil? && @vat_deductibility < 0
-        invalid_properties.push('invalid value for "vat_deductibility", must be greater than or equal to 0.')
-      end
-
       invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @entity.nil?
-      return false if !@tax_deductibility.nil? && @tax_deductibility > 100
-      return false if !@tax_deductibility.nil? && @tax_deductibility < 0
-      return false if !@vat_deductibility.nil? && @vat_deductibility > 100
-      return false if !@vat_deductibility.nil? && @vat_deductibility < 0
       true
-    end
-
-    # Custom attribute writer method with validation
-    # @param [Object] tax_deductibility Value to be assigned
-    def tax_deductibility=(tax_deductibility)
-      if !tax_deductibility.nil? && tax_deductibility > 100
-        fail ArgumentError, 'invalid value for "tax_deductibility", must be smaller than or equal to 100.'
-      end
-
-      if !tax_deductibility.nil? && tax_deductibility < 0
-        fail ArgumentError, 'invalid value for "tax_deductibility", must be greater than or equal to 0.'
-      end
-
-      @tax_deductibility = tax_deductibility
-    end
-
-    # Custom attribute writer method with validation
-    # @param [Object] vat_deductibility Value to be assigned
-    def vat_deductibility=(vat_deductibility)
-      if !vat_deductibility.nil? && vat_deductibility > 100
-        fail ArgumentError, 'invalid value for "vat_deductibility", must be smaller than or equal to 100.'
-      end
-
-      if !vat_deductibility.nil? && vat_deductibility < 0
-        fail ArgumentError, 'invalid value for "vat_deductibility", must be greater than or equal to 0.'
-      end
-
-      @vat_deductibility = vat_deductibility
     end
 
     # Checks equality by comparing each attribute.

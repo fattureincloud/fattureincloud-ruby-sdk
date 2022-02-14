@@ -11,5 +11,5 @@ OpenAPI Generator version: 5.4.0
 =end
 
 module FattureInCloud_Ruby_Sdk
-  VERSION = '2.0.4'
+  VERSION = '5.0.0'
 end

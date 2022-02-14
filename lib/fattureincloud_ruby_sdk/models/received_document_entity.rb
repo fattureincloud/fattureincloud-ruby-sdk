@@ -46,6 +46,7 @@ module FattureInCloud_Ruby_Sdk
     def self.openapi_nullable
       Set.new([
         :'id',
+        :'name'
       ])
     end
 

@@ -31,7 +31,7 @@ module FattureInCloud_Ruby_Sdk
     # @option config [Configuration] Configuration for initializing the object, default to Configuration.default
     def initialize(config = Configuration.default)
       @config = config
-      @user_agent = "FattureInCloud/2.0.4/Ruby-SDK"
+      @user_agent = "FattureInCloud/5.0.0/Ruby-SDK"
       @default_headers = {
         'Content-Type' => 'application/json',
         'User-Agent' => @user_agent
