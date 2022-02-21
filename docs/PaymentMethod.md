@@ -5,7 +5,7 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **id** | **Integer** | Unique identifier | [optional] |
-| **name** | **String** | Name of the payment method |  |
+| **name** | **String** | Name of the payment method | [optional] |
 | **type** | [**PaymentMethodType**](PaymentMethodType.md) |  | [optional][default to &#39;standard&#39;] |
 | **is_default** | **Boolean** | Determines if this is the default payment method. | [optional] |
 | **default_payment_account** | [**PaymentAccount**](PaymentAccount.md) |  | [optional] |

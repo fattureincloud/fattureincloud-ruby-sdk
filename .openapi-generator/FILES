@@ -59,6 +59,7 @@ docs/EmailDataDefaultSenderEmail.md
 docs/EmailSchedule.md
 docs/EmailScheduleInclude.md
 docs/Entity.md
+docs/EntityOptions.md
 docs/EntityType.md
 docs/F24.md
 docs/F24Status.md
@@ -98,6 +99,7 @@ docs/IssuedDocument.md
 docs/IssuedDocumentEiData.md
 docs/IssuedDocumentExtraData.md
 docs/IssuedDocumentItemsListItem.md
+docs/IssuedDocumentOptions.md
 docs/IssuedDocumentPaymentsListItem.md
 docs/IssuedDocumentPreCreateInfo.md
 docs/IssuedDocumentPreCreateInfoDefaultValues.md
@@ -105,8 +107,6 @@ docs/IssuedDocumentPreCreateInfoExtraDataDefaultValues.md
 docs/IssuedDocumentPreCreateInfoItemsDefaultValues.md
 docs/IssuedDocumentStatus.md
 docs/IssuedDocumentTotals.md
-docs/IssuedDocumentTotalsVatList.md
-docs/IssuedDocumentTotalsVatListVatItem.md
 docs/IssuedDocumentType.md
 docs/IssuedDocumentsApi.md
 docs/IssuedEInvoicesApi.md
@@ -219,6 +219,7 @@ docs/UploadReceivedDocumentAttachmentResponse.md
 docs/User.md
 docs/UserApi.md
 docs/UserCompanyRole.md
+docs/VatItem.md
 docs/VatKind.md
 docs/VatType.md
 docs/VerifyEInvoiceXmlErrorResponse.md
@@ -296,6 +297,7 @@ lib/fattureincloud_ruby_sdk/models/email_data_default_sender_email.rb
 lib/fattureincloud_ruby_sdk/models/email_schedule.rb
 lib/fattureincloud_ruby_sdk/models/email_schedule_include.rb
 lib/fattureincloud_ruby_sdk/models/entity.rb
+lib/fattureincloud_ruby_sdk/models/entity_options.rb
 lib/fattureincloud_ruby_sdk/models/entity_type.rb
 lib/fattureincloud_ruby_sdk/models/f24.rb
 lib/fattureincloud_ruby_sdk/models/f24_status.rb
@@ -334,6 +336,7 @@ lib/fattureincloud_ruby_sdk/models/issued_document.rb
 lib/fattureincloud_ruby_sdk/models/issued_document_ei_data.rb
 lib/fattureincloud_ruby_sdk/models/issued_document_extra_data.rb
 lib/fattureincloud_ruby_sdk/models/issued_document_items_list_item.rb
+lib/fattureincloud_ruby_sdk/models/issued_document_options.rb
 lib/fattureincloud_ruby_sdk/models/issued_document_payments_list_item.rb
 lib/fattureincloud_ruby_sdk/models/issued_document_pre_create_info.rb
 lib/fattureincloud_ruby_sdk/models/issued_document_pre_create_info_default_values.rb
@@ -341,8 +344,6 @@ lib/fattureincloud_ruby_sdk/models/issued_document_pre_create_info_extra_data_de
 lib/fattureincloud_ruby_sdk/models/issued_document_pre_create_info_items_default_values.rb
 lib/fattureincloud_ruby_sdk/models/issued_document_status.rb
 lib/fattureincloud_ruby_sdk/models/issued_document_totals.rb
-lib/fattureincloud_ruby_sdk/models/issued_document_totals_vat_list.rb
-lib/fattureincloud_ruby_sdk/models/issued_document_totals_vat_list_vat_item.rb
 lib/fattureincloud_ruby_sdk/models/issued_document_type.rb
 lib/fattureincloud_ruby_sdk/models/language.rb
 lib/fattureincloud_ruby_sdk/models/list_archive_categories_response.rb
@@ -446,6 +447,7 @@ lib/fattureincloud_ruby_sdk/models/upload_issued_document_attachment_response.rb
 lib/fattureincloud_ruby_sdk/models/upload_received_document_attachment_response.rb
 lib/fattureincloud_ruby_sdk/models/user.rb
 lib/fattureincloud_ruby_sdk/models/user_company_role.rb
+lib/fattureincloud_ruby_sdk/models/vat_item.rb
 lib/fattureincloud_ruby_sdk/models/vat_kind.rb
 lib/fattureincloud_ruby_sdk/models/vat_type.rb
 lib/fattureincloud_ruby_sdk/models/verify_e_invoice_xml_error_response.rb
@@ -456,15 +458,7 @@ lib/fattureincloud_ruby_sdk/models/verify_e_invoice_xml_response_data.rb
 lib/fattureincloud_ruby_sdk/version.rb
 spec/api_client_spec.rb
 spec/configuration_spec.rb
-spec/models/cashbook_entry_document_spec.rb
-spec/models/einvoice_rejection_reason_spec.rb
-spec/models/entity_type_spec.rb
-spec/models/get_e_invoice_rejection_reason_response_spec.rb
-spec/models/issued_document_items_list_item_spec.rb
-spec/models/issued_document_payments_list_item_spec.rb
-spec/models/list_f24_response_aggregation_spec.rb
-spec/models/received_document_items_list_item_spec.rb
-spec/models/received_document_payments_list_item_payment_terms_spec.rb
-spec/models/received_document_payments_list_item_spec.rb
-spec/models/sender_email_spec.rb
+spec/models/entity_options_spec.rb
+spec/models/issued_document_options_spec.rb
+spec/models/vat_item_spec.rb
 spec/spec_helper.rb

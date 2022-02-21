@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **numerations** | **Object** | Next numbers by year and numeration name (for the given document type). | [optional] |
-| **dn_numerations** | **Object** | Next numbers by year and numeration name (for delivery_notes). | [optional] |
+| **numerations** | **Hash&lt;String, Hash&gt;** |  | [optional] |
+| **dn_numerations** | **Hash&lt;String, Hash&gt;** |  | [optional] |
 | **default_values** | [**IssuedDocumentPreCreateInfoDefaultValues**](IssuedDocumentPreCreateInfoDefaultValues.md) |  | [optional] |
 | **extra_data_default_values** | [**IssuedDocumentPreCreateInfoExtraDataDefaultValues**](IssuedDocumentPreCreateInfoExtraDataDefaultValues.md) |  | [optional] |
 | **items_default_values** | [**IssuedDocumentPreCreateInfoItemsDefaultValues**](IssuedDocumentPreCreateInfoItemsDefaultValues.md) |  | [optional] |

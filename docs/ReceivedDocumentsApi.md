@@ -38,7 +38,7 @@ end
 api_instance = FattureInCloud_Ruby_Sdk::ReceivedDocumentsApi.new
 company_id = 12345 # Integer | The ID of the company.
 opts = {
-  create_received_document_request: FattureInCloud_Ruby_Sdk::CreateReceivedDocumentRequest.new({data: FattureInCloud_Ruby_Sdk::ReceivedDocument.new({entity: FattureInCloud_Ruby_Sdk::ReceivedDocumentEntity.new})}) # CreateReceivedDocumentRequest | Document to create
+  create_received_document_request: FattureInCloud_Ruby_Sdk::CreateReceivedDocumentRequest.new # CreateReceivedDocumentRequest | Document to create
 }
 
 begin

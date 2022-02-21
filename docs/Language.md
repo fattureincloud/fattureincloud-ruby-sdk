@@ -4,6 +4,6 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **code** | **String** | Language code. |  |
-| **name** | **String** | Language extended name. |  |
+| **code** | **String** | Language code. | [optional] |
+| **name** | **String** | Language extended name. | [optional] |
 
