@@ -1,4 +1,4 @@
-# FattureInCloud_Ruby_Sdk::IssuedDocumentTotalsVatListVatItem
+# FattureInCloud_Ruby_Sdk::VatItem
 
 ## Properties
 

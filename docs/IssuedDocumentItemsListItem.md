@@ -15,11 +15,11 @@
 | **net_price** | **Float** | Net price. | [optional] |
 | **gross_price** | **Float** | Gross price. | [optional] |
 | **vat** | [**VatType**](VatType.md) |  | [optional] |
-| **not_taxable** | **Boolean** |  | [optional][default to false] |
-| **apply_withholding_taxes** | **Boolean** | Apply withholding taxes, rivalsa and cassa. | [optional][default to true] |
+| **not_taxable** | **Boolean** |  | [optional] |
+| **apply_withholding_taxes** | **Boolean** | Apply withholding taxes, rivalsa and cassa. | [optional] |
 | **discount** | **Float** | Discount percentual value. | [optional] |
-| **discount_highlight** | **Boolean** |  | [optional][default to false] |
-| **in_ddt** | **Boolean** |  | [optional][default to true] |
+| **discount_highlight** | **Boolean** |  | [optional] |
+| **in_ddt** | **Boolean** |  | [optional] |
 | **stock** | **Boolean** |  | [optional] |
 | **ei_raw** | **Object** | Advanced raw attributes for e-invoices. | [optional] |
 
