@@ -5,7 +5,7 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **id** | **Integer** | Unique identifier | [optional] |
-| **name** | **String** | Payment account name. |  |
+| **name** | **String** | Payment account name. | [optional] |
 | **type** | [**PaymentAccountType**](PaymentAccountType.md) |  | [optional][default to &#39;standard&#39;] |
 | **iban** | **String** | Payment account iban. | [optional] |
 | **sia** | **String** | Payment account sia. | [optional] |

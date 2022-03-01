@@ -4,5 +4,5 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **attachment_token** | **String** | Uploaded attachment token. |  |
+| **attachment_token** | **String** | Uploaded attachment token. | [optional] |
 

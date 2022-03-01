@@ -5,7 +5,7 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **id** | **Integer** | Unique identifier. | [optional] |
-| **name** | **String** | Product name. |  |
+| **name** | **String** | Product name. | [optional] |
 | **code** | **String** | Product code. | [optional] |
 | **net_price** | **Float** | Net sale price (used if use_gross_price is false, otherwise it&#39;s competed automatically). | [optional] |
 | **gross_price** | **Float** | Gross sale price (used if use_gross_price is false, otherwise it&#39;s competed automatically). | [optional] |

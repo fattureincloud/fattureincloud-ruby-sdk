@@ -33,9 +33,9 @@
 | **other_withholding_tax** | **Float** | Other withholding tax (altra ritenuta) percentual value | [optional] |
 | **stamp_duty** | **Float** | Stamp duty value [0 if not present] | [optional] |
 | **payment_method** | [**PaymentMethod**](PaymentMethod.md) |  | [optional] |
-| **use_split_payment** | **Boolean** | Use split payment | [optional][default to false] |
-| **use_gross_prices** | **Boolean** | Use gross prices | [optional][default to false] |
-| **e_invoice** | **Boolean** | Indicates if this is an e-invoice. | [optional][default to false] |
+| **use_split_payment** | **Boolean** | Use split payment | [optional] |
+| **use_gross_prices** | **Boolean** | Use gross prices | [optional] |
+| **e_invoice** | **Boolean** | Indicates if this is an e-invoice. | [optional] |
 | **ei_data** | [**IssuedDocumentEiData**](IssuedDocumentEiData.md) |  | [optional] |
 | **ei_cassa_type** | **String** | Einvoice cassa type | [optional] |
 | **ei_cassa2_type** | **String** | Einvoice cassa2 type | [optional] |
@@ -52,11 +52,11 @@
 | **show_payments** | **Boolean** | Shows the expiration dates of the payments on the document. | [optional] |
 | **show_payment_method** | **Boolean** | Show the payment method details on the document. | [optional] |
 | **show_totals** | [**ShowTotalsMode**](ShowTotalsMode.md) |  | [optional][default to &#39;all&#39;] |
-| **show_paypal_button** | **Boolean** | Show paypal button | [optional][default to false] |
-| **show_notification_button** | **Boolean** | Show notification button | [optional][default to false] |
+| **show_paypal_button** | **Boolean** | Show paypal button | [optional] |
+| **show_notification_button** | **Boolean** | Show notification button | [optional] |
 | **show_tspay_button** | **Boolean** | Show ts pay button. | [optional] |
 | **delivery_note** | **Boolean** |  | [optional] |
-| **accompanying_invoice** | **Boolean** | Attach an accompanying invoice. | [optional][default to false] |
+| **accompanying_invoice** | **Boolean** | Attach an accompanying invoice. | [optional] |
 | **dn_number** | **Integer** | Number (for the attached delivery note). | [optional] |
 | **dn_date** | **Date** | Date (for the attached delivery note). | [optional] |
 | **dn_ai_packages_number** | **String** | Number of packages (for the attached delivery note). | [optional] |
