@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 2.0.5 (2022-03-01)
+
+
+### Bug Fixes
+
+* models are now nullable ([a6a4b50](https://github.com/fattureincloud/fattureincloud-ruby-sdk/commit/a6a4b50a3d849b9bf3a706ef30e4cf290f36267a))
+
 ### 2.0.4 (2022-02-08)
 
 
