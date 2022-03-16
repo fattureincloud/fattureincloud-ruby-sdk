@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 2.0.6 (2022-03-16)
+
+
+### Bug Fixes
+
+* added filter parameter and detailed countries method ([0f78c48](https://github.com/fattureincloud/fattureincloud-ruby-sdk/commit/0f78c487202d8cd8a2d68010a1876e45ee047000))
+
 ### 2.0.5 (2022-03-01)
 
 
