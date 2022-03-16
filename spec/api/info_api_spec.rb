@@ -33,6 +33,9 @@ describe 'InfoApi' do
     @list_countries_response_obj = {"data":["Italia","Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla","..."]}
     allow(@api_instance).to receive(:list_countries) {@list_countries_response_obj}
   
+    @list_detailed_countries_response_obj = {"data": [{"name": "Italia", "settings_name": "Italia", "iso": "IT", "fiscal_iso": "IT", "uic": "086"}, {"name": "Albania", "settings_name": "Albania", "iso": "AL", "fiscal_iso": "AL", "uic": "087"}]}
+    allow(@api_instance).to receive(:list_detailed_countries) {@list_detailed_countries_response_obj}
+
     @list_currencies_response_obj = {"data":[{"id":"AED","symbol":"AED","html_symbol":"AED","exchange_rate":"4.09500"},{"id":"EUR","symbol":"\u20ac","html_symbol":"€","exchange_rate":"1.00000"}]}
     allow(@api_instance).to receive(:list_currencies) {@list_currencies_response_obj}
   
@@ -139,6 +142,22 @@ describe 'InfoApi' do
       response = @api_instance.list_countries(2)
       response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @list_countries_response_obj.to_json
+      actual_json = response.to_json
+
+      expect(actual_json).to eq(expected_json)
+    end
+  end
+
+  # unit tests for list_detailed_countries
+  # List Detailed Countries
+  # Lists the supported countries.
+  # @param [Hash] opts the optional parameters
+  # @return [ListDetailedCountriesResponse]
+  describe 'list_detailed_countries test' do
+    it 'should work' do
+      response = @api_instance.list_detailed_countries(2)
+      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
+      expected_json = @list_detailed_countries_response_obj.to_json
       actual_json = response.to_json
 
       expect(actual_json).to eq(expected_json)
