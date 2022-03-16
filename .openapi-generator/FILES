@@ -52,8 +52,9 @@ docs/CreateVatTypeRequest.md
 docs/CreateVatTypeResponse.md
 docs/Currency.md
 docs/DefaultPaymentTermsType.md
+docs/DetailedCountry.md
 docs/DocumentTemplate.md
-docs/EinvoiceRejectionReason.md
+docs/EInvoiceRejectionReason.md
 docs/EmailData.md
 docs/EmailDataDefaultSenderEmail.md
 docs/EmailSchedule.md
@@ -121,6 +122,7 @@ docs/ListCostCentersResponse.md
 docs/ListCountriesResponse.md
 docs/ListCurrenciesResponse.md
 docs/ListDeliveryNotesDefaultCausalsResponse.md
+docs/ListDetailedCountriesResponse.md
 docs/ListF24Response.md
 docs/ListF24ResponseAggregatedData.md
 docs/ListF24ResponseAggregation.md
@@ -289,8 +291,9 @@ lib/fattureincloud_ruby_sdk/models/create_vat_type_request.rb
 lib/fattureincloud_ruby_sdk/models/create_vat_type_response.rb
 lib/fattureincloud_ruby_sdk/models/currency.rb
 lib/fattureincloud_ruby_sdk/models/default_payment_terms_type.rb
+lib/fattureincloud_ruby_sdk/models/detailed_country.rb
 lib/fattureincloud_ruby_sdk/models/document_template.rb
-lib/fattureincloud_ruby_sdk/models/einvoice_rejection_reason.rb
+lib/fattureincloud_ruby_sdk/models/e_invoice_rejection_reason.rb
 lib/fattureincloud_ruby_sdk/models/email_data.rb
 lib/fattureincloud_ruby_sdk/models/email_data_default_sender_email.rb
 lib/fattureincloud_ruby_sdk/models/email_schedule.rb
@@ -355,6 +358,7 @@ lib/fattureincloud_ruby_sdk/models/list_cost_centers_response.rb
 lib/fattureincloud_ruby_sdk/models/list_countries_response.rb
 lib/fattureincloud_ruby_sdk/models/list_currencies_response.rb
 lib/fattureincloud_ruby_sdk/models/list_delivery_notes_default_causals_response.rb
+lib/fattureincloud_ruby_sdk/models/list_detailed_countries_response.rb
 lib/fattureincloud_ruby_sdk/models/list_f24_response.rb
 lib/fattureincloud_ruby_sdk/models/list_f24_response_aggregated_data.rb
 lib/fattureincloud_ruby_sdk/models/list_f24_response_aggregation.rb
@@ -456,6 +460,7 @@ lib/fattureincloud_ruby_sdk/models/verify_e_invoice_xml_response_data.rb
 lib/fattureincloud_ruby_sdk/version.rb
 spec/api_client_spec.rb
 spec/configuration_spec.rb
-spec/models/issued_document_options_spec.rb
-spec/models/vat_item_spec.rb
+spec/models/detailed_country_spec.rb
+spec/models/e_invoice_rejection_reason_spec.rb
+spec/models/list_detailed_countries_response_spec.rb
 spec/spec_helper.rb

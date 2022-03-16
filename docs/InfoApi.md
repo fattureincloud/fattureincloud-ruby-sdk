@@ -10,6 +10,7 @@ All URIs are relative to *https://api-v2.fattureincloud.it*
 | [**list_countries**](InfoApi.md#list_countries) | **GET** /info/countries | List Countries |
 | [**list_currencies**](InfoApi.md#list_currencies) | **GET** /info/currencies | List Currencies |
 | [**list_delivery_notes_default_causals**](InfoApi.md#list_delivery_notes_default_causals) | **GET** /info/dn_causals | List Delivery Notes Default Causals |
+| [**list_detailed_countries**](InfoApi.md#list_detailed_countries) | **GET** /info/detailed_countries | List Detailed Countries |
 | [**list_languages**](InfoApi.md#list_languages) | **GET** /info/languages | List Languages |
 | [**list_payment_accounts**](InfoApi.md#list_payment_accounts) | **GET** /c/{company_id}/info/payment_accounts | List Payment Accounts |
 | [**list_payment_methods**](InfoApi.md#list_payment_methods) | **GET** /c/{company_id}/info/payment_methods | List Payment Methods |
@@ -419,6 +420,72 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**ListDeliveryNotesDefaultCausalsResponse**](ListDeliveryNotesDefaultCausalsResponse.md)
+
+### Authorization
+
+[OAuth2AuthenticationCodeFlow](../README.md#OAuth2AuthenticationCodeFlow)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## list_detailed_countries
+
+> <ListDetailedCountriesResponse> list_detailed_countries
+
+List Detailed Countries
+
+Lists the supported countries.
+
+### Examples
+
+```ruby
+require 'time'
+require 'fattureincloud_ruby_sdk'
+# setup authorization
+FattureInCloud_Ruby_Sdk.configure do |config|
+  # Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
+  config.access_token = 'YOUR ACCESS TOKEN'
+end
+
+api_instance = FattureInCloud_Ruby_Sdk::InfoApi.new
+
+begin
+  # List Detailed Countries
+  result = api_instance.list_detailed_countries
+  p result
+rescue FattureInCloud_Ruby_Sdk::ApiError => e
+  puts "Error when calling InfoApi->list_detailed_countries: #{e}"
+end
+```
+
+#### Using the list_detailed_countries_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<ListDetailedCountriesResponse>, Integer, Hash)> list_detailed_countries_with_http_info
+
+```ruby
+begin
+  # List Detailed Countries
+  data, status_code, headers = api_instance.list_detailed_countries_with_http_info
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <ListDetailedCountriesResponse>
+rescue FattureInCloud_Ruby_Sdk::ApiError => e
+  puts "Error when calling InfoApi->list_detailed_countries_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ListDetailedCountriesResponse**](ListDetailedCountriesResponse.md)
 
 ### Authorization
 
