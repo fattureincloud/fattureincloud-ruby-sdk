@@ -13,5 +13,5 @@
 | **bank_iban** | **String** | Bank iban | [optional] |
 | **bank_name** | **String** | Bank name | [optional] |
 | **bank_beneficiary** | **String** | Bank beneficiary | [optional] |
-| **ei_payment_method** | **String** | EInvoice payment method | [optional] |
+| **ei_payment_method** | **String** | E-invoice payment method | [optional] |
 

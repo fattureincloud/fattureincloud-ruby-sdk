@@ -4,19 +4,19 @@ All URIs are relative to *https://api-v2.fattureincloud.it*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**get_e_invoice_rejection_reason**](IssuedEInvoicesApi.md#get_e_invoice_rejection_reason) | **GET** /c/{company_id}/issued_documents/{document_id}/e_invoice/error_reason | Get EInvoice rejection reason |
+| [**get_e_invoice_rejection_reason**](IssuedEInvoicesApi.md#get_e_invoice_rejection_reason) | **GET** /c/{company_id}/issued_documents/{document_id}/e_invoice/error_reason | Get e-invoice rejection reason |
 | [**get_e_invoice_xml**](IssuedEInvoicesApi.md#get_e_invoice_xml) | **GET** /c/{company_id}/issued_documents/{document_id}/e_invoice/xml | Get e-invoice XML |
 | [**send_e_invoice**](IssuedEInvoicesApi.md#send_e_invoice) | **POST** /c/{company_id}/issued_documents/{document_id}/e_invoice/send | Send the e-invoice |
-| [**verify_e_invoice_xml**](IssuedEInvoicesApi.md#verify_e_invoice_xml) | **GET** /c/{company_id}/issued_documents/{document_id}/e_invoice/xml_verify | Verify e-invoice xml |
+| [**verify_e_invoice_xml**](IssuedEInvoicesApi.md#verify_e_invoice_xml) | **GET** /c/{company_id}/issued_documents/{document_id}/e_invoice/xml_verify | Verify e-invoice XML |
 
 
 ## get_e_invoice_rejection_reason
 
 > <GetEInvoiceRejectionReasonResponse> get_e_invoice_rejection_reason(company_id, document_id)
 
-Get EInvoice rejection reason
+Get e-invoice rejection reason
 
-Get EInvoice rejection reason
+Get e-invoice rejection reason
 
 ### Examples
 
@@ -34,7 +34,7 @@ company_id = 12345 # Integer | The ID of the company.
 document_id = 56 # Integer | The ID of the document.
 
 begin
-  # Get EInvoice rejection reason
+  # Get e-invoice rejection reason
   result = api_instance.get_e_invoice_rejection_reason(company_id, document_id)
   p result
 rescue FattureInCloud_Ruby_Sdk::ApiError => e
@@ -50,7 +50,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # Get EInvoice rejection reason
+  # Get e-invoice rejection reason
   data, status_code, headers = api_instance.get_e_invoice_rejection_reason_with_http_info(company_id, document_id)
   p status_code # => 2xx
   p headers # => { ... }
@@ -235,9 +235,9 @@ end
 
 > <VerifyEInvoiceXmlResponse> verify_e_invoice_xml(company_id, document_id)
 
-Verify e-invoice xml
+Verify e-invoice XML
 
-Verifies the e-invoice xml format. Checks if all of the mandatory fields are filled and compliant to the right format.
+Verifies the e-invoice XML format. Checks if all of the mandatory fields are filled and compliant to the right format.
 
 ### Examples
 
@@ -255,7 +255,7 @@ company_id = 12345 # Integer | The ID of the company.
 document_id = 56 # Integer | The ID of the document.
 
 begin
-  # Verify e-invoice xml
+  # Verify e-invoice XML
   result = api_instance.verify_e_invoice_xml(company_id, document_id)
   p result
 rescue FattureInCloud_Ruby_Sdk::ApiError => e
@@ -271,7 +271,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # Verify e-invoice xml
+  # Verify e-invoice XML
   data, status_code, headers = api_instance.verify_e_invoice_xml_with_http_info(company_id, document_id)
   p status_code # => 2xx
   p headers # => { ... }
