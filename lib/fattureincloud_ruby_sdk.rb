@@ -244,6 +244,14 @@ require 'fattureincloud_ruby_sdk/api/suppliers_api'
 require 'fattureincloud_ruby_sdk/api/taxes_api'
 require 'fattureincloud_ruby_sdk/api/user_api'
 
+# filter
+require 'fattureincloud_ruby_sdk/filter/operator'
+require 'fattureincloud_ruby_sdk/filter/condition'
+require 'fattureincloud_ruby_sdk/filter/conjunction'
+require 'fattureincloud_ruby_sdk/filter/disjunction'
+require 'fattureincloud_ruby_sdk/filter/filter'
+require 'fattureincloud_ruby_sdk/filter/expression'
+
 module FattureInCloud_Ruby_Sdk
   class << self
     # Customize default settings for the SDK using block.
