@@ -4,7 +4,7 @@ module FattureInCloud_Ruby_Sdk
     # Builds the query from the expression.
     # @return [String] The query.
     def build_query
-      throw 'build_query not implemented'
+      raise 'build_query not implemented'
     end
   end
 end
