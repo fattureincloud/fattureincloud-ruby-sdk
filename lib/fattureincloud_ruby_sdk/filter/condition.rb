@@ -19,11 +19,11 @@ module FattureInCloud_Ruby_Sdk
     # @return [String] The query.
     def build_query
       if @field.nil? || @field == ''
-        throw 'cannot build a query with an empty condition'
+        raise 'cannot build a query with an empty condition'
       end
 
       if @operator.nil? || @operator == ''
-        throw 'cannot build a query with an empty operator'
+        raise 'cannot build a query with an empty operator'
       end
 
       if @value.nil? || @value == 'null'
