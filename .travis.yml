@@ -11,4 +11,4 @@ script:
   - bundle install --path vendor/bundle
   - bundle exec rspec
   - gem build fattureincloud_ruby_sdk.gemspec
-  - gem install ./fattureincloud_ruby_sdk-2.0.6.gem
+  - gem install ./fattureincloud_ruby_sdk-2.0.7.gem
