@@ -460,7 +460,4 @@ lib/fattureincloud_ruby_sdk/models/verify_e_invoice_xml_response_data.rb
 lib/fattureincloud_ruby_sdk/version.rb
 spec/api_client_spec.rb
 spec/configuration_spec.rb
-spec/models/detailed_country_spec.rb
-spec/models/e_invoice_rejection_reason_spec.rb
-spec/models/list_detailed_countries_response_spec.rb
 spec/spec_helper.rb
