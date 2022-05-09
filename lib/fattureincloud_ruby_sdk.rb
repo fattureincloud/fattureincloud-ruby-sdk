@@ -252,6 +252,10 @@ require 'fattureincloud_ruby_sdk/filter/disjunction'
 require 'fattureincloud_ruby_sdk/filter/filter'
 require 'fattureincloud_ruby_sdk/filter/expression'
 
+#oauth
+require 'fattureincloud_ruby_sdk/oauth2/oauth2'
+require 'fattureincloud_ruby_sdk/oauth2/scope'
+
 module FattureInCloud_Ruby_Sdk
   class << self
     # Customize default settings for the SDK using block.
