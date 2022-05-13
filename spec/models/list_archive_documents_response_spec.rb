@@ -20,32 +20,32 @@ require 'date'
 describe FattureInCloud_Ruby_Sdk::ListArchiveDocumentsResponse do
   instance = FattureInCloud_Ruby_Sdk::ListArchiveDocumentsResponse.new
   instance.current_page = 2
-    instance.first_page_url = "page=1"
-    instance.from = 1
-    instance.last_page = 3
-    instance.last_page_url = "page=3"
-    instance.next_page_url = "page=3"
-    instance.path = "/archive"
-    instance.per_page = 50
-    instance.prev_page_url = "page=1"
-    instance.to = 3
-    instance.total = 155
-    instance.data = [
-      {
-        id: 12345,
-        date: "2021-08-20",
-        category: "Altri documenti",
-        description: "spesa 2",
-        attachment_url: "spesa2.pdf"
-      },
-      {
-        id: 12346,
-        date: "2021-08-19",
-        category: "Altri documenti",
-        description: "spesa 1",
-        attachment_url: "spesa1.pdf"
-      }
-    ]
+  instance.first_page_url = "page=1"
+  instance.from = 1
+  instance.last_page = 3
+  instance.last_page_url = "page=3"
+  instance.next_page_url = "page=3"
+  instance.path = "/archive"
+  instance.per_page = 50
+  instance.prev_page_url = "page=1"
+  instance.to = 3
+  instance.total = 155
+  instance.data = [
+    {
+      id: 12345,
+      date: "2021-08-20",
+      category: "Altri documenti",
+      description: "spesa 2",
+      attachment_url: "spesa2.pdf"
+    },
+    {
+      id: 12346,
+      date: "2021-08-19",
+      category: "Altri documenti",
+      description: "spesa 1",
+      attachment_url: "spesa1.pdf"
+    }
+  ]
 
   describe 'test an instance of ListArchiveDocumentsResponse' do
     it 'should create an instance of ListArchiveDocumentsResponse' do

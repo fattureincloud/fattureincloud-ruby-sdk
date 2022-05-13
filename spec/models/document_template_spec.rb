@@ -21,7 +21,7 @@ describe FattureInCloud_Ruby_Sdk::DocumentTemplate do
   instance = FattureInCloud_Ruby_Sdk::DocumentTemplate.new
   instance.id = 10
   instance.name = "New Standard S1"
-  instance.type = "";
+  instance.type = ""
   
   describe 'test an instance of DocumentTemplate' do
     it 'should create an instance of DocumentTemplate' do

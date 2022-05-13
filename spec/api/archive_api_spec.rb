@@ -21,20 +21,20 @@ describe 'ArchiveApi' do
     # run before each test
     @api_instance = FattureInCloud_Ruby_Sdk::ArchiveApi.new
 
-    @create_archive_document_response_obj = {"data":{"id":12345,"date":"2021-08-20","category":"Altri documenti","description":"spesa 2","attachment_url":"spesa2.pdf"}}
-    allow(@api_instance).to receive(:create_archive_document) {@create_archive_document_response_obj}
+    @create_archive_document_response_obj = { "data": { "id": 12345, "date": "2021-08-20", "category": "Altri documenti", "description": "spesa 2", "attachment_url": "spesa2.pdf" } }
+    allow(@api_instance).to receive(:create_archive_document) { @create_archive_document_response_obj }
 
-    @get_archive_document_response_obj = {"data":{"id":12345,"date":"2021-08-20","category":"Altri documenti","description":"spesa 2","attachment_url":"spesa2.pdf"}}
-    allow(@api_instance).to receive(:get_archive_document) {@get_archive_document_response_obj}
+    @get_archive_document_response_obj = { "data": { "id": 12345, "date": "2021-08-20", "category": "Altri documenti", "description": "spesa 2", "attachment_url": "spesa2.pdf" } }
+    allow(@api_instance).to receive(:get_archive_document) { @get_archive_document_response_obj }
 
-    @list_archive_documents_response_obj = {"current_page":1,"data":[{"id":12345,"date":"2021-08-20","category":"Altri documenti","description":"spesa 2","attachment_url":"spesa2.pdf"},{"id":12346,"date":"2021-08-19","category":"Altri documenti","description":"spesa 1","attachment_url":"spesa1.pdf"}],"first_page_url":"page=1","from":1,"last_page":1,"last_page_url":"page=1","next_page_url":nil,"path":"\/archive","per_page":50,"prev_page_url":nil,"to":2,"total":2}
-    allow(@api_instance).to receive(:list_archive_documents) {@list_archive_documents_response_obj}
+    @list_archive_documents_response_obj = { "current_page": 1, "data": [{ "id": 12345, "date": "2021-08-20", "category": "Altri documenti", "description": "spesa 2", "attachment_url": "spesa2.pdf" }, { "id": 12346, "date": "2021-08-19", "category": "Altri documenti", "description": "spesa 1", "attachment_url": "spesa1.pdf" }], "first_page_url": "page=1", "from": 1, "last_page": 1, "last_page_url": "page=1", "next_page_url": nil, "path": "\/archive", "per_page": 50, "prev_page_url": nil, "to": 2, "total": 2 }
+    allow(@api_instance).to receive(:list_archive_documents) { @list_archive_documents_response_obj }
   
-    @modify_archive_document_response_obj = {"data":{"id":12345,"date":"2021-08-20","category":"Altri documenti","description":"spesa 2","attachment_url":"spesa2.pdf"}}
-    allow(@api_instance).to receive(:modify_archive_document) {@modify_archive_document_response_obj}
+    @modify_archive_document_response_obj = { "data": { "id": 12345, "date": "2021-08-20", "category": "Altri documenti", "description": "spesa 2", "attachment_url": "spesa2.pdf" } }
+    allow(@api_instance).to receive(:modify_archive_document) { @modify_archive_document_response_obj }
 
-    @upload_archive_document_attachment_response_obj = {"data":{"attachment_token":"YmMyNWYxYzIwMTU3N2Y4ZGE3ZjZiMzg5OWY0ODNkZDQveXl5LmRvYw"}}
-    allow(@api_instance).to receive(:upload_archive_document_attachment) {@upload_archive_document_attachment_response_obj}
+    @upload_archive_document_attachment_response_obj = { "data": { "attachment_token": "YmMyNWYxYzIwMTU3N2Y4ZGE3ZjZiMzg5OWY0ODNkZDQveXl5LmRvYw" } }
+    allow(@api_instance).to receive(:upload_archive_document_attachment) { @upload_archive_document_attachment_response_obj }
 
   end
   after do
@@ -56,7 +56,7 @@ describe 'ArchiveApi' do
   # @return [CreateArchiveDocumentResponse]
   describe 'create_archive_document test' do
     it 'should work' do
-      opts = {"data":{"date":"2021-08-20","category":"Altri documenti","description":"spesa 1","attachment_token":"YjFrbmNlc3E0NmNuaW5ocXQ0b2p0c202NG1ncWx6ZmsvZmlsZW5hbWU"}}
+      opts = { "data": { "date": "2021-08-20", "category": "Altri documenti", "description": "spesa 1", "attachment_token": "YjFrbmNlc3E0NmNuaW5ocXQ0b2p0c202NG1ncWx6ZmsvZmlsZW5hbWU" } }
       response = @api_instance.create_archive_document(2, opts)
       response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @create_archive_document_response_obj.to_json

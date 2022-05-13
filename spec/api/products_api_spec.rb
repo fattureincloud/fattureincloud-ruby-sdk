@@ -21,17 +21,17 @@ describe 'ProductsApi' do
     # run before each test
     @api_instance = FattureInCloud_Ruby_Sdk::ProductsApi.new
 
-    @create_product_response_obj = {"data":{"id":12345,"name":"Tavolo di marmo","code":"TAVOLO003","net_price":240,"gross_price":280,"use_gross_price":false,"net_cost":0,"measure":"","description":"Tavolo in marmo pregiato","category":"arredamento","in_stock":true,"default_vat":{"id":3,"value":22,"description":"Non imponibile art. 123","notes":"IVA non imponibile ai sensi dell\'articolo 123, comma 2","is_disabled":false}}}
-    allow(@api_instance).to receive(:create_product) {@create_product_response_obj}
+    @create_product_response_obj = { "data": { "id": 12345, "name": "Tavolo di marmo", "code": "TAVOLO003", "net_price": 240, "gross_price": 280, "use_gross_price": false, "net_cost": 0, "measure": "", "description": "Tavolo in marmo pregiato", "category": "arredamento", "in_stock": true, "default_vat": { "id": 3, "value": 22, "description": "Non imponibile art. 123", "notes": "IVA non imponibile ai sensi dell\'articolo 123, comma 2", "is_disabled": false } } }
+    allow(@api_instance).to receive(:create_product) { @create_product_response_obj }
 
-    @get_product_response_obj = {"data":{"id":12345,"name":"Tavolo di marmo","code":"TAVOLO003","net_price":240,"gross_price":280,"use_gross_price":false,"net_cost":0,"measure":"","description":"Tavolo in marmo pregiato","category":"arredamento","in_stock":true,"default_vat":{"id":3,"value":22,"description":"Non imponibile art. 123","notes":"IVA non imponibile ai sensi dell\'articolo 123, comma 2","is_disabled":false}}}
-    allow(@api_instance).to receive(:get_product) {@get_product_response_obj}
+    @get_product_response_obj = { "data": { "id": 12345, "name": "Tavolo di marmo", "code": "TAVOLO003", "net_price": 240, "gross_price": 280, "use_gross_price": false, "net_cost": 0, "measure": "", "description": "Tavolo in marmo pregiato", "category": "arredamento", "in_stock": true, "default_vat": { "id": 3, "value": 22, "description": "Non imponibile art. 123", "notes": "IVA non imponibile ai sensi dell\'articolo 123, comma 2", "is_disabled": false } } }
+    allow(@api_instance).to receive(:get_product) { @get_product_response_obj }
 
-    @list_products_response_obj = {"current_page":1,"data":[{"id":12345,"name":"Tavolo di marmo","code":"TAVOLO003","net_price":240,"gross_price":280,"use_gross_price":false,"net_cost":0,"measure":"","description":"Tavolo in marmo pregiato","category":"arredamento","in_stock":true,"default_vat":{"id":3,"value":22,"description":"Non imponibile art. 123","notes":"IVA non imponibile ai sensi dell\'articolo 123, comma 2","is_disabled":false}},{"id":12346,"name":"Tavolo di legno","code":"TAVOLO001","net_price":120,"gross_price":160,"use_gross_price":false,"net_cost":0,"measure":"","description":"Tavolo in legno pregiato","category":"arredamento","in_stock":true,"default_vat":{"id":3,"value":22,"description":"Non imponibile art. 123","notes":"IVA non imponibile ai sensi dell\'articolo 123, comma 2","is_disabled":false}}],"first_page_url":"page=1","from":1,"last_page":1,"last_page_url":"page=1","next_page_url":"page=2","path":"products","per_page":50,"prev_page_url":nil,"to":55,"total":55}
-    allow(@api_instance).to receive(:list_products) {@list_products_response_obj}
+    @list_products_response_obj = { "current_page": 1, "data": [{ "id": 12345, "name": "Tavolo di marmo", "code": "TAVOLO003", "net_price": 240, "gross_price": 280, "use_gross_price": false, "net_cost": 0, "measure": "", "description": "Tavolo in marmo pregiato", "category": "arredamento", "in_stock": true, "default_vat": { "id": 3, "value": 22, "description": "Non imponibile art. 123", "notes": "IVA non imponibile ai sensi dell\'articolo 123, comma 2", "is_disabled": false } }, { "id": 12346, "name": "Tavolo di legno", "code": "TAVOLO001", "net_price": 120, "gross_price": 160, "use_gross_price": false, "net_cost": 0, "measure": "", "description": "Tavolo in legno pregiato", "category": "arredamento", "in_stock": true, "default_vat": { "id": 3, "value": 22, "description": "Non imponibile art. 123", "notes": "IVA non imponibile ai sensi dell\'articolo 123, comma 2", "is_disabled": false } }], "first_page_url": "page=1", "from": 1, "last_page": 1, "last_page_url": "page=1", "next_page_url": "page=2", "path": "products", "per_page": 50, "prev_page_url": nil, "to": 55, "total": 55 }
+    allow(@api_instance).to receive(:list_products) { @list_products_response_obj }
     
-    @modify_product_response_obj = {"data":{"id":12345,"name":"Tavolo di marmo","code":"TAVOLO003","net_price":240,"gross_price":280,"use_gross_price":false,"net_cost":0,"measure":"","description":"Tavolo in marmo pregiato","category":"arredamento","in_stock":true,"default_vat":{"id":3,"value":22,"description":"Non imponibile art. 123","notes":"IVA non imponibile ai sensi dell\'articolo 123, comma 2","is_disabled":false}}}
-    allow(@api_instance).to receive(:modify_product) {@modify_product_response_obj}
+    @modify_product_response_obj = { "data": { "id": 12345, "name": "Tavolo di marmo", "code": "TAVOLO003", "net_price": 240, "gross_price": 280, "use_gross_price": false, "net_cost": 0, "measure": "", "description": "Tavolo in marmo pregiato", "category": "arredamento", "in_stock": true, "default_vat": { "id": 3, "value": 22, "description": "Non imponibile art. 123", "notes": "IVA non imponibile ai sensi dell\'articolo 123, comma 2", "is_disabled": false } } }
+    allow(@api_instance).to receive(:modify_product) { @modify_product_response_obj }
 
   end
 
@@ -54,7 +54,7 @@ describe 'ProductsApi' do
   # @return [CreateProductResponse]
   describe 'create_product test' do
     it 'should work' do
-      opts = {"data":{"name":"Tavolo di marmo","code":"TAVOLOso003","net_price":240,"gross_price":280,"use_gross_price":false,"net_cost":0,"measure":"","description":"Tavolo in marmo pregiato","category":"arredamento","in_stock":true,"default_vat":{"id":1409,"value":22,"description":"Non imponibile art. 123","notes":"IVA non imponibile ai sensi dell'articolo 123, comma 2","is_disabled":false}}}
+      opts = { "data": { "name": "Tavolo di marmo", "code": "TAVOLOso003", "net_price": 240, "gross_price": 280, "use_gross_price": false, "net_cost": 0, "measure": "", "description": "Tavolo in marmo pregiato", "category": "arredamento", "in_stock": true, "default_vat": { "id": 1409, "value": 22, "description": "Non imponibile art. 123", "notes": "IVA non imponibile ai sensi dell'articolo 123, comma 2", "is_disabled": false } } }
       response = @api_instance.create_product(2, opts)
       response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @create_product_response_obj.to_json
@@ -130,7 +130,7 @@ describe 'ProductsApi' do
   # @return [ModifyProductResponse]
   describe 'modify_product test' do
     it 'should work' do
-      opts = {"data":{"name":"Tavolo di marmo","code":"TAVOLOso003","net_price":240,"gross_price":280,"use_gross_price":false,"net_cost":0,"measure":"","description":"Tavolo in marmo pregiato","category":"arredamento","in_stock":true,"default_vat":{"id":1409,"value":22,"description":"Non imponibile art. 123","notes":"IVA non imponibile ai sensi dell'articolo 123, comma 2","is_disabled":false}}}
+      opts = { "data": { "name": "Tavolo di marmo", "code": "TAVOLOso003", "net_price": 240, "gross_price": 280, "use_gross_price": false, "net_cost": 0, "measure": "", "description": "Tavolo in marmo pregiato", "category": "arredamento", "in_stock": true, "default_vat": { "id": 1409, "value": 22, "description": "Non imponibile art. 123", "notes": "IVA non imponibile ai sensi dell'articolo 123, comma 2", "is_disabled": false } } }
       response = @api_instance.modify_product(2, 22, opts)
       response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @modify_product_response_obj.to_json

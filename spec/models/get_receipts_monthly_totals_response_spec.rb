@@ -80,7 +80,7 @@ describe FattureInCloud_Ruby_Sdk::GetReceiptsMonthlyTotalsResponse do
       gross: 0,
       count: 21
     }
-  ];
+  ]
 
   describe 'test an instance of GetReceiptsMonthlyTotalsResponse' do
     it 'should create an instance of GetReceiptsMonthlyTotalsResponse' do

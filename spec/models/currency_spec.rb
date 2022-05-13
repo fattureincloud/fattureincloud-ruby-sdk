@@ -19,10 +19,10 @@ require 'date'
 # Please update as you see appropriate
 describe FattureInCloud_Ruby_Sdk::Currency do
   instance = FattureInCloud_Ruby_Sdk::Currency.new
-  instance.id = "EUR";
-  instance.symbol = "€";
-  instance.html_symbol = "&euro;";
-  instance.exchange_rate = "1.00000";
+  instance.id = "EUR"
+  instance.symbol = "€"
+  instance.html_symbol = "&euro;"
+  instance.exchange_rate = "1.00000"
 
   describe 'test an instance of Currency' do
     it 'should create an instance of Currency' do

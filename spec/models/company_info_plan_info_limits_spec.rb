@@ -19,10 +19,10 @@ require 'date'
 # Please update as you see appropriate
 describe FattureInCloud_Ruby_Sdk::CompanyInfoPlanInfoLimits do
   instance = FattureInCloud_Ruby_Sdk::CompanyInfoPlanInfoLimits.new
-  instance.clients = 5000;
-  instance.suppliers = 5000;
-  instance.products = 5000;
-  instance.documents = 3000;
+  instance.clients = 5000
+  instance.suppliers = 5000
+  instance.products = 5000
+  instance.documents = 3000
 
   describe 'test an instance of CompanyInfoPlanInfoLimits' do
     it 'should create an instance of CompanyInfoPlanInfoLimits' do

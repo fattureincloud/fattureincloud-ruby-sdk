@@ -34,32 +34,32 @@ describe FattureInCloud_Ruby_Sdk::IssuedDocumentPreCreateInfoDefaultValues do
         type: "accompanying_invoice",
         name: "FT Accompagnatoria 1"
     },
-    instance.notes = "";
-    instance.rivalsa = 0;
-    instance.cassa = 0;
-    instance.withholding_tax = 0;
-    instance.withholding_tax_taxable = 100;
-    instance.other_withholding_tax = 0;
-    instance.use_gross_prices = false;
-    instance.payment_method = {
-      id: 123321,
-      name: "Bonifico bancario",
-      is_default: true,
-      details: [
-        {
-        title: "Banca",
-        description: "Indesa"
-        },
-        {
-        title: "IBAN",
-        description: "IT17QA12345600000003498936"
-        },
-        {
-        title: "Intestatario",
-        description: "Mario Rossi"
-        }
-      ]
-    }
+    instance.notes = ""
+  instance.rivalsa = 0
+  instance.cassa = 0
+  instance.withholding_tax = 0
+  instance.withholding_tax_taxable = 100
+  instance.other_withholding_tax = 0
+  instance.use_gross_prices = false
+  instance.payment_method = {
+    id: 123321,
+    name: "Bonifico bancario",
+    is_default: true,
+    details: [
+      {
+      title: "Banca",
+      description: "Indesa"
+      },
+      {
+      title: "IBAN",
+      description: "IT17QA12345600000003498936"
+      },
+      {
+      title: "Intestatario",
+      description: "Mario Rossi"
+      }
+    ]
+  }
   describe 'test an instance of IssuedDocumentPreCreateInfoDefaultValues' do
     it 'should create an instance of IssuedDocumentPreCreateInfoDefaultValues' do
       expect(instance).to be_instance_of(FattureInCloud_Ruby_Sdk::IssuedDocumentPreCreateInfoDefaultValues)

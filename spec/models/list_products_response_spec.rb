@@ -19,17 +19,17 @@ require 'date'
 # Please update as you see appropriate
 describe FattureInCloud_Ruby_Sdk::ListProductsResponse do
   instance = FattureInCloud_Ruby_Sdk::ListProductsResponse.new
-  instance.current_page = 2;
-  instance.first_page_url = "page=1";
-  instance.from = 1;
-  instance.last_page = 3;
-  instance.last_page_url = "page=3";
-  instance.next_page_url = "page=3";
-  instance.path = "/archive";
-  instance.per_page = 50;
-  instance.prev_page_url = "page=1";
-  instance.to = 3;
-  instance.total = 155;
+  instance.current_page = 2
+  instance.first_page_url = "page=1"
+  instance.from = 1
+  instance.last_page = 3
+  instance.last_page_url = "page=3"
+  instance.next_page_url = "page=3"
+  instance.path = "/archive"
+  instance.per_page = 50
+  instance.prev_page_url = "page=1"
+  instance.to = 3
+  instance.total = 155
   instance.data = [
     {
       id: 12345,

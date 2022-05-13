@@ -19,26 +19,26 @@ require 'date'
 # Please update as you see appropriate
 describe FattureInCloud_Ruby_Sdk::CreateProductRequest do
   instance = FattureInCloud_Ruby_Sdk::CreateProductRequest.new
-    instance.data = {
-      id: 12345,
-      name: "Tavolo di marmo",
-      code: "TAVOLO003",
-      net_price: 240,
-      gross_price: 280,
-      use_gross_price: false,
-      net_cost: 0,
-      measure: "",
-      description: "Tavolo in marmo pregiato",
-      category: "arredamento",
-      in_stock: true,
-      default_vat: {
-        id: 3,
-        value: 22,
-        description: "Non imponibile art. 123",
-        notes: "IVA non imponibile ai sensi dell\'articolo 123, comma 2",
-        is_disabled: false
-      }
+  instance.data = {
+    id: 12345,
+    name: "Tavolo di marmo",
+    code: "TAVOLO003",
+    net_price: 240,
+    gross_price: 280,
+    use_gross_price: false,
+    net_cost: 0,
+    measure: "",
+    description: "Tavolo in marmo pregiato",
+    category: "arredamento",
+    in_stock: true,
+    default_vat: {
+      id: 3,
+      value: 22,
+      description: "Non imponibile art. 123",
+      notes: "IVA non imponibile ai sensi dell\'articolo 123, comma 2",
+      is_disabled: false
     }
+  }
 
   describe 'test an instance of CreateProductRequest' do
     it 'should create an instance of CreateProductRequest' do

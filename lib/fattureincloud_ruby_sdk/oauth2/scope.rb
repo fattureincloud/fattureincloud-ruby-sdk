@@ -1,7 +1,6 @@
 module FattureInCloud_Ruby_Sdk
   # The Scope class represents the scope enum.
   class Scope
-
     # Read permission to the Clients registry
     ENTITY_CLIENTS_READ = 'entity.clients:r'.freeze
 
@@ -62,10 +61,10 @@ module FattureInCloud_Ruby_Sdk
     # Write permission to the issued Delivery Notes
     ISSUED_DOCUMENTS_DELIVERY_NOTES_ALL = 'issued_documents.delivery_notes:a'.freeze
 
-    # Read permission to the issued Received Documents
+    # Read permission to the Received Documents
     RECEIVED_DOCUMENTS_READ = 'received_documents:r'.freeze
 
-    # Write permission to the issued Received Documents
+    # Write permission to the Received Documents
     RECEIVED_DOCUMENTS_ALL = 'received_documents:a'.freeze
 
     # Read permission to the Stock movements
@@ -106,6 +105,5 @@ module FattureInCloud_Ruby_Sdk
 
     # Read permission to the company Situation
     SITUATION_READ = 'situation:r'.freeze
-
   end
 end

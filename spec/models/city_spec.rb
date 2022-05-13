@@ -19,9 +19,9 @@ require 'date'
 # Please update as you see appropriate
 describe FattureInCloud_Ruby_Sdk::City do
   instance = FattureInCloud_Ruby_Sdk::City.new
-  instance.postal_code = "89867";
-  instance.city = "Zungri";
-  instance.province = "VV";    
+  instance.postal_code = "89867"
+  instance.city = "Zungri"
+  instance.province = "VV"    
 
   describe 'test an instance of City' do
     it 'should create an instance of City' do

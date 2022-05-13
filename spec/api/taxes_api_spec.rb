@@ -21,20 +21,20 @@ describe 'TaxesApi' do
     # run before each test
     @api_instance = FattureInCloud_Ruby_Sdk::TaxesApi.new
 
-    @create_f24_response_obj = {"data":{"amount":840.36,"description":"PAGAMENTO IVA 2021","due_date":"2021-12-31","status":"paid","payment_account":{"id":111},"attachment_token":"b19c01da9b1688fb73d0d9e8ad"}}
-    allow(@api_instance).to receive(:create_f24) {@create_f24_response_obj}
+    @create_f24_response_obj = { "data": { "amount": 840.36, "description": "PAGAMENTO IVA 2021", "due_date": "2021-12-31", "status": "paid", "payment_account": { "id": 111 }, "attachment_token": "b19c01da9b1688fb73d0d9e8ad" } }
+    allow(@api_instance).to receive(:create_f24) { @create_f24_response_obj }
   
-    @get_f24_response_obj = {"data":{"id":12345,"amount":840.36,"description":"PAGAMENTO IVA 2021","due_date":"2021-12-31","status":"paid","payment_account":{"id":111,"name":"Indesa - carta conto"},"attachment_url":"b19c01da9b1688fb73d0d9e8adae89a8.pdf"}}
-    allow(@api_instance).to receive(:get_f24) {@get_f24_response_obj}
+    @get_f24_response_obj = { "data": { "id": 12345, "amount": 840.36, "description": "PAGAMENTO IVA 2021", "due_date": "2021-12-31", "status": "paid", "payment_account": { "id": 111, "name": "Indesa - carta conto" }, "attachment_url": "b19c01da9b1688fb73d0d9e8adae89a8.pdf" } }
+    allow(@api_instance).to receive(:get_f24) { @get_f24_response_obj }
   
-    @list_f24_response_obj = {"current_page":1,"data":[{"id":12345,"amount":840.36,"description":"PAGAMENTO IVA 2021","due_date":"2021-12-31","status":"paid","payment_account":{"id":111,"name":"Indesa - carta conto"},"attachment_url":"b19c01da9b1688fb73d0d9e8adae89a8.pdf"},{"id":12346,"amount":810.62,"description":"PAGAMENTO IVA 2020","due_date":"2020-12-31","status":"paid","payment_account":{"id":111,"name":"Indesa - carta conto"},"attachment_url":"bb6df8490dad4770353b378ea926d8ba.pdf"}],"first_page_url":"page=1","from":1,"last_page":1,"last_page_url":"page=1","next_page_url":nil,"path":"taxes","per_page":50,"prev_page_url":nil,"to":2,"total":2,"aggregated_data":{"amount":"6438.96"}}
-    allow(@api_instance).to receive(:list_f24) {@list_f24_response_obj}
+    @list_f24_response_obj = { "current_page": 1, "data": [{ "id": 12345, "amount": 840.36, "description": "PAGAMENTO IVA 2021", "due_date": "2021-12-31", "status": "paid", "payment_account": { "id": 111, "name": "Indesa - carta conto" }, "attachment_url": "b19c01da9b1688fb73d0d9e8adae89a8.pdf" }, { "id": 12346, "amount": 810.62, "description": "PAGAMENTO IVA 2020", "due_date": "2020-12-31", "status": "paid", "payment_account": { "id": 111, "name": "Indesa - carta conto" }, "attachment_url": "bb6df8490dad4770353b378ea926d8ba.pdf" }], "first_page_url": "page=1", "from": 1, "last_page": 1, "last_page_url": "page=1", "next_page_url": nil, "path": "taxes", "per_page": 50, "prev_page_url": nil, "to": 2, "total": 2, "aggregated_data": { "amount": "6438.96" } }
+    allow(@api_instance).to receive(:list_f24) { @list_f24_response_obj }
   
-    @modify_f24_response_obj = {"data":{"id":12345,"amount":840.36,"description":"PAGAMENTO IVA 2021","due_date":"2021-12-31","status":"paid","payment_account":{"id":111,"name":"Indesa - carta conto"},"attachment_url":"b19c01da9b1688fb73d0d9e8adae89a8.pdf"}}
-    allow(@api_instance).to receive(:modify_f24) {@modify_f24_response_obj}
+    @modify_f24_response_obj = { "data": { "id": 12345, "amount": 840.36, "description": "PAGAMENTO IVA 2021", "due_date": "2021-12-31", "status": "paid", "payment_account": { "id": 111, "name": "Indesa - carta conto" }, "attachment_url": "b19c01da9b1688fb73d0d9e8adae89a8.pdf" } }
+    allow(@api_instance).to receive(:modify_f24) { @modify_f24_response_obj }
   
-    @upload_f24_attachment_response_obj = {"data":{"attachment_token":"YmMyNWYxYzIwMTU3N2Y4ZGE3ZjZiMzg5OWY0ODNkZDQveXl5LmRvYw"}}
-    allow(@api_instance).to receive(:upload_f24_attachment) {@upload_f24_attachment_response_obj}
+    @upload_f24_attachment_response_obj = { "data": { "attachment_token": "YmMyNWYxYzIwMTU3N2Y4ZGE3ZjZiMzg5OWY0ODNkZDQveXl5LmRvYw" } }
+    allow(@api_instance).to receive(:upload_f24_attachment) { @upload_f24_attachment_response_obj }
 
   end
 
@@ -57,7 +57,7 @@ describe 'TaxesApi' do
   # @return [CreateF24Response]
   describe 'create_f24 test' do
     it 'should work' do
-      opts = {"data":{"amount":840.36,"description":"PAGAMENTO IVA 2021","due_date":"2021-12-31","status":"paid","payment_account":{"id":21,"name":"Indesa - carta conto"}}}
+      opts = { "data": { "amount": 840.36, "description": "PAGAMENTO IVA 2021", "due_date": "2021-12-31", "status": "paid", "payment_account": { "id": 21, "name": "Indesa - carta conto" } } }
       response = @api_instance.create_f24(2, opts)
       response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @create_f24_response_obj.to_json
@@ -146,7 +146,7 @@ describe 'TaxesApi' do
   # @return [ModifyF24Response]
   describe 'modify_f24 test' do
     it 'should work' do
-      opts = {"data":{"amount":840.36,"description":"PAGAMENTO IVA 2021","due_date":"2021-12-31","status":"paid","payment_account":{"id":21,"name":"Indesa - carta conto"}}}
+      opts = { "data": { "amount": 840.36, "description": "PAGAMENTO IVA 2021", "due_date": "2021-12-31", "status": "paid", "payment_account": { "id": 21, "name": "Indesa - carta conto" } } }
       response = @api_instance.modify_f24(2, 22, opts)
       response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @modify_f24_response_obj.to_json

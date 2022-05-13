@@ -49,7 +49,7 @@ describe FattureInCloud_Ruby_Sdk::CreateReceiptRequest do
       }
     ]
   }
-  instance.autocomplete_number = true;
+  instance.autocomplete_number = true
 
   describe 'test an instance of CreateReceiptRequest' do
     it 'should create an instance of CreateReceiptRequest' do
