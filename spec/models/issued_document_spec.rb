@@ -51,7 +51,7 @@ describe FattureInCloud_Ruby_Sdk::IssuedDocument do
   instance.show_paypal_button = true
   instance.show_notification_button = false
   instance.is_marked = false
-  instance.date = Date.new(2021,12,21)
+  instance.date = Date.new(2021, 12, 21)
   instance.number = 1
   instance.notes = ""
   instance.rivalsa = 0.0
@@ -61,12 +61,12 @@ describe FattureInCloud_Ruby_Sdk::IssuedDocument do
   instance.other_withholding_tax = 0.0
   instance.use_split_payment = false
   instance.attachment_url = "kdijrnf893hnwkfk45f50f.pdf"
-  instance.seen_date = Date.new(2021,12,21)
-  instance.next_due_date = Date.new(2021,12,21)
+  instance.seen_date = Date.new(2021, 12, 21)
+  instance.next_due_date = Date.new(2021, 12, 21)
   instance.url = "y12h45rn9yf2mse0p43t7ec90vr.pdf"
   instance.show_tspay_button = false
   instance.dn_number = 3
-  instance.dn_date = Date.new(2021,12,21)
+  instance.dn_date = Date.new(2021, 12, 21)
   instance.dn_ai_packages_number = 4
   instance.dn_ai_weight = 3
   instance.dn_ai_causal = "causal"
@@ -138,7 +138,7 @@ describe FattureInCloud_Ruby_Sdk::IssuedDocument do
   instance.payments_list = [
    {
      amount: 75,
-     due_date: Date.new(2021,12,21),
+     due_date: Date.new(2021, 12, 21),
      paid_date: nil,
      id: 69078013,
      payment_terms: {

@@ -19,7 +19,7 @@ require 'date'
 # Please update as you see appropriate
 describe FattureInCloud_Ruby_Sdk::SendEInvoiceResponseData do
   instance = FattureInCloud_Ruby_Sdk::SendEInvoiceResponseData.new
-  instance.name = "CARICATO";
+  instance.name = "CARICATO"
   instance.date = Date.new(2021, 12, 21)
 
   describe 'test an instance of SendEInvoiceResponseData' do

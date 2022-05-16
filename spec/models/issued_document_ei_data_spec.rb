@@ -19,20 +19,20 @@ require 'date'
 # Please update as you see appropriate
 describe FattureInCloud_Ruby_Sdk::IssuedDocumentEiData do
   instance = FattureInCloud_Ruby_Sdk::IssuedDocumentEiData.new
-  instance.vat_kind = "I";
-  instance.od_number = 2;
-  instance.od_date = Date.new(2021, 12, 21);
-  instance.original_document_type = "ordine";
-  instance.cig = " ";
-  instance.cup = " ";
+  instance.vat_kind = "I"
+  instance.od_number = 2
+  instance.od_date = Date.new(2021, 12, 21)
+  instance.original_document_type = "ordine"
+  instance.cig = " "
+  instance.cup = " "
   instance.payment_method = {
     id: 5
-  };
-  instance.bank_name = " ";
-  instance.bank_iban = " ";
-  instance.bank_beneficiary = " ";
-  instance.invoice_number = " ";
-  instance.invoice_date = Date.new(2021, 12, 21);    
+  }
+  instance.bank_name = " "
+  instance.bank_iban = " "
+  instance.bank_beneficiary = " "
+  instance.invoice_number = " "
+  instance.invoice_date = Date.new(2021, 12, 21)    
 
   describe 'test an instance of IssuedDocumentEiData' do
     it 'should create an instance of IssuedDocumentEiData' do

@@ -21,17 +21,17 @@ describe 'IssuedEInvoicesApi' do
     # run before each test
     @api_instance = FattureInCloud_Ruby_Sdk::IssuedEInvoicesApi.new
 
-    @send_e_invoice_response_obj = {"data":{"name":"CARICATO","date":"2021-08-23 10:38:03"}};
-    allow(@api_instance).to receive(:send_e_invoice) {@send_e_invoice_response_obj}
+    @send_e_invoice_response_obj = { "data": { "name": "CARICATO", "date": "2021-08-23 10:38:03" } }
+    allow(@api_instance).to receive(:send_e_invoice) { @send_e_invoice_response_obj }
   
-    @verify_e_invoice_xml_response_obj = {"data":{"success":true}};
-    allow(@api_instance).to receive(:verify_e_invoice_xml) {@verify_e_invoice_xml_response_obj}
+    @verify_e_invoice_xml_response_obj = { "data": { "success": true } }
+    allow(@api_instance).to receive(:verify_e_invoice_xml) { @verify_e_invoice_xml_response_obj }
 
-    @get_e_invoice_xml_response = "<xml-fattura>fields</xml-fattura>";
-    allow(@api_instance).to receive(:get_e_invoice_xml) {@get_e_invoice_xml_response}
+    @get_e_invoice_xml_response = "<xml-fattura>fields</xml-fattura>"
+    allow(@api_instance).to receive(:get_e_invoice_xml) { @get_e_invoice_xml_response }
 
-    @get_e_invoice_rejection_reason_response_obj = {"data":{"reason": "invalid data"}};
-    allow(@api_instance).to receive(:get_e_invoice_rejection_reason) {@get_e_invoice_rejection_reason_response_obj}
+    @get_e_invoice_rejection_reason_response_obj = { "data": { "reason": "invalid data" } }
+    allow(@api_instance).to receive(:get_e_invoice_rejection_reason) { @get_e_invoice_rejection_reason_response_obj }
 
   end
 

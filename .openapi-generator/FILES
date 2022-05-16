@@ -1,5 +1,4 @@
 .rspec
-.rubocop.yml
 .travis.yml
 Gemfile
 README.md

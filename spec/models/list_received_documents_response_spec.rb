@@ -19,17 +19,17 @@ require 'date'
 # Please update as you see appropriate
 describe FattureInCloud_Ruby_Sdk::ListReceivedDocumentsResponse do
   instance = FattureInCloud_Ruby_Sdk::ListReceivedDocumentsResponse.new
-  instance.current_page = 2;
-  instance.first_page_url = "page=1";
-  instance.from = 1;
-  instance.last_page = 3;
-  instance.last_page_url = "page=3";
-  instance.next_page_url = "page=3";
-  instance.path = "/archive";
-  instance.per_page = 50;
-  instance.prev_page_url = "page=1";
-  instance.to = 3;
-  instance.total = 155;
+  instance.current_page = 2
+  instance.first_page_url = "page=1"
+  instance.from = 1
+  instance.last_page = 3
+  instance.last_page_url = "page=3"
+  instance.next_page_url = "page=3"
+  instance.path = "/archive"
+  instance.per_page = 50
+  instance.prev_page_url = "page=1"
+  instance.to = 3
+  instance.total = 155
   instance.data = [
     {
       id: 12345,
@@ -61,7 +61,7 @@ describe FattureInCloud_Ruby_Sdk::ListReceivedDocumentsResponse do
       amount_other_withholding_tax: 0,
       tax_deductibility: 50,
       vat_deductibility: 100,
-      items_list:nil,
+      items_list: nil,
       payments_list: [
         {
           amount: 592,
@@ -81,8 +81,8 @@ describe FattureInCloud_Ruby_Sdk::ListReceivedDocumentsResponse do
         }
       ],
       attachment_url: "spesa_ger5i783t45hu6ti.pdf",
-      attachment_preview_url:nil,
-      extra_data:nil
+      attachment_preview_url: nil,
+      extra_data: nil
     },
     {
       id: 12346,
@@ -114,7 +114,7 @@ describe FattureInCloud_Ruby_Sdk::ListReceivedDocumentsResponse do
       amount_other_withholding_tax: 0,
       tax_deductibility: 50,
       vat_deductibility: 100,
-      items_list:nil,
+      items_list: nil,
       payments_list: [
         {
           amount: 645.69,
@@ -134,8 +134,8 @@ describe FattureInCloud_Ruby_Sdk::ListReceivedDocumentsResponse do
         }
       ],
       attachment_url: "spesa_gjsd567e5hu6ti.pdf",
-      attachment_preview_url:nil,
-      extra_data:nil
+      attachment_preview_url: nil,
+      extra_data: nil
     }
   ]
 
@@ -145,11 +145,11 @@ describe FattureInCloud_Ruby_Sdk::ListReceivedDocumentsResponse do
     end
   end
 
-    describe 'test attribute "current_page"' do
-    it 'should work' do
-      expect(instance.current_page).to be_a_kind_of(Numeric)
-    end
+  describe 'test attribute "current_page"' do
+  it 'should work' do
+    expect(instance.current_page).to be_a_kind_of(Numeric)
   end
+end
 
   describe 'test attribute "first_page_url"' do
     it 'should work' do

@@ -19,8 +19,8 @@ require 'date'
 # Please update as you see appropriate
 describe FattureInCloud_Ruby_Sdk::SendEInvoiceRequestData do
   instance = FattureInCloud_Ruby_Sdk::SendEInvoiceRequestData.new
-  instance.cassa_type = "ct";
-  instance.withholding_tax_causal = "causale";
+  instance.cassa_type = "ct"
+  instance.withholding_tax_causal = "causale"
 
   describe 'test an instance of SendEInvoiceRequestData' do
     it 'should create an instance of SendEInvoiceRequestData' do

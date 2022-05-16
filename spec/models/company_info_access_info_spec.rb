@@ -23,8 +23,8 @@ describe FattureInCloud_Ruby_Sdk::CompanyInfoAccessInfo do
   describe 'test an instance of CompanyInfoAccessInfo' do
     it 'should create an instance of CompanyInfoAccessInfo' do
       expect(instance).to be_instance_of(FattureInCloud_Ruby_Sdk::CompanyInfoAccessInfo)
-      instance.role = "master";
-      instance.through_accountant = false;
+      instance.role = "master"
+      instance.through_accountant = false
       instance.permissions = {
           fic_situation: "read",
           fic_clients: "write",

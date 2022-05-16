@@ -19,7 +19,7 @@ require 'date'
 # Please update as you see appropriate
 describe FattureInCloud_Ruby_Sdk::ListF24ResponseAggregatedData do
   instance = FattureInCloud_Ruby_Sdk::ListF24ResponseAggregatedData.new
-  instance.amount = 6438.96;
+  instance.amount = 6438.96
 
   describe 'test an instance of ListF24ResponseAggregatedData' do
     it 'should create an instance of ListF24ResponseAggregatedData' do

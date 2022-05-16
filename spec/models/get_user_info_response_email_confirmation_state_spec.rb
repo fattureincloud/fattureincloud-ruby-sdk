@@ -19,7 +19,7 @@ require 'date'
 # Please update as you see appropriate
 describe FattureInCloud_Ruby_Sdk::GetUserInfoResponseEmailConfirmationState do
   instance = FattureInCloud_Ruby_Sdk::GetUserInfoResponseEmailConfirmationState.new
-  instance.need_confirmation = false;
+  instance.need_confirmation = false
 
   describe 'test an instance of GetUserInfoResponseEmailConfirmationState' do
     it 'should create an instance of GetUserInfoResponseEmailConfirmationState' do

@@ -19,8 +19,8 @@ require 'date'
 # Please update as you see appropriate
 describe FattureInCloud_Ruby_Sdk::ReceivedDocumentEntity do
   instance = FattureInCloud_Ruby_Sdk::ReceivedDocumentEntity.new
-  instance.id = 111;
-  instance.name = "Hotel Rubino Palace";    
+  instance.id = 111
+  instance.name = "Hotel Rubino Palace"    
 
   describe 'test an instance of ReceivedDocumentEntity' do
     it 'should create an instance of ReceivedDocumentEntity' do

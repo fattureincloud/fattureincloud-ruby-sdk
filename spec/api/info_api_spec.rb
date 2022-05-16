@@ -21,53 +21,53 @@ describe 'InfoApi' do
     # run before each test
     @api_instance = FattureInCloud_Ruby_Sdk::InfoApi.new
 
-    @list_archive_categories_response_obj = {"data":["Altri documenti","Conferme d\'ordine","Contratti","Dichiarazioni dei redditi","Documenti per detrazioni","Estratti conto bancari","Estratti conto carte di credito"]}
-    allow(@api_instance).to receive(:list_archive_categories) {@list_archive_categories_response_obj}
+    @list_archive_categories_response_obj = { "data": ["Altri documenti", "Conferme d\'ordine", "Contratti", "Dichiarazioni dei redditi", "Documenti per detrazioni", "Estratti conto bancari", "Estratti conto carte di credito"] }
+    allow(@api_instance).to receive(:list_archive_categories) { @list_archive_categories_response_obj }
   
-    @list_cities_response_obj = {"data":[{"postal_code":"89867","city":"Zungri","province":"VV"},{"postal_code":"83020","city":"Aiello del Sabato","province":"AV"},{"postal_code":"83011","city":"Altavilla Irpina","province":"AV"}]}
-    allow(@api_instance).to receive(:list_cities) {@list_cities_response_obj}
+    @list_cities_response_obj = { "data": [{ "postal_code": "89867", "city": "Zungri", "province": "VV" }, { "postal_code": "83020", "city": "Aiello del Sabato", "province": "AV" }, { "postal_code": "83011", "city": "Altavilla Irpina", "province": "AV" }] }
+    allow(@api_instance).to receive(:list_cities) { @list_cities_response_obj }
   
-    @list_cost_centers_response_obj = {"data":["Negozio Bergamo","Negozio Milano"]}
-    allow(@api_instance).to receive(:list_cost_centers) {@list_cost_centers_response_obj}
+    @list_cost_centers_response_obj = { "data": ["Negozio Bergamo", "Negozio Milano"] }
+    allow(@api_instance).to receive(:list_cost_centers) { @list_cost_centers_response_obj }
   
-    @list_countries_response_obj = {"data":["Italia","Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla","..."]}
-    allow(@api_instance).to receive(:list_countries) {@list_countries_response_obj}
+    @list_countries_response_obj = { "data": ["Italia", "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Anguilla", "..."] }
+    allow(@api_instance).to receive(:list_countries) { @list_countries_response_obj }
   
-    @list_detailed_countries_response_obj = {"data": [{"name": "Italia", "settings_name": "Italia", "iso": "IT", "fiscal_iso": "IT", "uic": "086"}, {"name": "Albania", "settings_name": "Albania", "iso": "AL", "fiscal_iso": "AL", "uic": "087"}]}
-    allow(@api_instance).to receive(:list_detailed_countries) {@list_detailed_countries_response_obj}
+    @list_detailed_countries_response_obj = { "data": [{ "name": "Italia", "settings_name": "Italia", "iso": "IT", "fiscal_iso": "IT", "uic": "086" }, { "name": "Albania", "settings_name": "Albania", "iso": "AL", "fiscal_iso": "AL", "uic": "087" }] }
+    allow(@api_instance).to receive(:list_detailed_countries) { @list_detailed_countries_response_obj }
 
-    @list_currencies_response_obj = {"data":[{"id":"AED","symbol":"AED","html_symbol":"AED","exchange_rate":"4.09500"},{"id":"EUR","symbol":"\u20ac","html_symbol":"€","exchange_rate":"1.00000"}]}
-    allow(@api_instance).to receive(:list_currencies) {@list_currencies_response_obj}
+    @list_currencies_response_obj = { "data": [{ "id": "AED", "symbol": "AED", "html_symbol": "AED", "exchange_rate": "4.09500" }, { "id": "EUR", "symbol": "\u20ac", "html_symbol": "€", "exchange_rate": "1.00000" }] }
+    allow(@api_instance).to receive(:list_currencies) { @list_currencies_response_obj }
   
-    @list_delivery_notes_default_causals_response_obj = {"data":["Vendita","Conto visione","Conto deposito","Conto vendita","Tentata vendita","Prestito d\'uso","Conto lavorazione","Omaggio","Riparazione","Reso per accredito","Reso per sostituzione"]}
-    allow(@api_instance).to receive(:list_delivery_notes_default_causals) {@list_delivery_notes_default_causals_response_obj}
+    @list_delivery_notes_default_causals_response_obj = { "data": ["Vendita", "Conto visione", "Conto deposito", "Conto vendita", "Tentata vendita", "Prestito d\'uso", "Conto lavorazione", "Omaggio", "Riparazione", "Reso per accredito", "Reso per sostituzione"] }
+    allow(@api_instance).to receive(:list_delivery_notes_default_causals) { @list_delivery_notes_default_causals_response_obj }
   
-    @list_languages_response_obj = {"data":[{"code":"it","name":"Italiano"},{"code":"en","name":"Inglese"}]}
-    allow(@api_instance).to receive(:list_languages) {@list_languages_response_obj}
+    @list_languages_response_obj = { "data": [{ "code": "it", "name": "Italiano" }, { "code": "en", "name": "Inglese" }] }
+    allow(@api_instance).to receive(:list_languages) { @list_languages_response_obj }
   
-    @list_payment_accounts_response_obj = {"data":[{"id":21,"name":"Indesa - Carta conto","type":"standard","iban":nil,"sia":nil,"virtual":false},{"id":109,"name":"Indesa","type":"bank","iban":"IT17A1234563200000003498936","sia":"IN234","virtual":false}]}
-    allow(@api_instance).to receive(:list_payment_accounts) {@list_payment_accounts_response_obj}
+    @list_payment_accounts_response_obj = { "data": [{ "id": 21, "name": "Indesa - Carta conto", "type": "standard", "iban": nil, "sia": nil, "virtual": false }, { "id": 109, "name": "Indesa", "type": "bank", "iban": "IT17A1234563200000003498936", "sia": "IN234", "virtual": false }] }
+    allow(@api_instance).to receive(:list_payment_accounts) { @list_payment_accounts_response_obj }
     
-    @list_payment_methods_response_obj = {"data":[{"id":12345,"name":"Carta di credito","is_default":false,"default_payment_account":nil},{"id":12346,"name":"Bonifico bancario","is_default":true,"default_payment_account":nil}]}
-    allow(@api_instance).to receive(:list_payment_methods) {@list_payment_methods_response_obj}
+    @list_payment_methods_response_obj = { "data": [{ "id": 12345, "name": "Carta di credito", "is_default": false, "default_payment_account": nil }, { "id": 12346, "name": "Bonifico bancario", "is_default": true, "default_payment_account": nil }] }
+    allow(@api_instance).to receive(:list_payment_methods) { @list_payment_methods_response_obj }
     
-    @list_product_categories_response_obj = {"data":["Alimentari","Arredamento"]}
-    allow(@api_instance).to receive(:list_product_categories) {@list_product_categories_response_obj}
+    @list_product_categories_response_obj = { "data": ["Alimentari", "Arredamento"] }
+    allow(@api_instance).to receive(:list_product_categories) { @list_product_categories_response_obj }
   
-    @list_received_document_categories_response_obj = {"data":["Telefono e internet","Assicurazioni e quote","Auto ed altri veicoli","Computer e accessori","Server e hosting"]}
-    allow(@api_instance).to receive(:list_received_document_categories) {@list_received_document_categories_response_obj}
+    @list_received_document_categories_response_obj = { "data": ["Telefono e internet", "Assicurazioni e quote", "Auto ed altri veicoli", "Computer e accessori", "Server e hosting"] }
+    allow(@api_instance).to receive(:list_received_document_categories) { @list_received_document_categories_response_obj }
   
-    @list_revenue_centers_response_obj = {"data":["Negozio Bergamo","Negozio Milano"]}
-    allow(@api_instance).to receive(:list_revenue_centers) {@list_revenue_centers_response_obj}
+    @list_revenue_centers_response_obj = { "data": ["Negozio Bergamo", "Negozio Milano"] }
+    allow(@api_instance).to receive(:list_revenue_centers) { @list_revenue_centers_response_obj }
   
-    @list_templates_response_obj = {"data":[{"id":10,"name":"New Standard S1"},{"id":106,"name":"Minimalist"}]}
-    allow(@api_instance).to receive(:list_templates) {@list_templates_response_obj}
+    @list_templates_response_obj = { "data": [{ "id": 10, "name": "New Standard S1" }, { "id": 106, "name": "Minimalist" }] }
+    allow(@api_instance).to receive(:list_templates) { @list_templates_response_obj }
   
-    @list_units_of_measure_response_obj = {"data":["pezzi","kg","litri","ore","giorni","km","mesi"]}
-    allow(@api_instance).to receive(:list_units_of_measure) {@list_units_of_measure_response_obj}
+    @list_units_of_measure_response_obj = { "data": ["pezzi", "kg", "litri", "ore", "giorni", "km", "mesi"] }
+    allow(@api_instance).to receive(:list_units_of_measure) { @list_units_of_measure_response_obj }
   
-    @list_vat_types_response_obj = {"data":[{"id":0,"value":22,"description":"Non imponibile art. 123","notes":"IVA non imponibile ai sensi dell\'articolo 123, comma 2","e_invoice":"string","ei_type":2,"ei_description":"string","editable":true},{"id":1010,"value":0,"description":"NON IMPONIBILE IVA EX ART. 8 COMMA 1 LETT.A","notes":"","e_invoice":false,"ei_type":0,"ei_description":nil,"is_disabled":false,"editable":true}]}
-    allow(@api_instance).to receive(:list_vat_types) {@list_vat_types_response_obj}
+    @list_vat_types_response_obj = { "data": [{ "id": 0, "value": 22, "description": "Non imponibile art. 123", "notes": "IVA non imponibile ai sensi dell\'articolo 123, comma 2", "e_invoice": "string", "ei_type": 2, "ei_description": "string", "editable": true }, { "id": 1010, "value": 0, "description": "NON IMPONIBILE IVA EX ART. 8 COMMA 1 LETT.A", "notes": "", "e_invoice": false, "ei_type": 0, "ei_description": nil, "is_disabled": false, "editable": true }] }
+    allow(@api_instance).to receive(:list_vat_types) { @list_vat_types_response_obj }
   end
 
   after do
