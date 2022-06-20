@@ -8,5 +8,5 @@
 | **ei_status** | **String** | E-invoice status. | [optional] |
 | **solution** | **String** | Error solution. | [optional] |
 | **code** | **String** | Error code. | [optional] |
-| **date** | **Date** | Rejection date. | [optional] |
+| **date** | **Time** | Rejection date. | [optional] |
 
