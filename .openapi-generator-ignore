@@ -26,3 +26,5 @@ git_push.sh
 
 # Linter conf
 .rubocop.yml
+
+.gitlab-ci.yml
