@@ -105,7 +105,7 @@ end
 
 api_instance = FattureInCloud_Ruby_Sdk::CashbookApi.new
 company_id = 12345 # Integer | The ID of the company.
-document_id = 56 # Integer | The ID of the document.
+document_id = 'document_id_example' # String | The ID of the document.
 
 begin
   # Delete Cashbook Entry
@@ -138,7 +138,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **company_id** | **Integer** | The ID of the company. |  |
-| **document_id** | **Integer** | The ID of the document. |  |
+| **document_id** | **String** | The ID of the document. |  |
 
 ### Return type
 
@@ -175,7 +175,7 @@ end
 
 api_instance = FattureInCloud_Ruby_Sdk::CashbookApi.new
 company_id = 12345 # Integer | The ID of the company.
-document_id = 56 # Integer | The ID of the document.
+document_id = 'document_id_example' # String | The ID of the document.
 opts = {
   fields: 'fields_example', # String | List of comma-separated fields.
   fieldset: 'basic' # String | Name of the fieldset.
@@ -213,7 +213,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **company_id** | **Integer** | The ID of the company. |  |
-| **document_id** | **Integer** | The ID of the document. |  |
+| **document_id** | **String** | The ID of the document. |  |
 | **fields** | **String** | List of comma-separated fields. | [optional] |
 | **fieldset** | **String** | Name of the fieldset. | [optional] |
 
@@ -333,7 +333,7 @@ end
 
 api_instance = FattureInCloud_Ruby_Sdk::CashbookApi.new
 company_id = 12345 # Integer | The ID of the company.
-document_id = 56 # Integer | The ID of the document.
+document_id = 'document_id_example' # String | The ID of the document.
 opts = {
   modify_cashbook_entry_request: FattureInCloud_Ruby_Sdk::ModifyCashbookEntryRequest.new # ModifyCashbookEntryRequest | Cashbook Entry
 }
@@ -370,7 +370,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **company_id** | **Integer** | The ID of the company. |  |
-| **document_id** | **Integer** | The ID of the document. |  |
+| **document_id** | **String** | The ID of the document. |  |
 | **modify_cashbook_entry_request** | [**ModifyCashbookEntryRequest**](ModifyCashbookEntryRequest.md) | Cashbook Entry | [optional] |
 
 ### Return type

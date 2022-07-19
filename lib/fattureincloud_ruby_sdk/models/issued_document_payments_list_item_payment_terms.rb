@@ -14,18 +14,40 @@ require 'date'
 require 'time'
 
 module FattureInCloud_Ruby_Sdk
-  class SenderEmail
-    # Id
-    attr_accessor :id
+  class IssuedDocumentPaymentsListItemPaymentTerms
+    # The number of days by which the payment must be made.
+    attr_accessor :days
 
-    # Email address
-    attr_accessor :email
+    # Payment terms type.
+    attr_accessor :type
+
+    class EnumAttributeValidator
+      attr_reader :datatype
+      attr_reader :allowable_values
+
+      def initialize(datatype, allowable_values)
+        @allowable_values = allowable_values.map do |value|
+          case datatype.to_s
+          when /Integer/i
+            value.to_i
+          when /Float/i
+            value.to_f
+          else
+            value
+          end
+        end
+      end
+
+      def valid?(value)
+        !value || allowable_values.include?(value)
+      end
+    end
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'id' => :'id',
-        :'email' => :'email'
+        :'days' => :'days',
+        :'type' => :'type'
       }
     end
 
@@ -37,16 +59,16 @@ module FattureInCloud_Ruby_Sdk
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'id' => :'Integer',
-        :'email' => :'String'
+        :'days' => :'Integer',
+        :'type' => :'String'
       }
     end
 
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
-        :'id',
-        :'email'
+        :'days',
+        :'type'
       ])
     end
 
@@ -54,23 +76,23 @@ module FattureInCloud_Ruby_Sdk
     # @param [Hash] attributes Model attributes in the form of hash
     def initialize(attributes = {})
       if (!attributes.is_a?(Hash))
-        fail ArgumentError, "The input argument (attributes) must be a hash in `FattureInCloud_Ruby_Sdk::SenderEmail` initialize method"
+        fail ArgumentError, "The input argument (attributes) must be a hash in `FattureInCloud_Ruby_Sdk::IssuedDocumentPaymentsListItemPaymentTerms` initialize method"
       end
 
       # check to see if the attribute exists and convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h|
         if (!self.class.attribute_map.key?(k.to_sym))
-          fail ArgumentError, "`#{k}` is not a valid attribute in `FattureInCloud_Ruby_Sdk::SenderEmail`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
+          fail ArgumentError, "`#{k}` is not a valid attribute in `FattureInCloud_Ruby_Sdk::IssuedDocumentPaymentsListItemPaymentTerms`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
         end
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'id')
-        self.id = attributes[:'id']
+      if attributes.key?(:'days')
+        self.days = attributes[:'days']
       end
 
-      if attributes.key?(:'email')
-        self.email = attributes[:'email']
+      if attributes.key?(:'type')
+        self.type = attributes[:'type']
       end
     end
 
@@ -84,7 +106,19 @@ module FattureInCloud_Ruby_Sdk
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      type_validator = EnumAttributeValidator.new('String', ["standard", "end_of_month"])
+      return false unless type_validator.valid?(@type)
       true
+    end
+
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] type Object to be assigned
+    def type=(type)
+      validator = EnumAttributeValidator.new('String', ["standard", "end_of_month"])
+      unless validator.valid?(type)
+        fail ArgumentError, "invalid value for \"type\", must be one of #{validator.allowable_values}."
+      end
+      @type = type
     end
 
     # Checks equality by comparing each attribute.
@@ -92,8 +126,8 @@ module FattureInCloud_Ruby_Sdk
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
-          email == o.email
+          days == o.days &&
+          type == o.type
     end
 
     # @see the `==` method
@@ -105,7 +139,7 @@ module FattureInCloud_Ruby_Sdk
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [id, email].hash
+      [days, type].hash
     end
 
     # Builds the object from hash

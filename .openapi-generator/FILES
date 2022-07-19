@@ -100,6 +100,7 @@ docs/IssuedDocumentExtraData.md
 docs/IssuedDocumentItemsListItem.md
 docs/IssuedDocumentOptions.md
 docs/IssuedDocumentPaymentsListItem.md
+docs/IssuedDocumentPaymentsListItemPaymentTerms.md
 docs/IssuedDocumentPreCreateInfo.md
 docs/IssuedDocumentPreCreateInfoDefaultValues.md
 docs/IssuedDocumentPreCreateInfoExtraDataDefaultValues.md
@@ -338,6 +339,7 @@ lib/fattureincloud_ruby_sdk/models/issued_document_extra_data.rb
 lib/fattureincloud_ruby_sdk/models/issued_document_items_list_item.rb
 lib/fattureincloud_ruby_sdk/models/issued_document_options.rb
 lib/fattureincloud_ruby_sdk/models/issued_document_payments_list_item.rb
+lib/fattureincloud_ruby_sdk/models/issued_document_payments_list_item_payment_terms.rb
 lib/fattureincloud_ruby_sdk/models/issued_document_pre_create_info.rb
 lib/fattureincloud_ruby_sdk/models/issued_document_pre_create_info_default_values.rb
 lib/fattureincloud_ruby_sdk/models/issued_document_pre_create_info_extra_data_default_values.rb
@@ -459,4 +461,5 @@ lib/fattureincloud_ruby_sdk/models/verify_e_invoice_xml_response_data.rb
 lib/fattureincloud_ruby_sdk/version.rb
 spec/api_client_spec.rb
 spec/configuration_spec.rb
+spec/models/issued_document_payments_list_item_payment_terms_spec.rb
 spec/spec_helper.rb
