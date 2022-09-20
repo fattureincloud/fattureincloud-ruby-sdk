@@ -5,5 +5,5 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **days** | **Integer** | The number of days by which the payment must be made. | [optional] |
-| **type** | **String** | Payment terms type. | [optional] |
+| **type** | [**PaymentTermsType**](PaymentTermsType.md) |  | [optional][default to &#39;standard&#39;] |
 

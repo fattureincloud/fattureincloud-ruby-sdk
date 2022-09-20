@@ -50,7 +50,6 @@ docs/CreateSupplierResponse.md
 docs/CreateVatTypeRequest.md
 docs/CreateVatTypeResponse.md
 docs/Currency.md
-docs/DefaultPaymentTermsType.md
 docs/DetailedCountry.md
 docs/DocumentTemplate.md
 docs/EInvoiceRejectionReason.md
@@ -180,6 +179,7 @@ docs/PaymentAccountType.md
 docs/PaymentMethod.md
 docs/PaymentMethodDetails.md
 docs/PaymentMethodType.md
+docs/PaymentTermsType.md
 docs/PermissionLevel.md
 docs/Permissions.md
 docs/PermissionsFicIssuedDocumentsDetailed.md
@@ -290,7 +290,6 @@ lib/fattureincloud_ruby_sdk/models/create_supplier_response.rb
 lib/fattureincloud_ruby_sdk/models/create_vat_type_request.rb
 lib/fattureincloud_ruby_sdk/models/create_vat_type_response.rb
 lib/fattureincloud_ruby_sdk/models/currency.rb
-lib/fattureincloud_ruby_sdk/models/default_payment_terms_type.rb
 lib/fattureincloud_ruby_sdk/models/detailed_country.rb
 lib/fattureincloud_ruby_sdk/models/document_template.rb
 lib/fattureincloud_ruby_sdk/models/e_invoice_rejection_reason.rb
@@ -417,6 +416,7 @@ lib/fattureincloud_ruby_sdk/models/payment_account_type.rb
 lib/fattureincloud_ruby_sdk/models/payment_method.rb
 lib/fattureincloud_ruby_sdk/models/payment_method_details.rb
 lib/fattureincloud_ruby_sdk/models/payment_method_type.rb
+lib/fattureincloud_ruby_sdk/models/payment_terms_type.rb
 lib/fattureincloud_ruby_sdk/models/permission_level.rb
 lib/fattureincloud_ruby_sdk/models/permissions.rb
 lib/fattureincloud_ruby_sdk/models/permissions_fic_issued_documents_detailed.rb
@@ -461,5 +461,5 @@ lib/fattureincloud_ruby_sdk/models/verify_e_invoice_xml_response_data.rb
 lib/fattureincloud_ruby_sdk/version.rb
 spec/api_client_spec.rb
 spec/configuration_spec.rb
-spec/models/issued_document_payments_list_item_payment_terms_spec.rb
+spec/models/payment_terms_type_spec.rb
 spec/spec_helper.rb

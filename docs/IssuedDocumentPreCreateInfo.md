@@ -17,4 +17,5 @@
 | **payment_methods_list** | [**Array&lt;PaymentMethod&gt;**](PaymentMethod.md) | Payment methods list. | [optional] |
 | **payment_accounts_list** | [**Array&lt;PaymentAccount&gt;**](PaymentAccount.md) | Payment accounts list. | [optional] |
 | **vat_types_list** | [**Array&lt;VatType&gt;**](VatType.md) | Vat types list. | [optional] |
+| **languages_list** | [**Array&lt;Language&gt;**](Language.md) | Languages list. | [optional] |
 
