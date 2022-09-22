@@ -1,4 +1,4 @@
-# FattureInCloud_Ruby_Sdk::DefaultPaymentTermsType
+# FattureInCloud_Ruby_Sdk::PaymentTermsType
 
 ## Properties
 

@@ -30,4 +30,6 @@
 | **attachment_url** | **String** | [Read Only] Attachment url. | [optional][readonly] |
 | **attachment_preview_url** | **String** | [Read Only] Attachment preview url. | [optional][readonly] |
 | **attachment_token** | **String** | Uploaded attachement token. | [optional] |
+| **created_at** | **String** |  | [optional] |
+| **updated_at** | **String** |  | [optional] |
 

@@ -26,7 +26,7 @@
 | **notes** | **String** | Extra notes. | [optional] |
 | **default_vat** | [**VatType**](VatType.md) |  | [optional] |
 | **default_payment_terms** | **Integer** | [Only for client] Default payment terms. | [optional] |
-| **default_payment_terms_type** | [**DefaultPaymentTermsType**](DefaultPaymentTermsType.md) |  | [optional][default to &#39;standard&#39;] |
+| **default_payment_terms_type** | [**PaymentTermsType**](PaymentTermsType.md) |  | [optional][default to &#39;standard&#39;] |
 | **default_payment_method** | [**PaymentMethod**](PaymentMethod.md) |  | [optional] |
 | **bank_name** | **String** | [Only for client] Bank name. | [optional] |
 | **bank_iban** | **String** | [Only for client] Iban. | [optional] |
@@ -35,8 +35,8 @@
 | **e_invoice** | **Boolean** | [Only for client] Use e-invoices. | [optional] |
 | **ei_code** | **String** | [Only for client] E-invoices code. | [optional] |
 | **has_intent_declaration** | **Boolean** | [Only for client] Has intent declaration. | [optional] |
-| **intent_declaration_protocol_number** | **Date** | [Only for client] Intent declaration protocol number. | [optional] |
-| **intent_declaration_protocol_date** | **String** | [Only for client] Intent declaration protocol date. | [optional] |
+| **intent_declaration_protocol_number** | **String** | [Only for client] Intent declaration protocol number. | [optional] |
+| **intent_declaration_protocol_date** | **Date** | [Only for client] Intent declaration protocol date. | [optional] |
 | **created_at** | **String** |  | [optional] |
 | **updated_at** | **String** |  | [optional] |
 

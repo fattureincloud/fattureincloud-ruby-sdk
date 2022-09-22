@@ -26,7 +26,7 @@
 | **notes** | **String** | Extra notes. | [optional] |
 | **default_vat** | [**VatType**](VatType.md) |  | [optional] |
 | **default_payment_terms** | **Integer** |  | [optional] |
-| **default_payment_terms_type** | [**DefaultPaymentTermsType**](DefaultPaymentTermsType.md) |  | [optional][default to &#39;standard&#39;] |
+| **default_payment_terms_type** | [**PaymentTermsType**](PaymentTermsType.md) |  | [optional][default to &#39;standard&#39;] |
 | **default_payment_method** | [**PaymentMethod**](PaymentMethod.md) |  | [optional] |
 | **bank_name** | **String** | Client bank name. | [optional] |
 | **bank_iban** | **String** | Client iban. | [optional] |
@@ -37,8 +37,8 @@
 | **discount_highlight** | **Boolean** | Discount Highlight. | [optional] |
 | **default_discount** | **Float** | Default discount. | [optional] |
 | **has_intent_declaration** | **Boolean** | Has intent declaration. | [optional] |
-| **intent_declaration_protocol_number** | **Date** | Intent declaration protocol number. | [optional] |
-| **intent_declaration_protocol_date** | **String** | Intent declaration protocol date. | [optional] |
+| **intent_declaration_protocol_number** | **String** | Intent declaration protocol number. | [optional] |
+| **intent_declaration_protocol_date** | **Date** | Intent declaration protocol date. | [optional] |
 | **created_at** | **String** |  | [optional] |
 | **updated_at** | **String** |  | [optional] |
 
