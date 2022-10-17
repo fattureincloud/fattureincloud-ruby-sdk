@@ -21,6 +21,10 @@ module FattureInCloud_Ruby_Sdk
     LIKE = 'like'.freeze
     # Contains operator.
     CONTAINS = 'contains'.freeze
+    # Not Like operator.
+    NOT_LIKE = 'not like'.freeze
+    # Not Contains operator.
+    NOT_CONTAINS = 'not contains'.freeze
     # Starts With operator.
     STARTS_WITH = 'starts with'.freeze
     # Ends With operator.
