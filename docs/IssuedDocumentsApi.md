@@ -12,9 +12,11 @@ All URIs are relative to *https://api-v2.fattureincloud.it*
 | [**get_issued_document**](IssuedDocumentsApi.md#get_issued_document) | **GET** /c/{company_id}/issued_documents/{document_id} | Get Issued Document |
 | [**get_issued_document_pre_create_info**](IssuedDocumentsApi.md#get_issued_document_pre_create_info) | **GET** /c/{company_id}/issued_documents/info | Get Issued Document Pre-create info |
 | [**get_new_issued_document_totals**](IssuedDocumentsApi.md#get_new_issued_document_totals) | **POST** /c/{company_id}/issued_documents/totals | Get New Issued Document Totals |
+| [**join_issued_documents**](IssuedDocumentsApi.md#join_issued_documents) | **GET** /c/{company_id}/issued_documents/join | Join issued documents |
 | [**list_issued_documents**](IssuedDocumentsApi.md#list_issued_documents) | **GET** /c/{company_id}/issued_documents | List Issued Documents |
 | [**modify_issued_document**](IssuedDocumentsApi.md#modify_issued_document) | **PUT** /c/{company_id}/issued_documents/{document_id} | Modify Issued Document |
 | [**schedule_email**](IssuedDocumentsApi.md#schedule_email) | **POST** /c/{company_id}/issued_documents/{document_id}/email | Schedule Email |
+| [**transform_issued_document**](IssuedDocumentsApi.md#transform_issued_document) | **GET** /c/{company_id}/issued_documents/transform | Transform issued document |
 | [**upload_issued_document_attachment**](IssuedDocumentsApi.md#upload_issued_document_attachment) | **POST** /c/{company_id}/issued_documents/attachment | Upload Issued Document Attachment |
 
 
@@ -598,6 +600,83 @@ end
 - **Accept**: application/json
 
 
+## join_issued_documents
+
+> <JoinIssuedDocumentsResponse> join_issued_documents(company_id, ids, opts)
+
+Join issued documents
+
+Joins issued documents.
+
+### Examples
+
+```ruby
+require 'time'
+require 'fattureincloud_ruby_sdk'
+# setup authorization
+FattureInCloud_Ruby_Sdk.configure do |config|
+  # Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
+  config.access_token = 'YOUR ACCESS TOKEN'
+end
+
+api_instance = FattureInCloud_Ruby_Sdk::IssuedDocumentsApi.new
+company_id = 12345 # Integer | The ID of the company.
+ids = '1,2,3,4' # String | Ids of the documents.
+opts = {
+  group: 0, # Integer | Group items.
+  e_invoice: 0 # Integer | New document e_invoice.
+}
+
+begin
+  # Join issued documents
+  result = api_instance.join_issued_documents(company_id, ids, opts)
+  p result
+rescue FattureInCloud_Ruby_Sdk::ApiError => e
+  puts "Error when calling IssuedDocumentsApi->join_issued_documents: #{e}"
+end
+```
+
+#### Using the join_issued_documents_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<JoinIssuedDocumentsResponse>, Integer, Hash)> join_issued_documents_with_http_info(company_id, ids, opts)
+
+```ruby
+begin
+  # Join issued documents
+  data, status_code, headers = api_instance.join_issued_documents_with_http_info(company_id, ids, opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <JoinIssuedDocumentsResponse>
+rescue FattureInCloud_Ruby_Sdk::ApiError => e
+  puts "Error when calling IssuedDocumentsApi->join_issued_documents_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **company_id** | **Integer** | The ID of the company. |  |
+| **ids** | **String** | Ids of the documents. |  |
+| **group** | **Integer** | Group items. | [optional] |
+| **e_invoice** | **Integer** | New document e_invoice. | [optional] |
+
+### Return type
+
+[**JoinIssuedDocumentsResponse**](JoinIssuedDocumentsResponse.md)
+
+### Authorization
+
+[OAuth2AuthenticationCodeFlow](../README.md#OAuth2AuthenticationCodeFlow)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## list_issued_documents
 
 > <ListIssuedDocumentsResponse> list_issued_documents(company_id, type, opts)
@@ -830,6 +909,85 @@ nil (empty response body)
 
 - **Content-Type**: application/json
 - **Accept**: Not defined
+
+
+## transform_issued_document
+
+> <TransformIssuedDocumentResponse> transform_issued_document(company_id, original_document_id, new_type, opts)
+
+Transform issued document
+
+Transforms the document.
+
+### Examples
+
+```ruby
+require 'time'
+require 'fattureincloud_ruby_sdk'
+# setup authorization
+FattureInCloud_Ruby_Sdk.configure do |config|
+  # Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
+  config.access_token = 'YOUR ACCESS TOKEN'
+end
+
+api_instance = FattureInCloud_Ruby_Sdk::IssuedDocumentsApi.new
+company_id = 12345 # Integer | The ID of the company.
+original_document_id = 'original_document_id_example' # String | Original document id.
+new_type = 'new_type_example' # String | New document type.
+opts = {
+  e_invoice: 0, # Integer | New document e_invoice.
+  transform_keep_copy: 0 # Integer | Keep the old document.
+}
+
+begin
+  # Transform issued document
+  result = api_instance.transform_issued_document(company_id, original_document_id, new_type, opts)
+  p result
+rescue FattureInCloud_Ruby_Sdk::ApiError => e
+  puts "Error when calling IssuedDocumentsApi->transform_issued_document: #{e}"
+end
+```
+
+#### Using the transform_issued_document_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<TransformIssuedDocumentResponse>, Integer, Hash)> transform_issued_document_with_http_info(company_id, original_document_id, new_type, opts)
+
+```ruby
+begin
+  # Transform issued document
+  data, status_code, headers = api_instance.transform_issued_document_with_http_info(company_id, original_document_id, new_type, opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <TransformIssuedDocumentResponse>
+rescue FattureInCloud_Ruby_Sdk::ApiError => e
+  puts "Error when calling IssuedDocumentsApi->transform_issued_document_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **company_id** | **Integer** | The ID of the company. |  |
+| **original_document_id** | **String** | Original document id. |  |
+| **new_type** | **String** | New document type. |  |
+| **e_invoice** | **Integer** | New document e_invoice. | [optional] |
+| **transform_keep_copy** | **Integer** | Keep the old document. | [optional] |
+
+### Return type
+
+[**TransformIssuedDocumentResponse**](TransformIssuedDocumentResponse.md)
+
+### Authorization
+
+[OAuth2AuthenticationCodeFlow](../README.md#OAuth2AuthenticationCodeFlow)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
 ## upload_issued_document_attachment
