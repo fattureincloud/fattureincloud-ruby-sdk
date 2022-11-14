@@ -5,5 +5,5 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **message** | **String** |  | [optional] |
-| **validation_result** | **Object** |  | [optional] |
+| **validation_result** | [**VerifyEInvoiceXmlErrorResponseErrorValidationResult**](VerifyEInvoiceXmlErrorResponseErrorValidationResult.md) |  | [optional] |
 
