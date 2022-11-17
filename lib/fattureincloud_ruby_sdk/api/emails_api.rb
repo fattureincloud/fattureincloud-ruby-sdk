@@ -21,7 +21,7 @@ module FattureInCloud_Ruby_Sdk
     end
     # List emails
     # List Emails.
-    # @param company_id [String] 
+    # @param company_id [Integer] 
     # @param [Hash] opts the optional parameters
     # @return [ListEmailsResponse]
     def list_emails(company_id, opts = {})
@@ -31,7 +31,7 @@ module FattureInCloud_Ruby_Sdk
 
     # List emails
     # List Emails.
-    # @param company_id [String] 
+    # @param company_id [Integer] 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ListEmailsResponse, Integer, Hash)>] ListEmailsResponse data, response status code and response headers
     def list_emails_with_http_info(company_id, opts = {})

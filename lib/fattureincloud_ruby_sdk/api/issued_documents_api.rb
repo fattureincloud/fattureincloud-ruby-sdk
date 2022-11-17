@@ -926,7 +926,7 @@ module FattureInCloud_Ruby_Sdk
     # Transform issued document
     # Transforms the document.
     # @param company_id [Integer] The ID of the company.
-    # @param original_document_id [String] Original document id.
+    # @param original_document_id [Integer] Original document id.
     # @param new_type [String] New document type.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :e_invoice New document e_invoice.
@@ -940,7 +940,7 @@ module FattureInCloud_Ruby_Sdk
     # Transform issued document
     # Transforms the document.
     # @param company_id [Integer] The ID of the company.
-    # @param original_document_id [String] Original document id.
+    # @param original_document_id [Integer] Original document id.
     # @param new_type [String] New document type.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :e_invoice New document e_invoice.
