@@ -479,17 +479,6 @@ lib/fattureincloud_ruby_sdk/models/verify_e_invoice_xml_error_response_extra.rb
 lib/fattureincloud_ruby_sdk/models/verify_e_invoice_xml_response.rb
 lib/fattureincloud_ruby_sdk/models/verify_e_invoice_xml_response_data.rb
 lib/fattureincloud_ruby_sdk/version.rb
-spec/api/emails_api_spec.rb
 spec/api_client_spec.rb
 spec/configuration_spec.rb
-spec/models/email_attachment_spec.rb
-spec/models/email_recipient_status_spec.rb
-spec/models/email_spec.rb
-spec/models/email_status_spec.rb
-spec/models/join_issued_documents_response_spec.rb
-spec/models/list_emails_response_page_spec.rb
-spec/models/list_emails_response_spec.rb
-spec/models/payment_terms_type_spec.rb
-spec/models/transform_issued_document_response_spec.rb
-spec/models/verify_e_invoice_xml_error_response_error_validation_result_spec.rb
 spec/spec_helper.rb

@@ -932,7 +932,7 @@ end
 
 api_instance = FattureInCloud_Ruby_Sdk::IssuedDocumentsApi.new
 company_id = 12345 # Integer | The ID of the company.
-original_document_id = 54321 # Integer | Original document id.
+original_document_id = 56 # Integer | Original document id.
 new_type = 'new_type_example' # String | New document type.
 opts = {
   e_invoice: 0, # Integer | New document e_invoice.
