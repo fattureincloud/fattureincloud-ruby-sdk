@@ -32,7 +32,7 @@ describe FattureInCloud_Ruby_Sdk::IssuedDocumentItemsListItem do
   instance.apply_withholding_taxes = true
   instance.discount = 0
   instance.discount_highlight = true
-  instance.in_ddt = false
+  instance.in_dn = false
   instance.stock = 89
   instance.vat = {
       id: 21
@@ -130,9 +130,9 @@ describe FattureInCloud_Ruby_Sdk::IssuedDocumentItemsListItem do
     end
   end
 
-  describe 'test attribute "in_ddt"' do
+  describe 'test attribute "in_dn"' do
     it 'should work' do
-      expect(instance.in_ddt).to be(true).or be(false)
+      expect(instance.in_dn).to be(true).or be(false)
     end
   end
 

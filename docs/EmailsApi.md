@@ -27,7 +27,7 @@ FattureInCloud_Ruby_Sdk.configure do |config|
 end
 
 api_instance = FattureInCloud_Ruby_Sdk::EmailsApi.new
-company_id = 12345
+company_id = 12345 # Integer | The ID of the company.
 
 begin
   # List emails
@@ -60,7 +60,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **company_id** | **Integer** |  |  |
+| **company_id** | **Integer** | The ID of the company. |  |
 
 ### Return type
 
