@@ -705,7 +705,8 @@ opts = {
   sort: 'sort_example', # String | List of comma-separated fields for result sorting (minus for desc sorting).
   page: 56, # Integer | The page to retrieve.
   per_page: 56, # Integer | The size of the page.
-  q: 'q_example' # String | Query for filtering the results.
+  q: 'q_example', # String | Query for filtering the results.
+  inclusive: 0 # Integer | (Only for type = delivery_notes) Include invoices delivery notes.
 }
 
 begin
@@ -747,6 +748,7 @@ end
 | **page** | **Integer** | The page to retrieve. | [optional][default to 1] |
 | **per_page** | **Integer** | The size of the page. | [optional][default to 5] |
 | **q** | **String** | Query for filtering the results. | [optional] |
+| **inclusive** | **Integer** | (Only for type &#x3D; delivery_notes) Include invoices delivery notes. | [optional] |
 
 ### Return type
 
