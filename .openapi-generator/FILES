@@ -212,6 +212,7 @@ docs/ReceivedDocumentsApi.md
 docs/ScheduleEmailRequest.md
 docs/SendEInvoiceRequest.md
 docs/SendEInvoiceRequestData.md
+docs/SendEInvoiceRequestOptions.md
 docs/SendEInvoiceResponse.md
 docs/SendEInvoiceResponseData.md
 docs/SenderEmail.md
@@ -456,6 +457,7 @@ lib/fattureincloud_ruby_sdk/models/received_document_type.rb
 lib/fattureincloud_ruby_sdk/models/schedule_email_request.rb
 lib/fattureincloud_ruby_sdk/models/send_e_invoice_request.rb
 lib/fattureincloud_ruby_sdk/models/send_e_invoice_request_data.rb
+lib/fattureincloud_ruby_sdk/models/send_e_invoice_request_options.rb
 lib/fattureincloud_ruby_sdk/models/send_e_invoice_response.rb
 lib/fattureincloud_ruby_sdk/models/send_e_invoice_response_data.rb
 lib/fattureincloud_ruby_sdk/models/sender_email.rb
@@ -481,4 +483,5 @@ lib/fattureincloud_ruby_sdk/models/verify_e_invoice_xml_response_data.rb
 lib/fattureincloud_ruby_sdk/version.rb
 spec/api_client_spec.rb
 spec/configuration_spec.rb
+spec/models/send_e_invoice_request_options_spec.rb
 spec/spec_helper.rb

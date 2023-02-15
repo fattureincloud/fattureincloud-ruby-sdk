@@ -14,14 +14,14 @@ require 'date'
 require 'time'
 
 module FattureInCloud_Ruby_Sdk
-  # 
-  class ListDeliveryNotesDefaultCausalsResponse
-    attr_accessor :data
+  class SendEInvoiceRequestOptions
+    # If set to true the e-invoice will not be sent to the SDI.
+    attr_accessor :dry_run
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'data' => :'data'
+        :'dry_run' => :'dry_run'
       }
     end
 
@@ -33,14 +33,14 @@ module FattureInCloud_Ruby_Sdk
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'data' => :'Array<String>'
+        :'dry_run' => :'Boolean'
       }
     end
 
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
-        :'data'
+        :'dry_run'
       ])
     end
 
@@ -48,21 +48,19 @@ module FattureInCloud_Ruby_Sdk
     # @param [Hash] attributes Model attributes in the form of hash
     def initialize(attributes = {})
       if (!attributes.is_a?(Hash))
-        fail ArgumentError, "The input argument (attributes) must be a hash in `FattureInCloud_Ruby_Sdk::ListDeliveryNotesDefaultCausalsResponse` initialize method"
+        fail ArgumentError, "The input argument (attributes) must be a hash in `FattureInCloud_Ruby_Sdk::SendEInvoiceRequestOptions` initialize method"
       end
 
       # check to see if the attribute exists and convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h|
         if (!self.class.attribute_map.key?(k.to_sym))
-          fail ArgumentError, "`#{k}` is not a valid attribute in `FattureInCloud_Ruby_Sdk::ListDeliveryNotesDefaultCausalsResponse`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
+          fail ArgumentError, "`#{k}` is not a valid attribute in `FattureInCloud_Ruby_Sdk::SendEInvoiceRequestOptions`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
         end
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'data')
-        if (value = attributes[:'data']).is_a?(Array)
-          self.data = value
-        end
+      if attributes.key?(:'dry_run')
+        self.dry_run = attributes[:'dry_run']
       end
     end
 
@@ -84,7 +82,7 @@ module FattureInCloud_Ruby_Sdk
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          data == o.data
+          dry_run == o.dry_run
     end
 
     # @see the `==` method
@@ -96,7 +94,7 @@ module FattureInCloud_Ruby_Sdk
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [data].hash
+      [dry_run].hash
     end
 
     # Builds the object from hash
