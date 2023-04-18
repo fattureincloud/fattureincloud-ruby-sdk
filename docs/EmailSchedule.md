@@ -8,7 +8,7 @@
 | **sender_email** | **String** | Sender email. Required if &#x60;sender_id&#x60; is not specified | [optional] |
 | **recipient_email** | **String** | One or more comma separated recipient emails | [optional] |
 | **subject** | **String** | Email subject | [optional] |
-| **body** | **String** | Email body | [optional] |
+| **body** | **String** | Email body [HTML Escaped] [max size 50KiB] | [optional] |
 | **include** | [**EmailScheduleInclude**](EmailScheduleInclude.md) |  | [optional] |
 | **attach_pdf** | **Boolean** | If set to true, documents will be sent as PDF attachments too | [optional] |
 | **send_copy** | **Boolean** | If set to true, a copy of the email will be sent to the &#x60;cc_email&#x60; specified by &#x60;Get email data&#x60; | [optional] |

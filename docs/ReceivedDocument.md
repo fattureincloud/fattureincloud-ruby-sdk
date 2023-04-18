@@ -6,7 +6,7 @@
 | ---- | ---- | ----------- | ----- |
 | **id** | **Integer** | Unique identifier of the document. | [optional] |
 | **type** | [**ReceivedDocumentType**](ReceivedDocumentType.md) |  | [optional][default to &#39;expense&#39;] |
-| **entity** | [**ReceivedDocumentEntity**](ReceivedDocumentEntity.md) |  | [optional] |
+| **entity** | [**Entity**](Entity.md) |  | [optional] |
 | **date** | **Date** | Date of the document [If not specified, today date is used]. | [optional] |
 | **category** | **String** | Document category. | [optional] |
 | **description** | **String** | Document description. | [optional] |
