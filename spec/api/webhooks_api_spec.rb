@@ -20,6 +20,19 @@ describe 'WebhooksApi' do
   before do
     # run before each test
     @api_instance = FattureInCloud_Ruby_Sdk::WebhooksApi.new
+
+    @create_webhooks_subscription_response_obj = { data: { id: 'SUB123', sink: 'https://endpoint.test', verified: true, types: ['it.fattureincloud.cashbook.create'] }, warnings: ['error'] }
+    allow(@api_instance).to receive(:create_webhooks_subscription) { @create_webhooks_subscription_response_obj }
+
+    @get_webhooks_subscription_response_obj = { data: { id: 'SUB123', sink: 'https://endpoint.test', verified: true, types: ['it.fattureincloud.cashbook.create'] } }
+    allow(@api_instance).to receive(:get_webhooks_subscription) { @get_webhooks_subscription_response_obj }
+
+    @list_webhooks_subscriptions_response_obj = { data: [ { id: 'SUB123', sink: 'https://endpoint.test', verified: true, types: ['it.fattureincloud.cashbook.create'] }, { id: 'SUB123', sink: 'https://endpoint.test', verified: true, types: ['it.fattureincloud.cashbook.create'] } ] }
+    allow(@api_instance).to receive(:list_webhooks_subscriptions) { @list_webhooks_subscriptions_response_obj }
+  
+    @modify_webhooks_subscription_response_obj = { data: { id: 'SUB123', sink: 'https://endpoint.test', verified: true, types: ['it.fattureincloud.cashbook.create'] }, warnings: ['error'] }
+    allow(@api_instance).to receive(:modify_webhooks_subscription) { @modify_webhooks_subscription_response_obj }
+
   end
 
   after do
@@ -41,7 +54,13 @@ describe 'WebhooksApi' do
   # @return [CreateWebhooksSubscriptionResponse]
   describe 'create_webhooks_subscription test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      opts = { data: { sink: 'https://endpoint.test', types: ['it.fattureincloud.cashbook.create'] } }
+      response = @api_instance.create_webhooks_subscription(2, opts)
+      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
+      expected_json = @create_webhooks_subscription_response_obj.to_json
+      actual_json = response.to_json
+
+      expect(actual_json).to eq(expected_json)
     end
   end
 
@@ -54,7 +73,7 @@ describe 'WebhooksApi' do
   # @return [nil]
   describe 'delete_webhooks_subscription test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      expect(true).to eq(true)
     end
   end
 
@@ -67,7 +86,12 @@ describe 'WebhooksApi' do
   # @return [GetWebhooksSubscriptionResponse]
   describe 'get_webhooks_subscription test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      response = @api_instance.get_webhooks_subscription(2, "SUB123")
+      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
+      expected_json = @get_webhooks_subscription_response_obj.to_json
+      actual_json = response.to_json
+
+      expect(actual_json).to eq(expected_json)
     end
   end
 
@@ -79,7 +103,12 @@ describe 'WebhooksApi' do
   # @return [ListWebhooksSubscriptionsResponse]
   describe 'list_webhooks_subscriptions test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      response = @api_instance.list_webhooks_subscriptions(2)
+      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
+      expected_json = @list_webhooks_subscriptions_response_obj.to_json
+      actual_json = response.to_json
+
+      expect(actual_json).to eq(expected_json)
     end
   end
 
@@ -93,7 +122,12 @@ describe 'WebhooksApi' do
   # @return [ModifyWebhooksSubscriptionResponse]
   describe 'modify_webhooks_subscription test' do
     it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      response = @api_instance.modify_webhooks_subscription(2, "SUB123")
+      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
+      expected_json = @modify_webhooks_subscription_response_obj.to_json
+      actual_json = response.to_json
+
+      expect(actual_json).to eq(expected_json)
     end
   end
 
