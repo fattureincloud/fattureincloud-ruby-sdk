@@ -49,6 +49,8 @@ docs/CreateSupplierRequest.md
 docs/CreateSupplierResponse.md
 docs/CreateVatTypeRequest.md
 docs/CreateVatTypeResponse.md
+docs/CreateWebhooksSubscriptionRequest.md
+docs/CreateWebhooksSubscriptionResponse.md
 docs/Currency.md
 docs/DetailedCountry.md
 docs/DocumentTemplate.md
@@ -64,6 +66,7 @@ docs/EmailStatus.md
 docs/EmailsApi.md
 docs/Entity.md
 docs/EntityType.md
+docs/EventType.md
 docs/F24.md
 docs/F24Status.md
 docs/FunctionStatus.md
@@ -97,6 +100,7 @@ docs/GetUserInfoResponse.md
 docs/GetUserInfoResponseEmailConfirmationState.md
 docs/GetUserInfoResponseInfo.md
 docs/GetVatTypeResponse.md
+docs/GetWebhooksSubscriptionResponse.md
 docs/InfoApi.md
 docs/IssuedDocument.md
 docs/IssuedDocumentEiData.md
@@ -155,6 +159,7 @@ docs/ListUnitsOfMeasureResponse.md
 docs/ListUserCompaniesResponse.md
 docs/ListUserCompaniesResponseData.md
 docs/ListVatTypesResponse.md
+docs/ListWebhooksSubscriptionsResponse.md
 docs/ModifyArchiveDocumentRequest.md
 docs/ModifyArchiveDocumentResponse.md
 docs/ModifyCashbookEntryRequest.md
@@ -179,6 +184,8 @@ docs/ModifySupplierRequest.md
 docs/ModifySupplierResponse.md
 docs/ModifyVatTypeRequest.md
 docs/ModifyVatTypeResponse.md
+docs/ModifyWebhooksSubscriptionRequest.md
+docs/ModifyWebhooksSubscriptionResponse.md
 docs/MonthlyTotal.md
 docs/OriginalDocumentType.md
 docs/Pagination.md
@@ -199,7 +206,6 @@ docs/ReceiptPreCreateInfo.md
 docs/ReceiptType.md
 docs/ReceiptsApi.md
 docs/ReceivedDocument.md
-docs/ReceivedDocumentEntity.md
 docs/ReceivedDocumentInfo.md
 docs/ReceivedDocumentInfoDefaultValues.md
 docs/ReceivedDocumentInfoItemsDefaultValues.md
@@ -239,6 +245,8 @@ docs/VerifyEInvoiceXmlErrorResponseErrorValidationResult.md
 docs/VerifyEInvoiceXmlErrorResponseExtra.md
 docs/VerifyEInvoiceXmlResponse.md
 docs/VerifyEInvoiceXmlResponseData.md
+docs/WebhooksApi.md
+docs/WebhooksSubscription.md
 fattureincloud_ruby_sdk.gemspec
 lib/fattureincloud_ruby_sdk.rb
 lib/fattureincloud_ruby_sdk/api/archive_api.rb
@@ -256,6 +264,7 @@ lib/fattureincloud_ruby_sdk/api/settings_api.rb
 lib/fattureincloud_ruby_sdk/api/suppliers_api.rb
 lib/fattureincloud_ruby_sdk/api/taxes_api.rb
 lib/fattureincloud_ruby_sdk/api/user_api.rb
+lib/fattureincloud_ruby_sdk/api/webhooks_api.rb
 lib/fattureincloud_ruby_sdk/api_client.rb
 lib/fattureincloud_ruby_sdk/api_error.rb
 lib/fattureincloud_ruby_sdk/configuration.rb
@@ -301,6 +310,8 @@ lib/fattureincloud_ruby_sdk/models/create_supplier_request.rb
 lib/fattureincloud_ruby_sdk/models/create_supplier_response.rb
 lib/fattureincloud_ruby_sdk/models/create_vat_type_request.rb
 lib/fattureincloud_ruby_sdk/models/create_vat_type_response.rb
+lib/fattureincloud_ruby_sdk/models/create_webhooks_subscription_request.rb
+lib/fattureincloud_ruby_sdk/models/create_webhooks_subscription_response.rb
 lib/fattureincloud_ruby_sdk/models/currency.rb
 lib/fattureincloud_ruby_sdk/models/detailed_country.rb
 lib/fattureincloud_ruby_sdk/models/document_template.rb
@@ -315,6 +326,7 @@ lib/fattureincloud_ruby_sdk/models/email_schedule_include.rb
 lib/fattureincloud_ruby_sdk/models/email_status.rb
 lib/fattureincloud_ruby_sdk/models/entity.rb
 lib/fattureincloud_ruby_sdk/models/entity_type.rb
+lib/fattureincloud_ruby_sdk/models/event_type.rb
 lib/fattureincloud_ruby_sdk/models/f24.rb
 lib/fattureincloud_ruby_sdk/models/f24_status.rb
 lib/fattureincloud_ruby_sdk/models/function_status.rb
@@ -348,6 +360,7 @@ lib/fattureincloud_ruby_sdk/models/get_user_info_response.rb
 lib/fattureincloud_ruby_sdk/models/get_user_info_response_email_confirmation_state.rb
 lib/fattureincloud_ruby_sdk/models/get_user_info_response_info.rb
 lib/fattureincloud_ruby_sdk/models/get_vat_type_response.rb
+lib/fattureincloud_ruby_sdk/models/get_webhooks_subscription_response.rb
 lib/fattureincloud_ruby_sdk/models/issued_document.rb
 lib/fattureincloud_ruby_sdk/models/issued_document_ei_data.rb
 lib/fattureincloud_ruby_sdk/models/issued_document_extra_data.rb
@@ -403,6 +416,7 @@ lib/fattureincloud_ruby_sdk/models/list_units_of_measure_response.rb
 lib/fattureincloud_ruby_sdk/models/list_user_companies_response.rb
 lib/fattureincloud_ruby_sdk/models/list_user_companies_response_data.rb
 lib/fattureincloud_ruby_sdk/models/list_vat_types_response.rb
+lib/fattureincloud_ruby_sdk/models/list_webhooks_subscriptions_response.rb
 lib/fattureincloud_ruby_sdk/models/modify_archive_document_request.rb
 lib/fattureincloud_ruby_sdk/models/modify_archive_document_response.rb
 lib/fattureincloud_ruby_sdk/models/modify_cashbook_entry_request.rb
@@ -427,6 +441,8 @@ lib/fattureincloud_ruby_sdk/models/modify_supplier_request.rb
 lib/fattureincloud_ruby_sdk/models/modify_supplier_response.rb
 lib/fattureincloud_ruby_sdk/models/modify_vat_type_request.rb
 lib/fattureincloud_ruby_sdk/models/modify_vat_type_response.rb
+lib/fattureincloud_ruby_sdk/models/modify_webhooks_subscription_request.rb
+lib/fattureincloud_ruby_sdk/models/modify_webhooks_subscription_response.rb
 lib/fattureincloud_ruby_sdk/models/monthly_total.rb
 lib/fattureincloud_ruby_sdk/models/original_document_type.rb
 lib/fattureincloud_ruby_sdk/models/pagination.rb
@@ -445,7 +461,6 @@ lib/fattureincloud_ruby_sdk/models/receipt_items_list_item.rb
 lib/fattureincloud_ruby_sdk/models/receipt_pre_create_info.rb
 lib/fattureincloud_ruby_sdk/models/receipt_type.rb
 lib/fattureincloud_ruby_sdk/models/received_document.rb
-lib/fattureincloud_ruby_sdk/models/received_document_entity.rb
 lib/fattureincloud_ruby_sdk/models/received_document_info.rb
 lib/fattureincloud_ruby_sdk/models/received_document_info_default_values.rb
 lib/fattureincloud_ruby_sdk/models/received_document_info_items_default_values.rb
@@ -480,8 +495,17 @@ lib/fattureincloud_ruby_sdk/models/verify_e_invoice_xml_error_response_error_val
 lib/fattureincloud_ruby_sdk/models/verify_e_invoice_xml_error_response_extra.rb
 lib/fattureincloud_ruby_sdk/models/verify_e_invoice_xml_response.rb
 lib/fattureincloud_ruby_sdk/models/verify_e_invoice_xml_response_data.rb
+lib/fattureincloud_ruby_sdk/models/webhooks_subscription.rb
 lib/fattureincloud_ruby_sdk/version.rb
+spec/api/webhooks_api_spec.rb
 spec/api_client_spec.rb
 spec/configuration_spec.rb
-spec/models/send_e_invoice_request_options_spec.rb
+spec/models/create_webhooks_subscription_request_spec.rb
+spec/models/create_webhooks_subscription_response_spec.rb
+spec/models/event_type_spec.rb
+spec/models/get_webhooks_subscription_response_spec.rb
+spec/models/list_webhooks_subscriptions_response_spec.rb
+spec/models/modify_webhooks_subscription_request_spec.rb
+spec/models/modify_webhooks_subscription_response_spec.rb
+spec/models/webhooks_subscription_spec.rb
 spec/spec_helper.rb
