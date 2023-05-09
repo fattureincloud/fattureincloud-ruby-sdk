@@ -21,7 +21,7 @@ describe FattureInCloud_Ruby_Sdk::ModifyWebhooksSubscriptionRequest do
   instance = FattureInCloud_Ruby_Sdk::ModifyWebhooksSubscriptionRequest.new
   instance.data = {
     sink: 'https://endpoint.test',
-    types: ['it.fattureincloud.cashbook.create']
+    types: ['it.fattureincloud.webhooks.cashbook.create']
   }
 
   describe 'test an instance of ModifyWebhooksSubscriptionRequest' do
