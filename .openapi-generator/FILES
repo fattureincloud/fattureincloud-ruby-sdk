@@ -497,15 +497,6 @@ lib/fattureincloud_ruby_sdk/models/verify_e_invoice_xml_response.rb
 lib/fattureincloud_ruby_sdk/models/verify_e_invoice_xml_response_data.rb
 lib/fattureincloud_ruby_sdk/models/webhooks_subscription.rb
 lib/fattureincloud_ruby_sdk/version.rb
-spec/api/webhooks_api_spec.rb
 spec/api_client_spec.rb
 spec/configuration_spec.rb
-spec/models/create_webhooks_subscription_request_spec.rb
-spec/models/create_webhooks_subscription_response_spec.rb
-spec/models/event_type_spec.rb
-spec/models/get_webhooks_subscription_response_spec.rb
-spec/models/list_webhooks_subscriptions_response_spec.rb
-spec/models/modify_webhooks_subscription_request_spec.rb
-spec/models/modify_webhooks_subscription_response_spec.rb
-spec/models/webhooks_subscription_spec.rb
 spec/spec_helper.rb

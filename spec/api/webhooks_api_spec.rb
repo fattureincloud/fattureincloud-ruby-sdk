@@ -21,16 +21,16 @@ describe 'WebhooksApi' do
     # run before each test
     @api_instance = FattureInCloud_Ruby_Sdk::WebhooksApi.new
 
-    @create_webhooks_subscription_response_obj = { data: { id: 'SUB123', sink: 'https://endpoint.test', verified: true, types: ['it.fattureincloud.cashbook.create'] }, warnings: ['error'] }
+    @create_webhooks_subscription_response_obj = { data: { id: 'SUB123', sink: 'https://endpoint.test', verified: true, types: ['it.fattureincloud.webhooks.cashbook.create'] }, warnings: ['error'] }
     allow(@api_instance).to receive(:create_webhooks_subscription) { @create_webhooks_subscription_response_obj }
 
-    @get_webhooks_subscription_response_obj = { data: { id: 'SUB123', sink: 'https://endpoint.test', verified: true, types: ['it.fattureincloud.cashbook.create'] } }
+    @get_webhooks_subscription_response_obj = { data: { id: 'SUB123', sink: 'https://endpoint.test', verified: true, types: ['it.fattureincloud.webhooks.cashbook.create'] } }
     allow(@api_instance).to receive(:get_webhooks_subscription) { @get_webhooks_subscription_response_obj }
 
-    @list_webhooks_subscriptions_response_obj = { data: [ { id: 'SUB123', sink: 'https://endpoint.test', verified: true, types: ['it.fattureincloud.cashbook.create'] }, { id: 'SUB123', sink: 'https://endpoint.test', verified: true, types: ['it.fattureincloud.cashbook.create'] } ] }
+    @list_webhooks_subscriptions_response_obj = { data: [ { id: 'SUB123', sink: 'https://endpoint.test', verified: true, types: ['it.fattureincloud.webhooks.cashbook.create'] }, { id: 'SUB123', sink: 'https://endpoint.test', verified: true, types: ['it.fattureincloud.webhooks.cashbook.update'] } ] }
     allow(@api_instance).to receive(:list_webhooks_subscriptions) { @list_webhooks_subscriptions_response_obj }
   
-    @modify_webhooks_subscription_response_obj = { data: { id: 'SUB123', sink: 'https://endpoint.test', verified: true, types: ['it.fattureincloud.cashbook.create'] }, warnings: ['error'] }
+    @modify_webhooks_subscription_response_obj = { data: { id: 'SUB123', sink: 'https://endpoint.test', verified: true, types: ['it.fattureincloud.webhooks.cashbook.create'] }, warnings: ['error'] }
     allow(@api_instance).to receive(:modify_webhooks_subscription) { @modify_webhooks_subscription_response_obj }
 
   end
@@ -54,7 +54,7 @@ describe 'WebhooksApi' do
   # @return [CreateWebhooksSubscriptionResponse]
   describe 'create_webhooks_subscription test' do
     it 'should work' do
-      opts = { data: { sink: 'https://endpoint.test', types: ['it.fattureincloud.cashbook.create'] } }
+      opts = { data: { sink: 'https://endpoint.test', types: ['it.fattureincloud.webhooks.cashbook.create'] } }
       response = @api_instance.create_webhooks_subscription(2, opts)
       response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @create_webhooks_subscription_response_obj.to_json

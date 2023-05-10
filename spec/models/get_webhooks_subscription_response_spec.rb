@@ -23,7 +23,7 @@ describe FattureInCloud_Ruby_Sdk::GetWebhooksSubscriptionResponse do
     id: 'SUB123',
     sink: 'https://endpoint.test',
     verified: true,
-    types: ['it.fattureincloud.cashbook.create']
+    types: ['it.fattureincloud.webhooks.cashbook.create']
   }
 
   describe 'test an instance of GetWebhooksSubscriptionResponse' do

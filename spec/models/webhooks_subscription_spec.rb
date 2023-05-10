@@ -22,7 +22,7 @@ describe FattureInCloud_Ruby_Sdk::WebhooksSubscription do
   instance.id = 'SUB123'
   instance.sink = 'https://endpoint.test'
   instance.verified = true
-  instance.types = ['it.fattureincloud.cashbook.create']
+  instance.types = ['it.fattureincloud.webhooks.cashbook.create']
 
   describe 'test an instance of WebhooksSubscription' do
     it 'should create an instance of WebhooksSubscription' do
