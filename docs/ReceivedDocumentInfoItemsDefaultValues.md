@@ -4,5 +4,5 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **vat** | **Float** | Default vat value. | [optional] |
+| **vat** | **Float** | Vat default value | [optional] |
 

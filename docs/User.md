@@ -4,11 +4,11 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **id** | **Integer** | User identifier. | [optional] |
-| **name** | **String** | Full name of the user. | [optional] |
-| **first_name** | **String** | First name of the user. | [optional] |
-| **last_name** | **String** | Last name of the user. | [optional] |
-| **email** | **String** | Email of the user. | [optional] |
-| **hash** | **String** |  | [optional] |
-| **picture** | **String** | Picture of the user. | [optional] |
+| **id** | **Integer** | User id | [optional] |
+| **name** | **String** | User full name | [optional] |
+| **first_name** | **String** | User first name | [optional] |
+| **last_name** | **String** | User last name | [optional] |
+| **email** | **String** | User email address | [optional] |
+| **hash** | **String** | User hash | [optional] |
+| **picture** | **String** | User picture | [optional] |
 
