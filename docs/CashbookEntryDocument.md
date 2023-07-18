@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **id** | **Integer** | Document unique identifier. | [optional] |
-| **type** | **String** | Document type. | [optional] |
-| **path** | **String** | Document path. | [optional] |
+| **id** | **Integer** | Cashbook related document id | [optional] |
+| **type** | **String** | Cashbook related document type | [optional] |
+| **path** | **String** | Cashbook related document path | [optional] |
 

@@ -4,11 +4,11 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **id** | **Integer** | Unique identifier. | [optional] |
-| **amount** | **Float** | Amount of items. | [optional] |
+| **id** | **Integer** | Received document payment id | [optional] |
+| **amount** | **Float** | Received document payment total amount | [optional] |
 | **due_date** | **Date** | Due date | [optional] |
-| **paid_date** | **Date** | Paid date | [optional] |
+| **paid_date** | **Date** | Received document payment paid date | [optional] |
 | **payment_terms** | [**ReceivedDocumentPaymentsListItemPaymentTerms**](ReceivedDocumentPaymentsListItemPaymentTerms.md) |  | [optional] |
-| **status** | **String** | Payment status. | [optional] |
+| **status** | **String** | Received document payment status | [optional] |
 | **payment_account** | [**PaymentAccount**](PaymentAccount.md) |  | [optional] |
 

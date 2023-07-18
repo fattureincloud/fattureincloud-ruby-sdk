@@ -6,5 +6,5 @@
 | ---- | ---- | ----------- | ----- |
 | **role** | [**UserCompanyRole**](UserCompanyRole.md) |  | [optional] |
 | **permissions** | [**Permissions**](Permissions.md) |  | [optional] |
-| **through_accountant** | **Boolean** |  | [optional] |
+| **through_accountant** | **Boolean** | Company activated through accountant | [optional] |
 

@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **id** | **Integer** | Unique identifier. | [optional] |
-| **name** | **String** | Template name. | [optional] |
-| **type** | **String** | Template type. | [optional] |
+| **id** | **Integer** | Template id | [optional] |
+| **name** | **String** | Template name | [optional] |
+| **type** | **String** | Template type | [optional] |
 

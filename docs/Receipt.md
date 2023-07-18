@@ -4,19 +4,19 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **id** | **Integer** | Receipt unique identifier. | [optional] |
-| **date** | **Date** | Receipt date. | [optional] |
-| **number** | **Float** | Receipt number. | [optional] |
-| **numeration** | **String** | If it&#39;s null or empty string use the default numeration. | [optional] |
-| **amount_net** | **Float** | Total net amount. | [optional] |
-| **amount_vat** | **Float** | Total vat amount. | [optional] |
-| **amount_gross** | **Float** | Total gross amount. | [optional] |
-| **use_gross_prices** | **Boolean** |  | [optional] |
+| **id** | **Integer** | Receipt id | [optional] |
+| **date** | **Date** | Receipt date | [optional] |
+| **number** | **Float** | Receipt number | [optional] |
+| **numeration** | **String** | Receipt numeration | [optional] |
+| **amount_net** | **Float** | Receipt total net amount | [optional] |
+| **amount_vat** | **Float** | Receipt total vat amount | [optional] |
+| **amount_gross** | **Float** | Receipt total gross amount | [optional] |
+| **use_gross_prices** | **Boolean** | Receipt uses gross prices | [optional] |
 | **type** | [**ReceiptType**](ReceiptType.md) |  | [optional] |
-| **description** | **String** | Receipt description. | [optional] |
-| **rc_center** | **String** | Revenue center. | [optional] |
-| **created_at** | **String** |  | [optional] |
-| **updated_at** | **String** |  | [optional] |
+| **description** | **String** | Receipt description | [optional] |
+| **rc_center** | **String** | Receipt revenue center | [optional] |
+| **created_at** | **String** | Receipt creation date | [optional] |
+| **updated_at** | **String** | Receipt last update date | [optional] |
 | **payment_account** | [**PaymentAccount**](PaymentAccount.md) |  | [optional] |
 | **items_list** | [**Array&lt;ReceiptItemsListItem&gt;**](ReceiptItemsListItem.md) |  | [optional] |
 

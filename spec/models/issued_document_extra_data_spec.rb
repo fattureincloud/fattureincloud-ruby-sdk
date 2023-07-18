@@ -31,7 +31,6 @@ describe FattureInCloud_Ruby_Sdk::IssuedDocumentExtraData do
   instance.ts_sent_date = Date.new(2021, 12, 21)
   instance.ts_full_amount = true
   instance.imported_by = "jss"
-  instance.ts_single_sending = false
 
   describe 'test an instance of IssuedDocumentExtraData' do
     it 'should create an instance of IssuedDocumentExtraData' do
@@ -107,12 +106,6 @@ describe FattureInCloud_Ruby_Sdk::IssuedDocumentExtraData do
   describe 'test attribute "imported_by"' do
     it 'should work' do
       expect(instance.imported_by).to be_a_kind_of(String)
-    end
-  end
-
-  describe 'test attribute "ts_single_sending"' do
-    it 'should work' do
-      expect(instance.ts_single_sending).to be(true).or be(false)
     end
   end
 

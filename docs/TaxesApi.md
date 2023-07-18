@@ -483,8 +483,8 @@ end
 api_instance = FattureInCloud_Ruby_Sdk::TaxesApi.new
 company_id = 12345 # Integer | The ID of the company.
 opts = {
-  filename: 'filename_example', # String | Name of the file.
-  attachment: File.new('/path/to/some/file') # File | Valid format: .png, .jpg, .gif, .pdf, .zip, .xls, .xlsx, .doc, .docx
+  filename: 'filename_example', # String | Attachment file name
+  attachment: File.new('/path/to/some/file') # File | Attachment file [.png, .jpg, .gif, .pdf, .zip, .xls, .xlsx, .doc, .docx]
 }
 
 begin
@@ -519,8 +519,8 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **company_id** | **Integer** | The ID of the company. |  |
-| **filename** | **String** | Name of the file. | [optional] |
-| **attachment** | **File** | Valid format: .png, .jpg, .gif, .pdf, .zip, .xls, .xlsx, .doc, .docx | [optional] |
+| **filename** | **String** | Attachment file name | [optional] |
+| **attachment** | **File** | Attachment file [.png, .jpg, .gif, .pdf, .zip, .xls, .xlsx, .doc, .docx] | [optional] |
 
 ### Return type
 

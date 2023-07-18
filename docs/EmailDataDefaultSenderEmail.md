@@ -4,6 +4,6 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **id** | **Integer** | Id | [optional] |
-| **email** | **String** | Email address | [optional] |
+| **id** | **Integer** | Default sender email id | [optional] |
+| **email** | **String** | Default sender email address | [optional] |
 

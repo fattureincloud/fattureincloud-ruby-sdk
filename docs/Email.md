@@ -4,20 +4,20 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **id** | **Integer** | Email unique identifier. | [optional] |
+| **id** | **Integer** | Email id | [optional] |
 | **status** | [**EmailStatus**](EmailStatus.md) |  | [optional] |
-| **sent_date** | **Time** | Email sent date. | [optional] |
-| **errors_count** | **Integer** | Errors count. | [optional] |
-| **error_log** | **String** | Error log. | [optional] |
-| **from_email** | **String** | Sender email. | [optional] |
-| **from_name** | **String** | Sender name. | [optional] |
-| **to_email** | **String** | Recipient email. | [optional] |
-| **to_name** | **String** | Receipient email. | [optional] |
-| **subject** | **String** | Email subject. | [optional] |
-| **content** | **String** | Email content. | [optional] |
-| **copy_to** | **String** |  | [optional] |
+| **sent_date** | **Time** | Email sent date | [optional] |
+| **errors_count** | **Integer** | Email errors count | [optional] |
+| **error_log** | **String** | Email errors log | [optional] |
+| **from_email** | **String** | Email sender email | [optional] |
+| **from_name** | **String** | Email sender name | [optional] |
+| **to_email** | **String** | Email recipient email | [optional] |
+| **to_name** | **String** | Email receipient name | [optional] |
+| **subject** | **String** | Email subject | [optional] |
+| **content** | **String** | Email content | [optional] |
+| **copy_to** | **String** | Email cc | [optional] |
 | **recipient_status** | [**EmailRecipientStatus**](EmailRecipientStatus.md) |  | [optional] |
-| **recipient_date** | **Time** |  | [optional] |
-| **kind** | **String** | Email kind. | [optional] |
-| **attachments** | [**Array&lt;EmailAttachment&gt;**](EmailAttachment.md) | Email attachments. | [optional] |
+| **recipient_date** | **Time** | Email recipient date | [optional] |
+| **kind** | **String** | Email kind | [optional] |
+| **attachments** | [**Array&lt;EmailAttachment&gt;**](EmailAttachment.md) | Email attachments | [optional] |
 
