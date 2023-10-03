@@ -4,14 +4,14 @@ All URIs are relative to *https://api-v2.fattureincloud.it*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**list_emails**](EmailsApi.md#list_emails) | **GET** /c/{company_id}/emails | List emails |
+| [**list_emails**](EmailsApi.md#list_emails) | **GET** /c/{company_id}/emails | List Emails |
 
 
 ## list_emails
 
 > <ListEmailsResponse> list_emails(company_id)
 
-List emails
+List Emails
 
 List Emails.
 
@@ -30,7 +30,7 @@ api_instance = FattureInCloud_Ruby_Sdk::EmailsApi.new
 company_id = 12345 # Integer | The ID of the company.
 
 begin
-  # List emails
+  # List Emails
   result = api_instance.list_emails(company_id)
   p result
 rescue FattureInCloud_Ruby_Sdk::ApiError => e
@@ -46,7 +46,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # List emails
+  # List Emails
   data, status_code, headers = api_instance.list_emails_with_http_info(company_id)
   p status_code # => 2xx
   p headers # => { ... }

@@ -10,13 +10,13 @@ All URIs are relative to *https://api-v2.fattureincloud.it*
 | [**get_email_data**](IssuedDocumentsApi.md#get_email_data) | **GET** /c/{company_id}/issued_documents/{document_id}/email | Get Email Data |
 | [**get_existing_issued_document_totals**](IssuedDocumentsApi.md#get_existing_issued_document_totals) | **POST** /c/{company_id}/issued_documents/{document_id}/totals | Get Existing Issued Document Totals |
 | [**get_issued_document**](IssuedDocumentsApi.md#get_issued_document) | **GET** /c/{company_id}/issued_documents/{document_id} | Get Issued Document |
-| [**get_issued_document_pre_create_info**](IssuedDocumentsApi.md#get_issued_document_pre_create_info) | **GET** /c/{company_id}/issued_documents/info | Get Issued Document Pre-create info |
+| [**get_issued_document_pre_create_info**](IssuedDocumentsApi.md#get_issued_document_pre_create_info) | **GET** /c/{company_id}/issued_documents/info | Get Issued Document Pre-Create Info |
 | [**get_new_issued_document_totals**](IssuedDocumentsApi.md#get_new_issued_document_totals) | **POST** /c/{company_id}/issued_documents/totals | Get New Issued Document Totals |
-| [**join_issued_documents**](IssuedDocumentsApi.md#join_issued_documents) | **GET** /c/{company_id}/issued_documents/join | Join issued documents |
+| [**join_issued_documents**](IssuedDocumentsApi.md#join_issued_documents) | **GET** /c/{company_id}/issued_documents/join | Join Issued Documents |
 | [**list_issued_documents**](IssuedDocumentsApi.md#list_issued_documents) | **GET** /c/{company_id}/issued_documents | List Issued Documents |
 | [**modify_issued_document**](IssuedDocumentsApi.md#modify_issued_document) | **PUT** /c/{company_id}/issued_documents/{document_id} | Modify Issued Document |
 | [**schedule_email**](IssuedDocumentsApi.md#schedule_email) | **POST** /c/{company_id}/issued_documents/{document_id}/email | Schedule Email |
-| [**transform_issued_document**](IssuedDocumentsApi.md#transform_issued_document) | **GET** /c/{company_id}/issued_documents/transform | Transform issued document |
+| [**transform_issued_document**](IssuedDocumentsApi.md#transform_issued_document) | **GET** /c/{company_id}/issued_documents/transform | Transform Issued Document |
 | [**upload_issued_document_attachment**](IssuedDocumentsApi.md#upload_issued_document_attachment) | **POST** /c/{company_id}/issued_documents/attachment | Upload Issued Document Attachment |
 
 
@@ -460,7 +460,7 @@ end
 
 > <GetIssuedDocumentPreCreateInfoResponse> get_issued_document_pre_create_info(company_id, type)
 
-Get Issued Document Pre-create info
+Get Issued Document Pre-Create Info
 
 Retrieves the information useful while creating a new document.
 
@@ -480,7 +480,7 @@ company_id = 12345 # Integer | The ID of the company.
 type = 'invoice' # String | The type of the issued document.
 
 begin
-  # Get Issued Document Pre-create info
+  # Get Issued Document Pre-Create Info
   result = api_instance.get_issued_document_pre_create_info(company_id, type)
   p result
 rescue FattureInCloud_Ruby_Sdk::ApiError => e
@@ -496,7 +496,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # Get Issued Document Pre-create info
+  # Get Issued Document Pre-Create Info
   data, status_code, headers = api_instance.get_issued_document_pre_create_info_with_http_info(company_id, type)
   p status_code # => 2xx
   p headers # => { ... }
@@ -604,7 +604,7 @@ end
 
 > <JoinIssuedDocumentsResponse> join_issued_documents(company_id, ids, opts)
 
-Join issued documents
+Join Issued Documents
 
 Joins issued documents.
 
@@ -628,7 +628,7 @@ opts = {
 }
 
 begin
-  # Join issued documents
+  # Join Issued Documents
   result = api_instance.join_issued_documents(company_id, ids, opts)
   p result
 rescue FattureInCloud_Ruby_Sdk::ApiError => e
@@ -644,7 +644,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # Join issued documents
+  # Join Issued Documents
   data, status_code, headers = api_instance.join_issued_documents_with_http_info(company_id, ids, opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -917,7 +917,7 @@ nil (empty response body)
 
 > <TransformIssuedDocumentResponse> transform_issued_document(company_id, original_document_id, new_type, opts)
 
-Transform issued document
+Transform Issued Document
 
 Transforms the document.
 
@@ -942,7 +942,7 @@ opts = {
 }
 
 begin
-  # Transform issued document
+  # Transform Issued Document
   result = api_instance.transform_issued_document(company_id, original_document_id, new_type, opts)
   p result
 rescue FattureInCloud_Ruby_Sdk::ApiError => e
@@ -958,7 +958,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # Transform issued document
+  # Transform Issued Document
   data, status_code, headers = api_instance.transform_issued_document_with_http_info(company_id, original_document_id, new_type, opts)
   p status_code # => 2xx
   p headers # => { ... }

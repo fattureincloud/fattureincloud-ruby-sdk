@@ -19,6 +19,7 @@
 | **address_province** | **String** | Supplier province | [optional] |
 | **address_extra** | **String** | Supplier address extra info | [optional] |
 | **country** | **String** | Supplier country | [optional] |
+| **country_iso** | **String** | Supplier country iso code | [optional] |
 | **email** | **String** | Supplier email | [optional] |
 | **certified_email** | **String** | Supplier certified email | [optional] |
 | **phone** | **String** | Supplier phone | [optional] |

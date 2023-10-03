@@ -738,7 +738,7 @@ end
 
 api_instance = FattureInCloud_Ruby_Sdk::InfoApi.new
 company_id = 12345 # Integer | The ID of the company.
-context = 'products' # String | 
+context = 'products' # String | Categories resource type.
 
 begin
   # List Product Categories
@@ -772,7 +772,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **company_id** | **Integer** | The ID of the company. |  |
-| **context** | **String** |  |  |
+| **context** | **String** | Categories resource type. |  |
 
 ### Return type
 
