@@ -247,6 +247,8 @@ docs/VerifyEInvoiceXmlResponse.md
 docs/VerifyEInvoiceXmlResponseData.md
 docs/WebhooksApi.md
 docs/WebhooksSubscription.md
+docs/WebhooksSubscriptionConfig.md
+docs/WebhooksSubscriptionMapping.md
 fattureincloud_ruby_sdk.gemspec
 lib/fattureincloud_ruby_sdk.rb
 lib/fattureincloud_ruby_sdk/api/archive_api.rb
@@ -496,7 +498,11 @@ lib/fattureincloud_ruby_sdk/models/verify_e_invoice_xml_error_response_extra.rb
 lib/fattureincloud_ruby_sdk/models/verify_e_invoice_xml_response.rb
 lib/fattureincloud_ruby_sdk/models/verify_e_invoice_xml_response_data.rb
 lib/fattureincloud_ruby_sdk/models/webhooks_subscription.rb
+lib/fattureincloud_ruby_sdk/models/webhooks_subscription_config.rb
+lib/fattureincloud_ruby_sdk/models/webhooks_subscription_mapping.rb
 lib/fattureincloud_ruby_sdk/version.rb
 spec/api_client_spec.rb
 spec/configuration_spec.rb
+spec/models/webhooks_subscription_config_spec.rb
+spec/models/webhooks_subscription_mapping_spec.rb
 spec/spec_helper.rb

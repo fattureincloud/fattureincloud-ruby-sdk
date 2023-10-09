@@ -23,6 +23,9 @@ describe FattureInCloud_Ruby_Sdk::WebhooksSubscription do
   instance.sink = 'https://endpoint.test'
   instance.verified = true
   instance.types = ['it.fattureincloud.webhooks.cashbook.create']
+  instance.config = {
+    mapping: 'structured'
+  }
 
   describe 'test an instance of WebhooksSubscription' do
     it 'should create an instance of WebhooksSubscription' do
@@ -50,6 +53,12 @@ describe FattureInCloud_Ruby_Sdk::WebhooksSubscription do
   describe 'test attribute "types"' do
     it 'should work' do
       expect(instance.types).to be_a_kind_of(Object)
+    end
+  end
+
+  describe 'test attribute "config"' do
+    it 'should work' do
+      expect(instance.config).to be_a_kind_of(Object)
     end
   end
 
