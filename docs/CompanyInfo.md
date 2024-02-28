@@ -9,6 +9,8 @@
 | **email** | **String** | Company email | [optional] |
 | **type** | [**CompanyType**](CompanyType.md) |  | [optional] |
 | **access_info** | [**CompanyInfoAccessInfo**](CompanyInfoAccessInfo.md) |  | [optional] |
+| **fic_license_expire** | **Date** |  | [optional] |
+| **fic_plan_name** | [**FattureInCloudPlanType**](FattureInCloudPlanType.md) |  | [optional] |
 | **plan_info** | [**CompanyInfoPlanInfo**](CompanyInfoPlanInfo.md) |  | [optional] |
 | **accountant_id** | **Integer** | Company accountant id | [optional] |
 | **is_accountant** | **Boolean** | Is the logged account an accountant. | [optional] |

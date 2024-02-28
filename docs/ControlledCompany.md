@@ -8,6 +8,8 @@
 | **name** | **String** | Controlled company id | [optional] |
 | **type** | [**CompanyType**](CompanyType.md) |  | [optional] |
 | **access_token** | **String** | Controlled company access token Only if type&#x3D;company] | [optional] |
+| **fic_license_expire** | **Date** |  | [optional] |
+| **fic_plan** | [**FattureInCloudPlanType**](FattureInCloudPlanType.md) |  | [optional] |
 | **connection_id** | **Float** | Controlled company connection id | [optional] |
 | **tax_code** | **String** | Controlled company tax code | [optional] |
 

@@ -9,6 +9,8 @@
 | **type** | [**CompanyType**](CompanyType.md) |  | [optional] |
 | **access_token** | **String** | Company authentication token for this company. [Only if type&#x3D;company] | [optional] |
 | **controlled_companies** | [**Array&lt;ControlledCompany&gt;**](ControlledCompany.md) | Company list of controlled companies [Only if type&#x3D;accountant] | [optional] |
+| **fic_license_expire** | **Date** |  | [optional] |
+| **fic_plan** | [**FattureInCloudPlanType**](FattureInCloudPlanType.md) |  | [optional] |
 | **connection_id** | **Integer** | Company connection id | [optional] |
 | **tax_code** | **String** | Company tax code | [optional] |
 
