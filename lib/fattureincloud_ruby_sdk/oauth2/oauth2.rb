@@ -206,7 +206,7 @@ module FattureInCloud_Ruby_Sdk
   end
 
   # The OAuth2DeviceCodeResponse class is used to manage the OAuth2 device code response.
-  class OAuth2DerviceCodeResponse
+  class OAuth2DeviceCodeResponse
     attr_accessor :device_code, :user_code, :scope, :verification_uri, :interval, :expires_in
 
     # Initializes a new instance of the OAuth2TokenResponse class.
