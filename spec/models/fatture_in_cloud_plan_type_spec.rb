@@ -22,8 +22,7 @@ describe FattureInCloud_Ruby_Sdk::FattureInCloudPlanType do
 
   describe 'test an instance of FattureInCloudPlanType' do
     it 'should create an instance of FattureInCloudPlanType' do
-      # uncomment below to test the instance creation
-      # expect(instance).to be_instance_of(FattureInCloud_Ruby_Sdk::FattureInCloudPlanType)
+      expect(instance).to be_instance_of(FattureInCloud_Ruby_Sdk::FattureInCloudPlanType)
     end
   end
 
