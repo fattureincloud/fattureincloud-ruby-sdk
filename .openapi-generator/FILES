@@ -23,6 +23,7 @@ docs/CompanyInfoPlanInfo.md
 docs/CompanyInfoPlanInfoFunctions.md
 docs/CompanyInfoPlanInfoFunctionsStatus.md
 docs/CompanyInfoPlanInfoLimits.md
+docs/CompanyPlanUsage.md
 docs/CompanyType.md
 docs/ControlledCompany.md
 docs/CreateArchiveDocumentRequest.md
@@ -69,11 +70,13 @@ docs/EntityType.md
 docs/EventType.md
 docs/F24.md
 docs/F24Status.md
+docs/FattureInCloudPlanType.md
 docs/FunctionStatus.md
 docs/GetArchiveDocumentResponse.md
 docs/GetCashbookEntryResponse.md
 docs/GetClientResponse.md
 docs/GetCompanyInfoResponse.md
+docs/GetCompanyPlanUsageResponse.md
 docs/GetEInvoiceRejectionReasonResponse.md
 docs/GetEmailDataResponse.md
 docs/GetExistingIssuedDocumentTotalsRequest.md
@@ -286,6 +289,7 @@ lib/fattureincloud_ruby_sdk/models/company_info_plan_info.rb
 lib/fattureincloud_ruby_sdk/models/company_info_plan_info_functions.rb
 lib/fattureincloud_ruby_sdk/models/company_info_plan_info_functions_status.rb
 lib/fattureincloud_ruby_sdk/models/company_info_plan_info_limits.rb
+lib/fattureincloud_ruby_sdk/models/company_plan_usage.rb
 lib/fattureincloud_ruby_sdk/models/company_type.rb
 lib/fattureincloud_ruby_sdk/models/controlled_company.rb
 lib/fattureincloud_ruby_sdk/models/create_archive_document_request.rb
@@ -331,11 +335,13 @@ lib/fattureincloud_ruby_sdk/models/entity_type.rb
 lib/fattureincloud_ruby_sdk/models/event_type.rb
 lib/fattureincloud_ruby_sdk/models/f24.rb
 lib/fattureincloud_ruby_sdk/models/f24_status.rb
+lib/fattureincloud_ruby_sdk/models/fatture_in_cloud_plan_type.rb
 lib/fattureincloud_ruby_sdk/models/function_status.rb
 lib/fattureincloud_ruby_sdk/models/get_archive_document_response.rb
 lib/fattureincloud_ruby_sdk/models/get_cashbook_entry_response.rb
 lib/fattureincloud_ruby_sdk/models/get_client_response.rb
 lib/fattureincloud_ruby_sdk/models/get_company_info_response.rb
+lib/fattureincloud_ruby_sdk/models/get_company_plan_usage_response.rb
 lib/fattureincloud_ruby_sdk/models/get_e_invoice_rejection_reason_response.rb
 lib/fattureincloud_ruby_sdk/models/get_email_data_response.rb
 lib/fattureincloud_ruby_sdk/models/get_existing_issued_document_totals_request.rb
@@ -501,6 +507,7 @@ lib/fattureincloud_ruby_sdk/models/webhooks_subscription.rb
 lib/fattureincloud_ruby_sdk/models/webhooks_subscription_config.rb
 lib/fattureincloud_ruby_sdk/models/webhooks_subscription_mapping.rb
 lib/fattureincloud_ruby_sdk/version.rb
-spec/api_client_spec.rb
-spec/configuration_spec.rb
+spec/models/company_plan_usage_spec.rb
+spec/models/fatture_in_cloud_plan_type_spec.rb
+spec/models/get_company_plan_usage_response_spec.rb
 spec/spec_helper.rb

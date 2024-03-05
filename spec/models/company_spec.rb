@@ -26,6 +26,8 @@ describe FattureInCloud_Ruby_Sdk::Company do
   instance.access_token = "4ff5f0fe5abcd1d7157fa13ca72ab62b6183db0667a576a0e19164801c18c4f7362a848fa32dbb8c3a3f94c34f3df95"
   instance.connection_id = 94566
   instance.access_token = "ergaegwergq53wh65je5j"
+  instance.fic_license_expire = "2024-10-10"
+  instance.fic_plan = "standard"
   instance.controlled_companies = [
     {
       id: 12246,
@@ -91,6 +93,18 @@ describe FattureInCloud_Ruby_Sdk::Company do
   describe 'test attribute "tax_code"' do
     it 'should work' do
       expect(instance.tax_code).to be_a_kind_of(String)
+    end
+  end
+
+  describe 'test attribute "fic_license_expire"' do
+    it 'should work' do
+      expect(instance.fic_license_expire).to be_a_kind_of(String)
+    end
+  end
+
+  describe 'test attribute "fic_plan"' do
+    it 'should work' do
+      expect(instance.fic_plan).to be_a_kind_of(String)
     end
   end
 
