@@ -507,7 +507,4 @@ lib/fattureincloud_ruby_sdk/models/webhooks_subscription.rb
 lib/fattureincloud_ruby_sdk/models/webhooks_subscription_config.rb
 lib/fattureincloud_ruby_sdk/models/webhooks_subscription_mapping.rb
 lib/fattureincloud_ruby_sdk/version.rb
-spec/models/company_plan_usage_spec.rb
-spec/models/fatture_in_cloud_plan_type_spec.rb
-spec/models/get_company_plan_usage_response_spec.rb
 spec/spec_helper.rb
