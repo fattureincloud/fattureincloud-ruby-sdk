@@ -19,7 +19,6 @@ require 'date'
 # Please update as you see appropriate
 describe FattureInCloud_Ruby_Sdk::IssuedDocumentExtraData do
   instance = FattureInCloud_Ruby_Sdk::IssuedDocumentExtraData.new
-  instance.show_sofort_button = true
   instance.multifatture_sent = 3
   instance.ts_communication = true
   instance.ts_flag_tipo_spesa = 1
@@ -35,11 +34,6 @@ describe FattureInCloud_Ruby_Sdk::IssuedDocumentExtraData do
   describe 'test an instance of IssuedDocumentExtraData' do
     it 'should create an instance of IssuedDocumentExtraData' do
       expect(instance).to be_instance_of(FattureInCloud_Ruby_Sdk::IssuedDocumentExtraData)
-    end
-  end
-  describe 'test attribute "show_sofort_button"' do
-    it 'should work' do
-      expect(instance.show_sofort_button).to be(true).or be(false)
     end
   end
 

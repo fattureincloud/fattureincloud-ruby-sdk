@@ -22,6 +22,7 @@ describe FattureInCloud_Ruby_Sdk::Company do
   instance.id = 12345
   instance.name = "Studio Commercialista"
   instance.tax_code = "ABCSFN94T17A794K"
+  instance.vat_number = "IT12345640962"
   instance.type = "accountant"
   instance.access_token = "4ff5f0fe5abcd1d7157fa13ca72ab62b6183db0667a576a0e19164801c18c4f7362a848fa32dbb8c3a3f94c34f3df95"
   instance.connection_id = 94566
@@ -75,6 +76,12 @@ describe FattureInCloud_Ruby_Sdk::Company do
   describe 'test attribute "access_token"' do
     it 'should work' do
       expect(instance.access_token).to be_a_kind_of(String)
+    end
+  end
+
+  describe 'test attribute "vat_number"' do
+    it 'should work' do
+      expect(instance.vat_number).to be_a_kind_of(String)
     end
   end
 
