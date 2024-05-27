@@ -45,7 +45,6 @@ describe FattureInCloud_Ruby_Sdk::CreateIssuedDocumentResponse do
     show_payment_method: false,
     show_payments: true,
     show_totals: "all",
-    show_paypal_button: true,
     show_notification_button: false,
     is_marked: false,
     entity: {
@@ -132,7 +131,7 @@ describe FattureInCloud_Ruby_Sdk::CreateIssuedDocumentResponse do
     url: "y12h45rn9yf2mse0p43t7ec90vr.pdf",
     show_tspay_button: false
   }
-  
+
   describe 'test an instance of CreateIssuedDocumentResponse' do
     it 'should create an instance of CreateIssuedDocumentResponse' do
       expect(instance).to be_instance_of(FattureInCloud_Ruby_Sdk::CreateIssuedDocumentResponse)

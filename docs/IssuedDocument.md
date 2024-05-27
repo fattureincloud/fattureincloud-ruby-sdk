@@ -52,7 +52,6 @@
 | **show_payments** | **Boolean** | Show the expiration dates of the payments on the document | [optional] |
 | **show_payment_method** | **Boolean** | Show the payment method details on the document | [optional] |
 | **show_totals** | [**ShowTotalsMode**](ShowTotalsMode.md) |  | [optional][default to &#39;all&#39;] |
-| **show_paypal_button** | **Boolean** | Show paypal button in the PDF | [optional] |
 | **show_notification_button** | **Boolean** | Show notification button in the PDF | [optional] |
 | **show_tspay_button** | **Boolean** | Show ts pay button in the PDF | [optional] |
 | **delivery_note** | **Boolean** | Issued document has delivery note | [optional] |

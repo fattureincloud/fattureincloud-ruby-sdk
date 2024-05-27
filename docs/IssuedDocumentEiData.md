@@ -5,7 +5,7 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **vat_kind** | [**VatKind**](VatKind.md) |  | [optional] |
-| **original_document_type** | [**OriginalDocumentType**](OriginalDocumentType.md) |  | [optional][default to &#39;ordine&#39;] |
+| **original_document_type** | [**OriginalDocumentType**](OriginalDocumentType.md) |  | [optional] |
 | **od_number** | **String** | E-invoice original document number | [optional] |
 | **od_date** | **Date** | E-invoice original document date | [optional] |
 | **cig** | **String** | E-invoice CIG | [optional] |

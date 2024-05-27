@@ -13,4 +13,5 @@
 | **fic_plan** | [**FattureInCloudPlanType**](FattureInCloudPlanType.md) |  | [optional] |
 | **connection_id** | **Integer** | Company connection id | [optional] |
 | **tax_code** | **String** | Company tax code | [optional] |
+| **vat_number** | **String** | Company vat number | [optional] |
 
