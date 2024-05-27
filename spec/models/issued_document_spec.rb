@@ -48,7 +48,6 @@ describe FattureInCloud_Ruby_Sdk::IssuedDocument do
   instance.show_payment_method = false
   instance.show_payments = true
   instance.show_totals = "all"
-  instance.show_paypal_button = true
   instance.show_notification_button = false
   instance.is_marked = false
   instance.date = Date.new(2021, 12, 21)
@@ -369,12 +368,6 @@ describe FattureInCloud_Ruby_Sdk::IssuedDocument do
   describe 'test attribute "v_margins"' do
     it 'should work' do
       expect(instance.v_margins).to be_a_kind_of(Numeric)
-    end
-  end
-
-  describe 'test attribute "show_paypal_button"' do
-    it 'should work' do
-      expect(instance.show_paypal_button).to be(true).or be(false)
     end
   end
 
