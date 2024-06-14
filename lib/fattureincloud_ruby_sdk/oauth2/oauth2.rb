@@ -19,7 +19,7 @@ module FattureInCloud_Ruby_Sdk
     # @param [Object] data The request data.
     # @return [Object] The response body.
     def execute_post(url, body)
-      res = Typhoeus.post(token_uri, body: data)
+      res = Typhoeus.post(url, body: body)
       if res.response_code != 200
         raise "Error fetching token: #{res.response_body}"
       end
@@ -56,7 +56,7 @@ module FattureInCloud_Ruby_Sdk
     def get_authorization_url(scopes, state)
       authorization_uri = "#{@base_uri}/oauth/authorize"
       scope_string = OAuth2Manager.get_scope_string(scopes)
-    
+
       params = {
           'response_type': 'code',
           'client_id': @client_id,
@@ -137,7 +137,7 @@ module FattureInCloud_Ruby_Sdk
           'scope': scope_string
       }
 
-      json = execute_post(device_uri, data)
+      json = execute_post(device_uri, data)["data"]
 
       OAuth2DeviceCodeResponse.new(json["device_code"], json['user_code'], json['scope'], json['verification_uri'], json['interval'], json['expires_in'])
     end
@@ -178,7 +178,7 @@ module FattureInCloud_Ruby_Sdk
   # The Oauth2AuthorizationCodeParams class is used to manage the OAuth2 redirect url query parameters.
   class OAuth2AuthorizationCodeParams
     attr_accessor :authorization_code, :state
-    
+
     # Initializes a new instance of the OAuth2AuthorizationCodeParams class.
     # @param [String] authorization_code The authorization code.
     # @param [String] state The state.
