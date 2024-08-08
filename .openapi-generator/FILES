@@ -99,6 +99,7 @@ docs/GetReceiptsMonthlyTotalsResponse.md
 docs/GetReceivedDocumentPreCreateInfoResponse.md
 docs/GetReceivedDocumentResponse.md
 docs/GetSupplierResponse.md
+docs/GetTaxProfileResponse.md
 docs/GetUserInfoResponse.md
 docs/GetUserInfoResponseEmailConfirmationState.md
 docs/GetUserInfoResponseInfo.md
@@ -230,6 +231,7 @@ docs/ShowTotalsMode.md
 docs/Supplier.md
 docs/SupplierType.md
 docs/SuppliersApi.md
+docs/TaxProfile.md
 docs/TaxesApi.md
 docs/TransformIssuedDocumentResponse.md
 docs/UploadArchiveAttachmentResponse.md
@@ -364,6 +366,7 @@ lib/fattureincloud_ruby_sdk/models/get_receipts_monthly_totals_response.rb
 lib/fattureincloud_ruby_sdk/models/get_received_document_pre_create_info_response.rb
 lib/fattureincloud_ruby_sdk/models/get_received_document_response.rb
 lib/fattureincloud_ruby_sdk/models/get_supplier_response.rb
+lib/fattureincloud_ruby_sdk/models/get_tax_profile_response.rb
 lib/fattureincloud_ruby_sdk/models/get_user_info_response.rb
 lib/fattureincloud_ruby_sdk/models/get_user_info_response_email_confirmation_state.rb
 lib/fattureincloud_ruby_sdk/models/get_user_info_response_info.rb
@@ -487,6 +490,7 @@ lib/fattureincloud_ruby_sdk/models/sender_email.rb
 lib/fattureincloud_ruby_sdk/models/show_totals_mode.rb
 lib/fattureincloud_ruby_sdk/models/supplier.rb
 lib/fattureincloud_ruby_sdk/models/supplier_type.rb
+lib/fattureincloud_ruby_sdk/models/tax_profile.rb
 lib/fattureincloud_ruby_sdk/models/transform_issued_document_response.rb
 lib/fattureincloud_ruby_sdk/models/upload_archive_attachment_response.rb
 lib/fattureincloud_ruby_sdk/models/upload_f24_attachment_response.rb
@@ -507,4 +511,6 @@ lib/fattureincloud_ruby_sdk/models/webhooks_subscription.rb
 lib/fattureincloud_ruby_sdk/models/webhooks_subscription_config.rb
 lib/fattureincloud_ruby_sdk/models/webhooks_subscription_mapping.rb
 lib/fattureincloud_ruby_sdk/version.rb
+spec/models/get_tax_profile_response_spec.rb
+spec/models/tax_profile_spec.rb
 spec/spec_helper.rb
