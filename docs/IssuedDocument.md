@@ -13,7 +13,7 @@
 | **year** | **Integer** | Issued document year | [optional] |
 | **currency** | [**Currency**](Currency.md) |  | [optional] |
 | **language** | [**Language**](Language.md) |  | [optional] |
-| **subject** | **String** | Issued document subject | [optional] |
+| **subject** | **String** | Issued document subject [not shown on the PDF] | [optional] |
 | **visible_subject** | **String** | Issued document visible subject | [optional] |
 | **rc_center** | **String** | Issued document revenue center [or cost center if type&#x3D;supplier_order]. | [optional] |
 | **notes** | **String** | Issued document extra notes | [optional] |

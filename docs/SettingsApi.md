@@ -12,6 +12,7 @@ All URIs are relative to *https://api-v2.fattureincloud.it*
 | [**delete_vat_type**](SettingsApi.md#delete_vat_type) | **DELETE** /c/{company_id}/settings/vat_types/{vat_type_id} | Delete Vat Type |
 | [**get_payment_account**](SettingsApi.md#get_payment_account) | **GET** /c/{company_id}/settings/payment_accounts/{payment_account_id} | Get Payment Account |
 | [**get_payment_method**](SettingsApi.md#get_payment_method) | **GET** /c/{company_id}/settings/payment_methods/{payment_method_id} | Get Payment Method |
+| [**get_tax_profile**](SettingsApi.md#get_tax_profile) | **GET** /c/{company_id}/settings/tax_profile | Get Tax Profile |
 | [**get_vat_type**](SettingsApi.md#get_vat_type) | **GET** /c/{company_id}/settings/vat_types/{vat_type_id} | Get Vat Type |
 | [**modify_payment_account**](SettingsApi.md#modify_payment_account) | **PUT** /c/{company_id}/settings/payment_accounts/{payment_account_id} | Modify Payment Account |
 | [**modify_payment_method**](SettingsApi.md#modify_payment_method) | **PUT** /c/{company_id}/settings/payment_methods/{payment_method_id} | Modify Payment Method |
@@ -590,6 +591,75 @@ end
 ### Return type
 
 [**GetPaymentMethodResponse**](GetPaymentMethodResponse.md)
+
+### Authorization
+
+[OAuth2AuthenticationCodeFlow](../README.md#OAuth2AuthenticationCodeFlow)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## get_tax_profile
+
+> <GetTaxProfileResponse> get_tax_profile(company_id)
+
+Get Tax Profile
+
+Gets the Tax Profile
+
+### Examples
+
+```ruby
+require 'time'
+require 'fattureincloud_ruby_sdk'
+# setup authorization
+FattureInCloud_Ruby_Sdk.configure do |config|
+  # Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
+  config.access_token = 'YOUR ACCESS TOKEN'
+end
+
+api_instance = FattureInCloud_Ruby_Sdk::SettingsApi.new
+company_id = 12345 # Integer | The ID of the company.
+
+begin
+  # Get Tax Profile
+  result = api_instance.get_tax_profile(company_id)
+  p result
+rescue FattureInCloud_Ruby_Sdk::ApiError => e
+  puts "Error when calling SettingsApi->get_tax_profile: #{e}"
+end
+```
+
+#### Using the get_tax_profile_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<GetTaxProfileResponse>, Integer, Hash)> get_tax_profile_with_http_info(company_id)
+
+```ruby
+begin
+  # Get Tax Profile
+  data, status_code, headers = api_instance.get_tax_profile_with_http_info(company_id)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <GetTaxProfileResponse>
+rescue FattureInCloud_Ruby_Sdk::ApiError => e
+  puts "Error when calling SettingsApi->get_tax_profile_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **company_id** | **Integer** | The ID of the company. |  |
+
+### Return type
+
+[**GetTaxProfileResponse**](GetTaxProfileResponse.md)
 
 ### Authorization
 

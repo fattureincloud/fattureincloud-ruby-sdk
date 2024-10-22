@@ -34,7 +34,7 @@ module FattureInCloud_Ruby_Sdk
     end
   end
 
-    # The OAuth2AuthorizationCodeManager class is used to manage the OAuth2 authorization code flow.
+  # The OAuth2AuthorizationCodeManager class is used to manage the OAuth2 authorization code flow.
   class OAuth2AuthorizationCodeManager < OAuth2Manager
     attr_accessor :client_id, :client_secret, :redirect_uri, :base_uri
 
