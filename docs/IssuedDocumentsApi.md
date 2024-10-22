@@ -624,7 +624,7 @@ company_id = 12345 # Integer | The ID of the company.
 ids = '1,2,3,4' # String | Ids of the documents.
 opts = {
   group: 0, # Integer | Group items.
-  e_invoice: 0 # Integer | New document e_invoice.
+  parameter: 'delivery_notes' # String | Type of the parameters to be joined
 }
 
 begin
@@ -661,7 +661,7 @@ end
 | **company_id** | **Integer** | The ID of the company. |  |
 | **ids** | **String** | Ids of the documents. |  |
 | **group** | **Integer** | Group items. | [optional] |
-| **e_invoice** | **Integer** | New document e_invoice. | [optional] |
+| **parameter** | **String** | Type of the parameters to be joined | [optional] |
 
 ### Return type
 
@@ -937,6 +937,7 @@ company_id = 12345 # Integer | The ID of the company.
 original_document_id = 56 # Integer | Original document id.
 new_type = 'new_type_example' # String | New document type.
 opts = {
+  parameter: 'parameter_example', # String | Old document type.
   e_invoice: 0, # Integer | New document e_invoice.
   transform_keep_copy: 0 # Integer | Keep the old document.
 }
@@ -975,6 +976,7 @@ end
 | **company_id** | **Integer** | The ID of the company. |  |
 | **original_document_id** | **Integer** | Original document id. |  |
 | **new_type** | **String** | New document type. |  |
+| **parameter** | **String** | Old document type. | [optional] |
 | **e_invoice** | **Integer** | New document e_invoice. | [optional] |
 | **transform_keep_copy** | **Integer** | Keep the old document. | [optional] |
 
