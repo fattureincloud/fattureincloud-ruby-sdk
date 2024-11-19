@@ -48,6 +48,9 @@ describe 'SettingsApi' do
     @modify_vat_type_response_obj = { "data": { "id": 0, "value": 22, "description": "Non imponibile art. 123", "notes": "IVA non imponibile ai sensi dell'articolo 123, comma 2", "e_invoice": true, "ei_type": 2, "ei_description": "string", "editable": true, "is_disabled": true } }
     allow(@api_instance).to receive(:modify_vat_type) { @modify_vat_type_response_obj }
 
+    @get_tax_profile_response_obj = { "data": { "company_type": "individual", "company_subtype": "artigiani", "profession": "test", "regime": "forfettario_5", "rivalsa_name": "", "default_rivalsa": 0, "cassa_name": "", "default_cassa": 0, "default_cassa_taxable": 100, "cassa2_name": "", "default_cassa2": 0, "default_cassa2_taxable": 0, "default_withholding_tax": 0, "default_withholding_tax_taxable": 100, "default_other_withholding_tax": 0, "enasarco": false, "enasarco_type": "test", "contributions_percentage": 0, "med": false, "default_vat": { "id": 66, "value": 0, "description": "Contribuenti forfettari", "notes": "Operazione non soggetta a IVA ai sensi dell'art. 1, commi 54-89, Legge n. 190/2014 e succ. modifiche/integrazioni", "e_invoice": true, "ei_type": 2.2, "ei_description": "Non soggetta art. 1/54-89 L. 190/2014 e succ. modifiche/integrazioni", "editable": false, "is_disabled": false, "default": true } } }
+    allow(@api_instance).to receive(:get_tax_profile) { @get_tax_profile_response_obj }
+
   end
 
   after do
@@ -268,6 +271,23 @@ describe 'SettingsApi' do
       response = @api_instance.modify_vat_type(2, 22, opts)
       response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @modify_vat_type_response_obj.to_json
+      actual_json = response.to_json
+
+      expect(actual_json).to eq(expected_json)
+    end
+  end
+
+  # unit tests for get_tax_profile
+  # Get Tax Profile
+  # Gets the tax profile of the specified company.
+  # @param company_id The ID of the company.
+  # @param [Hash] opts the optional parameters
+  # @return [GetTaxProfileResponse]
+  describe 'get_tax_profile test' do
+    it 'should work' do
+      response = @api_instance.get_tax_profile(2)
+      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
+      expected_json = @get_tax_profile_response_obj.to_json
       actual_json = response.to_json
 
       expect(actual_json).to eq(expected_json)
