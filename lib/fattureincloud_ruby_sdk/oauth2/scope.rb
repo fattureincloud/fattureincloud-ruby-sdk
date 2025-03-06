@@ -97,6 +97,12 @@ module FattureInCloud_Ruby_Sdk
     # Write permission to the Receipts
     RECEIPTS_ALL = 'receipts:a'.freeze
 
+    # Read permission to the Calendar
+    CALENDAR_READ = 'calendar:r'.freeze
+
+    # Write permission to the Calendar
+    CALENDAR_ALL = 'calendar:a'.freeze
+
     # Read permission to the Taxes
     TAXES_READ = 'taxes:r'.freeze
 
@@ -108,6 +114,9 @@ module FattureInCloud_Ruby_Sdk
 
     # Read permission to the Archive Documents
     ARCHIVE_ALL = 'archive:a'.freeze
+
+    # Read permission to the Emails
+    EMAILS_READ = 'emails:r'.freeze
 
     # Read permission to the Cashbook
     CASHBOOK_READ = 'cashbook:r'.freeze

@@ -5,16 +5,20 @@ All URIs are relative to *https://api-v2.fattureincloud.it*
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
 | [**create_issued_document**](IssuedDocumentsApi.md#create_issued_document) | **POST** /c/{company_id}/issued_documents | Create Issued Document |
+| [**delete_bin_issued_document**](IssuedDocumentsApi.md#delete_bin_issued_document) | **DELETE** /c/{company_id}/bin/issued_documents/{document_id} |  |
 | [**delete_issued_document**](IssuedDocumentsApi.md#delete_issued_document) | **DELETE** /c/{company_id}/issued_documents/{document_id} | Delete Issued Document |
 | [**delete_issued_document_attachment**](IssuedDocumentsApi.md#delete_issued_document_attachment) | **DELETE** /c/{company_id}/issued_documents/{document_id}/attachment | Delete Issued Document Attachment |
+| [**get_bin_issued_document**](IssuedDocumentsApi.md#get_bin_issued_document) | **GET** /c/{company_id}/bin/issued_documents/{document_id} | Get Bin Issued Documents List |
 | [**get_email_data**](IssuedDocumentsApi.md#get_email_data) | **GET** /c/{company_id}/issued_documents/{document_id}/email | Get Email Data |
 | [**get_existing_issued_document_totals**](IssuedDocumentsApi.md#get_existing_issued_document_totals) | **POST** /c/{company_id}/issued_documents/{document_id}/totals | Get Existing Issued Document Totals |
 | [**get_issued_document**](IssuedDocumentsApi.md#get_issued_document) | **GET** /c/{company_id}/issued_documents/{document_id} | Get Issued Document |
 | [**get_issued_document_pre_create_info**](IssuedDocumentsApi.md#get_issued_document_pre_create_info) | **GET** /c/{company_id}/issued_documents/info | Get Issued Document Pre-Create Info |
 | [**get_new_issued_document_totals**](IssuedDocumentsApi.md#get_new_issued_document_totals) | **POST** /c/{company_id}/issued_documents/totals | Get New Issued Document Totals |
 | [**join_issued_documents**](IssuedDocumentsApi.md#join_issued_documents) | **GET** /c/{company_id}/issued_documents/join | Join Issued Documents |
+| [**list_bin_issued_documents**](IssuedDocumentsApi.md#list_bin_issued_documents) | **GET** /c/{company_id}/bin/issued_documents | Get Bin Issued Documents List |
 | [**list_issued_documents**](IssuedDocumentsApi.md#list_issued_documents) | **GET** /c/{company_id}/issued_documents | List Issued Documents |
 | [**modify_issued_document**](IssuedDocumentsApi.md#modify_issued_document) | **PUT** /c/{company_id}/issued_documents/{document_id} | Modify Issued Document |
+| [**recover_bin_issued_document**](IssuedDocumentsApi.md#recover_bin_issued_document) | **POST** /c/{company_id}/bin/issued_documents/{document_id}/recover |  |
 | [**schedule_email**](IssuedDocumentsApi.md#schedule_email) | **POST** /c/{company_id}/issued_documents/{document_id}/email | Schedule Email |
 | [**transform_issued_document**](IssuedDocumentsApi.md#transform_issued_document) | **GET** /c/{company_id}/issued_documents/transform | Transform Issued Document |
 | [**upload_issued_document_attachment**](IssuedDocumentsApi.md#upload_issued_document_attachment) | **POST** /c/{company_id}/issued_documents/attachment | Upload Issued Document Attachment |
@@ -91,6 +95,76 @@ end
 
 - **Content-Type**: application/json
 - **Accept**: application/json
+
+
+## delete_bin_issued_document
+
+> delete_bin_issued_document(company_id, document_id)
+
+
+
+Delete Bin Issued Document
+
+### Examples
+
+```ruby
+require 'time'
+require 'fattureincloud_ruby_sdk'
+# setup authorization
+FattureInCloud_Ruby_Sdk.configure do |config|
+  # Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
+  config.access_token = 'YOUR ACCESS TOKEN'
+end
+
+api_instance = FattureInCloud_Ruby_Sdk::IssuedDocumentsApi.new
+company_id = 12345 # Integer | The ID of the company.
+document_id = 56 # Integer | The ID of the document.
+
+begin
+  # 
+  api_instance.delete_bin_issued_document(company_id, document_id)
+rescue FattureInCloud_Ruby_Sdk::ApiError => e
+  puts "Error when calling IssuedDocumentsApi->delete_bin_issued_document: #{e}"
+end
+```
+
+#### Using the delete_bin_issued_document_with_http_info variant
+
+This returns an Array which contains the response data (`nil` in this case), status code and headers.
+
+> <Array(nil, Integer, Hash)> delete_bin_issued_document_with_http_info(company_id, document_id)
+
+```ruby
+begin
+  # 
+  data, status_code, headers = api_instance.delete_bin_issued_document_with_http_info(company_id, document_id)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => nil
+rescue FattureInCloud_Ruby_Sdk::ApiError => e
+  puts "Error when calling IssuedDocumentsApi->delete_bin_issued_document_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **company_id** | **Integer** | The ID of the company. |  |
+| **document_id** | **Integer** | The ID of the document. |  |
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+[OAuth2AuthenticationCodeFlow](../README.md#OAuth2AuthenticationCodeFlow)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
 
 ## delete_issued_document
@@ -231,6 +305,77 @@ nil (empty response body)
 
 - **Content-Type**: Not defined
 - **Accept**: Not defined
+
+
+## get_bin_issued_document
+
+> <GetBinIssuedDocumentResponse> get_bin_issued_document(company_id, document_id)
+
+Get Bin Issued Documents List
+
+Get bin issued documents detail
+
+### Examples
+
+```ruby
+require 'time'
+require 'fattureincloud_ruby_sdk'
+# setup authorization
+FattureInCloud_Ruby_Sdk.configure do |config|
+  # Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
+  config.access_token = 'YOUR ACCESS TOKEN'
+end
+
+api_instance = FattureInCloud_Ruby_Sdk::IssuedDocumentsApi.new
+company_id = 12345 # Integer | The ID of the company.
+document_id = 56 # Integer | The ID of the document.
+
+begin
+  # Get Bin Issued Documents List
+  result = api_instance.get_bin_issued_document(company_id, document_id)
+  p result
+rescue FattureInCloud_Ruby_Sdk::ApiError => e
+  puts "Error when calling IssuedDocumentsApi->get_bin_issued_document: #{e}"
+end
+```
+
+#### Using the get_bin_issued_document_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<GetBinIssuedDocumentResponse>, Integer, Hash)> get_bin_issued_document_with_http_info(company_id, document_id)
+
+```ruby
+begin
+  # Get Bin Issued Documents List
+  data, status_code, headers = api_instance.get_bin_issued_document_with_http_info(company_id, document_id)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <GetBinIssuedDocumentResponse>
+rescue FattureInCloud_Ruby_Sdk::ApiError => e
+  puts "Error when calling IssuedDocumentsApi->get_bin_issued_document_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **company_id** | **Integer** | The ID of the company. |  |
+| **document_id** | **Integer** | The ID of the document. |  |
+
+### Return type
+
+[**GetBinIssuedDocumentResponse**](GetBinIssuedDocumentResponse.md)
+
+### Authorization
+
+[OAuth2AuthenticationCodeFlow](../README.md#OAuth2AuthenticationCodeFlow)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
 ## get_email_data
@@ -677,6 +822,75 @@ end
 - **Accept**: application/json
 
 
+## list_bin_issued_documents
+
+> <ListBinIssuedDocuments> list_bin_issued_documents(company_id)
+
+Get Bin Issued Documents List
+
+Get bin issued documents list
+
+### Examples
+
+```ruby
+require 'time'
+require 'fattureincloud_ruby_sdk'
+# setup authorization
+FattureInCloud_Ruby_Sdk.configure do |config|
+  # Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
+  config.access_token = 'YOUR ACCESS TOKEN'
+end
+
+api_instance = FattureInCloud_Ruby_Sdk::IssuedDocumentsApi.new
+company_id = 12345 # Integer | The ID of the company.
+
+begin
+  # Get Bin Issued Documents List
+  result = api_instance.list_bin_issued_documents(company_id)
+  p result
+rescue FattureInCloud_Ruby_Sdk::ApiError => e
+  puts "Error when calling IssuedDocumentsApi->list_bin_issued_documents: #{e}"
+end
+```
+
+#### Using the list_bin_issued_documents_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<ListBinIssuedDocuments>, Integer, Hash)> list_bin_issued_documents_with_http_info(company_id)
+
+```ruby
+begin
+  # Get Bin Issued Documents List
+  data, status_code, headers = api_instance.list_bin_issued_documents_with_http_info(company_id)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <ListBinIssuedDocuments>
+rescue FattureInCloud_Ruby_Sdk::ApiError => e
+  puts "Error when calling IssuedDocumentsApi->list_bin_issued_documents_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **company_id** | **Integer** | The ID of the company. |  |
+
+### Return type
+
+[**ListBinIssuedDocuments**](ListBinIssuedDocuments.md)
+
+### Authorization
+
+[OAuth2AuthenticationCodeFlow](../README.md#OAuth2AuthenticationCodeFlow)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## list_issued_documents
 
 > <ListIssuedDocumentsResponse> list_issued_documents(company_id, type, opts)
@@ -837,6 +1051,76 @@ end
 
 - **Content-Type**: application/json
 - **Accept**: application/json
+
+
+## recover_bin_issued_document
+
+> recover_bin_issued_document(company_id, document_id)
+
+
+
+Recover Issued Document From The Bin
+
+### Examples
+
+```ruby
+require 'time'
+require 'fattureincloud_ruby_sdk'
+# setup authorization
+FattureInCloud_Ruby_Sdk.configure do |config|
+  # Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
+  config.access_token = 'YOUR ACCESS TOKEN'
+end
+
+api_instance = FattureInCloud_Ruby_Sdk::IssuedDocumentsApi.new
+company_id = 12345 # Integer | The ID of the company.
+document_id = 56 # Integer | The ID of the document.
+
+begin
+  # 
+  api_instance.recover_bin_issued_document(company_id, document_id)
+rescue FattureInCloud_Ruby_Sdk::ApiError => e
+  puts "Error when calling IssuedDocumentsApi->recover_bin_issued_document: #{e}"
+end
+```
+
+#### Using the recover_bin_issued_document_with_http_info variant
+
+This returns an Array which contains the response data (`nil` in this case), status code and headers.
+
+> <Array(nil, Integer, Hash)> recover_bin_issued_document_with_http_info(company_id, document_id)
+
+```ruby
+begin
+  # 
+  data, status_code, headers = api_instance.recover_bin_issued_document_with_http_info(company_id, document_id)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => nil
+rescue FattureInCloud_Ruby_Sdk::ApiError => e
+  puts "Error when calling IssuedDocumentsApi->recover_bin_issued_document_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **company_id** | **Integer** | The ID of the company. |  |
+| **document_id** | **Integer** | The ID of the document. |  |
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+[OAuth2AuthenticationCodeFlow](../README.md#OAuth2AuthenticationCodeFlow)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
 
 ## schedule_email

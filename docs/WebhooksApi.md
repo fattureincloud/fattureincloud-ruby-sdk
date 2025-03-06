@@ -9,6 +9,7 @@ All URIs are relative to *https://api-v2.fattureincloud.it*
 | [**get_webhooks_subscription**](WebhooksApi.md#get_webhooks_subscription) | **GET** /c/{company_id}/subscriptions/{subscription_id} | Get Webhooks Subscription |
 | [**list_webhooks_subscriptions**](WebhooksApi.md#list_webhooks_subscriptions) | **GET** /c/{company_id}/subscriptions | List Webhooks Subscriptions |
 | [**modify_webhooks_subscription**](WebhooksApi.md#modify_webhooks_subscription) | **PUT** /c/{company_id}/subscriptions/{subscription_id} | Modify Webhooks Subscription |
+| [**verify_webhooks_subscription**](WebhooksApi.md#verify_webhooks_subscription) | **POST** /c/{company_id}/subscriptions/{subscription_id}/verify | Verify Webhooks Subscription |
 
 
 ## create_webhooks_subscription
@@ -367,4 +368,78 @@ end
 
 - **Content-Type**: application/json
 - **Accept**: application/json
+
+
+## verify_webhooks_subscription
+
+> verify_webhooks_subscription(company_id, subscription_id, opts)
+
+Verify Webhooks Subscription
+
+Verify a webhook subscription.
+
+### Examples
+
+```ruby
+require 'time'
+require 'fattureincloud_ruby_sdk'
+# setup authorization
+FattureInCloud_Ruby_Sdk.configure do |config|
+  # Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
+  config.access_token = 'YOUR ACCESS TOKEN'
+end
+
+api_instance = FattureInCloud_Ruby_Sdk::WebhooksApi.new
+company_id = 12345 # Integer | The ID of the company.
+subscription_id = 'SUB123' # String | The ID of the subscription.
+opts = {
+  verify_webhooks_subscription_request: FattureInCloud_Ruby_Sdk::VerifyWebhooksSubscriptionRequest.new # VerifyWebhooksSubscriptionRequest | 
+}
+
+begin
+  # Verify Webhooks Subscription
+  api_instance.verify_webhooks_subscription(company_id, subscription_id, opts)
+rescue FattureInCloud_Ruby_Sdk::ApiError => e
+  puts "Error when calling WebhooksApi->verify_webhooks_subscription: #{e}"
+end
+```
+
+#### Using the verify_webhooks_subscription_with_http_info variant
+
+This returns an Array which contains the response data (`nil` in this case), status code and headers.
+
+> <Array(nil, Integer, Hash)> verify_webhooks_subscription_with_http_info(company_id, subscription_id, opts)
+
+```ruby
+begin
+  # Verify Webhooks Subscription
+  data, status_code, headers = api_instance.verify_webhooks_subscription_with_http_info(company_id, subscription_id, opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => nil
+rescue FattureInCloud_Ruby_Sdk::ApiError => e
+  puts "Error when calling WebhooksApi->verify_webhooks_subscription_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **company_id** | **Integer** | The ID of the company. |  |
+| **subscription_id** | **String** | The ID of the subscription. |  |
+| **verify_webhooks_subscription_request** | [**VerifyWebhooksSubscriptionRequest**](VerifyWebhooksSubscriptionRequest.md) |  | [optional] |
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+[OAuth2AuthenticationCodeFlow](../README.md#OAuth2AuthenticationCodeFlow)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: Not defined
 
