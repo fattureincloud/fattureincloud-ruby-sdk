@@ -22,8 +22,7 @@ describe FattureInCloud_Ruby_Sdk::PriceListPricesType do
 
   describe 'test an instance of PriceListPricesType' do
     it 'should create an instance of PriceListPricesType' do
-      # uncomment below to test the instance creation
-      # expect(instance).to be_instance_of(FattureInCloud_Ruby_Sdk::PriceListPricesType)
+      expect(instance).to be_instance_of(FattureInCloud_Ruby_Sdk::PriceListPricesType)
     end
   end
 

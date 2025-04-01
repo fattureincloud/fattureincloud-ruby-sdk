@@ -20,6 +20,13 @@ describe 'PriceListsApi' do
   before do
     # run before each test
     @api_instance = FattureInCloud_Ruby_Sdk::PriceListsApi.new
+
+    @get_price_lists_response_obj = { data: [{ id: '10', name: 'listino', prices_type: 'net', is_default: true, valid_from: '2025-01-01', valid_to: '2025-12-01', type: 'sell' }, { id: '11', name: 'listino-test', prices_type: 'gross', is_default: true, valid_from: '2025-01-01', valid_to: '2025-01-01', type: 'purchase' }] }
+    allow(@api_instance).to receive(:get_price_lists) { @get_price_lists_response_obj }
+
+    @get_price_list_items_response_obj = { data: { '1': { price: 3.5 }, '2': { price: 5 } } }
+    allow(@api_instance).to receive(:get_price_list_items) { @get_price_list_items_response_obj }
+
   end
 
   after do
@@ -36,12 +43,17 @@ describe 'PriceListsApi' do
   # Get PriceList Items List
   # Retrieves all the Items of a PriceList
   # @param company_id The ID of the company.
-  # @param price_list_id 
+  # @param price_list_id
   # @param [Hash] opts the optional parameters
   # @return [GetPriceListItemsResponse]
   describe 'get_price_list_items test' do
     it 'should work' do
-      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+        response = @api_instance.get_price_list_items(2, '10')
+        response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
+        expected_json = @get_price_list_items_response_obj.to_json
+        actual_json = response.to_json
+
+        expect(actual_json).to eq(expected_json)
     end
   end
 
@@ -53,7 +65,12 @@ describe 'PriceListsApi' do
   # @return [ListPriceListsResponse]
   describe 'get_price_lists test' do
     it 'should work' do
-      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+      response = @api_instance.get_price_lists(2)
+      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
+      expected_json = @get_price_lists_response_obj.to_json
+      actual_json = response.to_json
+
+      expect(actual_json).to eq(expected_json)
     end
   end
 
