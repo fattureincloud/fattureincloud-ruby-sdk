@@ -7,6 +7,7 @@ All URIs are relative to *https://api-v2.fattureincloud.it*
 | [**create_client**](ClientsApi.md#create_client) | **POST** /c/{company_id}/entities/clients | Create Client |
 | [**delete_client**](ClientsApi.md#delete_client) | **DELETE** /c/{company_id}/entities/clients/{client_id} | Delete Client |
 | [**get_client**](ClientsApi.md#get_client) | **GET** /c/{company_id}/entities/clients/{client_id} | Get Client |
+| [**get_client_info**](ClientsApi.md#get_client_info) | **GET** /c/{company_id}/entities/clients/info | Get Client info |
 | [**list_clients**](ClientsApi.md#list_clients) | **GET** /c/{company_id}/entities/clients | List Clients |
 | [**modify_client**](ClientsApi.md#modify_client) | **PUT** /c/{company_id}/entities/clients/{client_id} | Modify Client |
 
@@ -220,6 +221,75 @@ end
 ### Return type
 
 [**GetClientResponse**](GetClientResponse.md)
+
+### Authorization
+
+[OAuth2AuthenticationCodeFlow](../README.md#OAuth2AuthenticationCodeFlow)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## get_client_info
+
+> <GetEntityClientPreCreateInfoResponse> get_client_info(company_id)
+
+Get Client info
+
+Retrieves the information useful while creating a new Client.
+
+### Examples
+
+```ruby
+require 'time'
+require 'fattureincloud_ruby_sdk'
+# setup authorization
+FattureInCloud_Ruby_Sdk.configure do |config|
+  # Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
+  config.access_token = 'YOUR ACCESS TOKEN'
+end
+
+api_instance = FattureInCloud_Ruby_Sdk::ClientsApi.new
+company_id = 12345 # Integer | The ID of the company.
+
+begin
+  # Get Client info
+  result = api_instance.get_client_info(company_id)
+  p result
+rescue FattureInCloud_Ruby_Sdk::ApiError => e
+  puts "Error when calling ClientsApi->get_client_info: #{e}"
+end
+```
+
+#### Using the get_client_info_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<GetEntityClientPreCreateInfoResponse>, Integer, Hash)> get_client_info_with_http_info(company_id)
+
+```ruby
+begin
+  # Get Client info
+  data, status_code, headers = api_instance.get_client_info_with_http_info(company_id)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <GetEntityClientPreCreateInfoResponse>
+rescue FattureInCloud_Ruby_Sdk::ApiError => e
+  puts "Error when calling ClientsApi->get_client_info_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **company_id** | **Integer** | The ID of the company. |  |
+
+### Return type
+
+[**GetEntityClientPreCreateInfoResponse**](GetEntityClientPreCreateInfoResponse.md)
 
 ### Authorization
 
