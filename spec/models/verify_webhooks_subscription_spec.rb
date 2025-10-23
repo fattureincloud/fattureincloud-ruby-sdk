@@ -30,13 +30,13 @@ describe FattureInCloud_Ruby_Sdk::VerifyWebhooksSubscription do
 
   describe 'test attribute "id"' do
     it 'should work' do
-        expect(instance.id).to be_a_kind_of(String)
+      expect(instance.id).to be_a_kind_of(String)
     end
   end
 
   describe 'test attribute "verification_method"' do
     it 'should work' do
-        expect(instance.verification_method).to be_a_kind_of(String)
+      expect(instance.verification_method).to be_a_kind_of(String)
     end
   end
 
