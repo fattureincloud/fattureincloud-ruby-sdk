@@ -35,43 +35,43 @@ describe FattureInCloud_Ruby_Sdk::PriceList do
 
   describe 'test attribute "id"' do
     it 'should work' do
-        expect(instance.id).to be_a_kind_of(String)
+      expect(instance.id).to be_a_kind_of(String)
     end
   end
 
   describe 'test attribute "name"' do
     it 'should work' do
-        expect(instance.name).to be_a_kind_of(String)
+      expect(instance.name).to be_a_kind_of(String)
     end
   end
 
   describe 'test attribute "prices_type"' do
     it 'should work' do
-        expect(instance.prices_type).to be_a_kind_of(String)
+      expect(instance.prices_type).to be_a_kind_of(String)
     end
   end
 
   describe 'test attribute "is_default"' do
     it 'should work' do
-        expect(instance.is_default).to be_a_kind_of(TrueClass)
+      expect(instance.is_default).to be_a_kind_of(TrueClass)
     end
   end
 
   describe 'test attribute "valid_from"' do
     it 'should work' do
-        expect(instance.valid_from).to be_a_kind_of(String)
+      expect(instance.valid_from).to be_a_kind_of(String)
     end
   end
 
   describe 'test attribute "valid_to"' do
     it 'should work' do
-        expect(instance.valid_to).to be_a_kind_of(String)
+      expect(instance.valid_to).to be_a_kind_of(String)
     end
   end
 
   describe 'test attribute "type"' do
     it 'should work' do
-        expect(instance.type).to be_a_kind_of(String)
+      expect(instance.type).to be_a_kind_of(String)
     end
   end
 

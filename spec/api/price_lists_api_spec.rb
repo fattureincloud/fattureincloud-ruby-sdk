@@ -48,12 +48,12 @@ describe 'PriceListsApi' do
   # @return [GetPriceListItemsResponse]
   describe 'get_price_list_items test' do
     it 'should work' do
-        response = @api_instance.get_price_list_items(2, '10')
-        response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
-        expected_json = @get_price_list_items_response_obj.to_json
-        actual_json = response.to_json
+      response = @api_instance.get_price_list_items(2, '10')
+      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
+      expected_json = @get_price_list_items_response_obj.to_json
+      actual_json = response.to_json
 
-        expect(actual_json).to eq(expected_json)
+      expect(actual_json).to eq(expected_json)
     end
   end
 
