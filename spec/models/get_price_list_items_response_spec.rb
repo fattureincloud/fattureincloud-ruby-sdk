@@ -36,7 +36,7 @@ describe FattureInCloud_Ruby_Sdk::GetPriceListItemsResponse do
 
   describe 'test attribute "data"' do
     it 'should work' do
-        expect(instance.data).to be_a_kind_of(Hash)
+      expect(instance.data).to be_a_kind_of(Hash)
     end
   end
 end
