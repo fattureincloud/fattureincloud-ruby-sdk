@@ -138,7 +138,7 @@ describe FattureInCloud_Ruby_Sdk::GetBinIssuedDocumentResponse do
 
   describe 'test attribute "data"' do
     it 'should work' do
-        expect(instance.data).to be_a_kind_of(Object)
+      expect(instance.data).to be_a_kind_of(Object)
     end
   end
 
