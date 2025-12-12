@@ -105,6 +105,7 @@ docs/GetReceivedDocumentPreCreateInfoResponse.md
 docs/GetReceivedDocumentResponse.md
 docs/GetSupplierResponse.md
 docs/GetTaxProfileResponse.md
+docs/GetTemplatesResponse.md
 docs/GetUserInfoResponse.md
 docs/GetUserInfoResponseEmailConfirmationState.md
 docs/GetUserInfoResponseInfo.md
@@ -246,6 +247,7 @@ docs/SupplierType.md
 docs/SuppliersApi.md
 docs/TaxProfile.md
 docs/TaxesApi.md
+docs/TemplateType.md
 docs/TransformIssuedDocumentResponse.md
 docs/UploadArchiveAttachmentResponse.md
 docs/UploadF24AttachmentResponse.md
@@ -291,6 +293,7 @@ lib/fattureincloud_ruby_sdk/api/user_api.rb
 lib/fattureincloud_ruby_sdk/api/webhooks_api.rb
 lib/fattureincloud_ruby_sdk/api_client.rb
 lib/fattureincloud_ruby_sdk/api_error.rb
+lib/fattureincloud_ruby_sdk/api_model_base.rb
 lib/fattureincloud_ruby_sdk/configuration.rb
 lib/fattureincloud_ruby_sdk/models/archive_document.rb
 lib/fattureincloud_ruby_sdk/models/attachment_data.rb
@@ -389,6 +392,7 @@ lib/fattureincloud_ruby_sdk/models/get_received_document_pre_create_info_respons
 lib/fattureincloud_ruby_sdk/models/get_received_document_response.rb
 lib/fattureincloud_ruby_sdk/models/get_supplier_response.rb
 lib/fattureincloud_ruby_sdk/models/get_tax_profile_response.rb
+lib/fattureincloud_ruby_sdk/models/get_templates_response.rb
 lib/fattureincloud_ruby_sdk/models/get_user_info_response.rb
 lib/fattureincloud_ruby_sdk/models/get_user_info_response_email_confirmation_state.rb
 lib/fattureincloud_ruby_sdk/models/get_user_info_response_info.rb
@@ -520,6 +524,7 @@ lib/fattureincloud_ruby_sdk/models/show_totals_mode.rb
 lib/fattureincloud_ruby_sdk/models/supplier.rb
 lib/fattureincloud_ruby_sdk/models/supplier_type.rb
 lib/fattureincloud_ruby_sdk/models/tax_profile.rb
+lib/fattureincloud_ruby_sdk/models/template_type.rb
 lib/fattureincloud_ruby_sdk/models/transform_issued_document_response.rb
 lib/fattureincloud_ruby_sdk/models/upload_archive_attachment_response.rb
 lib/fattureincloud_ruby_sdk/models/upload_f24_attachment_response.rb
@@ -543,20 +548,6 @@ lib/fattureincloud_ruby_sdk/models/webhooks_subscription_config.rb
 lib/fattureincloud_ruby_sdk/models/webhooks_subscription_mapping.rb
 lib/fattureincloud_ruby_sdk/models/webhooks_subscription_verification_method.rb
 lib/fattureincloud_ruby_sdk/version.rb
-spec/api/price_lists_api_spec.rb
-spec/models/entity_client_pre_create_info_spec.rb
-spec/models/get_bin_issued_document_response_spec.rb
-spec/models/get_bin_received_document_response_spec.rb
-spec/models/get_entity_client_pre_create_info_response_spec.rb
-spec/models/get_price_list_items_response_spec.rb
-spec/models/list_bin_issued_documents_spec.rb
-spec/models/list_bin_received_documents_spec.rb
-spec/models/list_price_lists_response_spec.rb
-spec/models/price_list_item_spec.rb
-spec/models/price_list_prices_type_spec.rb
-spec/models/price_list_spec.rb
-spec/models/price_list_type_spec.rb
-spec/models/verify_webhooks_subscription_request_spec.rb
-spec/models/verify_webhooks_subscription_spec.rb
-spec/models/webhooks_subscription_verification_method_spec.rb
+spec/models/get_templates_response_spec.rb
+spec/models/template_type_spec.rb
 spec/spec_helper.rb
