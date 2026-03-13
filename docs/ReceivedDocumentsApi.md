@@ -5,18 +5,20 @@ All URIs are relative to *https://api-v2.fattureincloud.it*
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
 | [**create_received_document**](ReceivedDocumentsApi.md#create_received_document) | **POST** /c/{company_id}/received_documents | Create Received Document |
-| [**delete_bin_received_document**](ReceivedDocumentsApi.md#delete_bin_received_document) | **DELETE** /c/{company_id}/bin/received_documents/{document_id} |  |
+| [**delete_bin_received_document**](ReceivedDocumentsApi.md#delete_bin_received_document) | **DELETE** /c/{company_id}/bin/received_documents/{document_id} | Delete Bin Received Document |
 | [**delete_received_document**](ReceivedDocumentsApi.md#delete_received_document) | **DELETE** /c/{company_id}/received_documents/{document_id} | Delete Received Document |
 | [**delete_received_document_attachment**](ReceivedDocumentsApi.md#delete_received_document_attachment) | **DELETE** /c/{company_id}/received_documents/{document_id}/attachment | Delete Received Document Attachment |
 | [**get_bin_received_document**](ReceivedDocumentsApi.md#get_bin_received_document) | **GET** /c/{company_id}/bin/received_documents/{document_id} | Get Bin Received Documents List |
 | [**get_existing_received_document_totals**](ReceivedDocumentsApi.md#get_existing_received_document_totals) | **POST** /c/{company_id}/received_documents/{document_id}/totals | Get Existing Received Document Totals |
 | [**get_new_received_document_totals**](ReceivedDocumentsApi.md#get_new_received_document_totals) | **POST** /c/{company_id}/received_documents/totals | Get New Received Document Totals |
+| [**get_pending_received_document**](ReceivedDocumentsApi.md#get_pending_received_document) | **GET** /c/{company_id}/received_documents/pending/{document_id} | Get Pending Received Document |
 | [**get_received_document**](ReceivedDocumentsApi.md#get_received_document) | **GET** /c/{company_id}/received_documents/{document_id} | Get Received Document |
 | [**get_received_document_pre_create_info**](ReceivedDocumentsApi.md#get_received_document_pre_create_info) | **GET** /c/{company_id}/received_documents/info | Get Received Document Pre-Create Info |
 | [**list_bin_received_documents**](ReceivedDocumentsApi.md#list_bin_received_documents) | **GET** /c/{company_id}/bin/received_documents | Get Bin Received Documents List |
+| [**list_pending_received_documents**](ReceivedDocumentsApi.md#list_pending_received_documents) | **GET** /c/{company_id}/received_documents/pending | List Pending Received Documents |
 | [**list_received_documents**](ReceivedDocumentsApi.md#list_received_documents) | **GET** /c/{company_id}/received_documents | List Received Documents |
 | [**modify_received_document**](ReceivedDocumentsApi.md#modify_received_document) | **PUT** /c/{company_id}/received_documents/{document_id} | Modify Received Document |
-| [**recover_bin_received_document**](ReceivedDocumentsApi.md#recover_bin_received_document) | **POST** /c/{company_id}/bin/received_documents/{document_id}/recover |  |
+| [**recover_bin_received_document**](ReceivedDocumentsApi.md#recover_bin_received_document) | **POST** /c/{company_id}/bin/received_documents/{document_id}/recover | Recover Received Document From The Bin |
 | [**upload_received_document_attachment**](ReceivedDocumentsApi.md#upload_received_document_attachment) | **POST** /c/{company_id}/received_documents/attachment | Upload Received Document Attachment |
 
 
@@ -97,7 +99,7 @@ end
 
 > delete_bin_received_document(company_id, document_id)
 
-
+Delete Bin Received Document
 
 Delete Bin Received Document
 
@@ -117,7 +119,7 @@ company_id = 12345 # Integer | The ID of the company.
 document_id = 56 # Integer | The ID of the document.
 
 begin
-  # 
+  # Delete Bin Received Document
   api_instance.delete_bin_received_document(company_id, document_id)
 rescue FattureInCloud_Ruby_Sdk::ApiError => e
   puts "Error when calling ReceivedDocumentsApi->delete_bin_received_document: #{e}"
@@ -132,7 +134,7 @@ This returns an Array which contains the response data (`nil` in this case), sta
 
 ```ruby
 begin
-  # 
+  # Delete Bin Received Document
   data, status_code, headers = api_instance.delete_bin_received_document_with_http_info(company_id, document_id)
   p status_code # => 2xx
   p headers # => { ... }
@@ -160,7 +162,7 @@ nil (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: application/json
 
 
 ## delete_received_document
@@ -230,7 +232,7 @@ nil (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: application/json
 
 
 ## delete_received_document_attachment
@@ -300,12 +302,12 @@ nil (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: application/json
 
 
 ## get_bin_received_document
 
-> <GetBinIssuedDocumentResponse> get_bin_received_document(company_id, document_id)
+> <GetBinReceivedDocumentResponse> get_bin_received_document(company_id, document_id)
 
 Get Bin Received Documents List
 
@@ -339,7 +341,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetBinIssuedDocumentResponse>, Integer, Hash)> get_bin_received_document_with_http_info(company_id, document_id)
+> <Array(<GetBinReceivedDocumentResponse>, Integer, Hash)> get_bin_received_document_with_http_info(company_id, document_id)
 
 ```ruby
 begin
@@ -347,7 +349,7 @@ begin
   data, status_code, headers = api_instance.get_bin_received_document_with_http_info(company_id, document_id)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <GetBinIssuedDocumentResponse>
+  p data # => <GetBinReceivedDocumentResponse>
 rescue FattureInCloud_Ruby_Sdk::ApiError => e
   puts "Error when calling ReceivedDocumentsApi->get_bin_received_document_with_http_info: #{e}"
 end
@@ -362,7 +364,7 @@ end
 
 ### Return type
 
-[**GetBinIssuedDocumentResponse**](GetBinIssuedDocumentResponse.md)
+[**GetBinReceivedDocumentResponse**](GetBinReceivedDocumentResponse.md)
 
 ### Authorization
 
@@ -519,6 +521,83 @@ end
 ### HTTP request headers
 
 - **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## get_pending_received_document
+
+> <GetPendingReceivedDocumentResponse> get_pending_received_document(company_id, document_id, opts)
+
+Get Pending Received Document
+
+Gets the specified pending received document.
+
+### Examples
+
+```ruby
+require 'time'
+require 'fattureincloud_ruby_sdk'
+# setup authorization
+FattureInCloud_Ruby_Sdk.configure do |config|
+  # Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
+  config.access_token = 'YOUR ACCESS TOKEN'
+end
+
+api_instance = FattureInCloud_Ruby_Sdk::ReceivedDocumentsApi.new
+company_id = 12345 # Integer | The ID of the company.
+document_id = 56 # Integer | The ID of the document.
+opts = {
+  fields: 'fields_example', # String | List of comma-separated fields.
+  fieldset: 'basic' # String | Name of the fieldset.
+}
+
+begin
+  # Get Pending Received Document
+  result = api_instance.get_pending_received_document(company_id, document_id, opts)
+  p result
+rescue FattureInCloud_Ruby_Sdk::ApiError => e
+  puts "Error when calling ReceivedDocumentsApi->get_pending_received_document: #{e}"
+end
+```
+
+#### Using the get_pending_received_document_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<GetPendingReceivedDocumentResponse>, Integer, Hash)> get_pending_received_document_with_http_info(company_id, document_id, opts)
+
+```ruby
+begin
+  # Get Pending Received Document
+  data, status_code, headers = api_instance.get_pending_received_document_with_http_info(company_id, document_id, opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <GetPendingReceivedDocumentResponse>
+rescue FattureInCloud_Ruby_Sdk::ApiError => e
+  puts "Error when calling ReceivedDocumentsApi->get_pending_received_document_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **company_id** | **Integer** | The ID of the company. |  |
+| **document_id** | **Integer** | The ID of the document. |  |
+| **fields** | **String** | List of comma-separated fields. | [optional] |
+| **fieldset** | **String** | Name of the fieldset. | [optional] |
+
+### Return type
+
+[**GetPendingReceivedDocumentResponse**](GetPendingReceivedDocumentResponse.md)
+
+### Authorization
+
+[OAuth2AuthenticationCodeFlow](../README.md#OAuth2AuthenticationCodeFlow)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
 
@@ -739,6 +818,91 @@ end
 - **Accept**: application/json
 
 
+## list_pending_received_documents
+
+> <ListPendingReceivedDocumentsResponse> list_pending_received_documents(company_id, type, opts)
+
+List Pending Received Documents
+
+Lists the pending received documents.
+
+### Examples
+
+```ruby
+require 'time'
+require 'fattureincloud_ruby_sdk'
+# setup authorization
+FattureInCloud_Ruby_Sdk.configure do |config|
+  # Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
+  config.access_token = 'YOUR ACCESS TOKEN'
+end
+
+api_instance = FattureInCloud_Ruby_Sdk::ReceivedDocumentsApi.new
+company_id = 12345 # Integer | The ID of the company.
+type = 'agyo' # String | The type of the pending received document.
+opts = {
+  fields: 'fields_example', # String | List of comma-separated fields.
+  fieldset: 'basic', # String | Name of the fieldset.
+  sort: 'sort_example', # String | List of comma-separated fields for result sorting (minus for desc sorting).
+  page: 56, # Integer | The page to retrieve.
+  per_page: 56, # Integer | The size of the page.
+  q: 'q_example' # String | Query for filtering the results.
+}
+
+begin
+  # List Pending Received Documents
+  result = api_instance.list_pending_received_documents(company_id, type, opts)
+  p result
+rescue FattureInCloud_Ruby_Sdk::ApiError => e
+  puts "Error when calling ReceivedDocumentsApi->list_pending_received_documents: #{e}"
+end
+```
+
+#### Using the list_pending_received_documents_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<ListPendingReceivedDocumentsResponse>, Integer, Hash)> list_pending_received_documents_with_http_info(company_id, type, opts)
+
+```ruby
+begin
+  # List Pending Received Documents
+  data, status_code, headers = api_instance.list_pending_received_documents_with_http_info(company_id, type, opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <ListPendingReceivedDocumentsResponse>
+rescue FattureInCloud_Ruby_Sdk::ApiError => e
+  puts "Error when calling ReceivedDocumentsApi->list_pending_received_documents_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **company_id** | **Integer** | The ID of the company. |  |
+| **type** | **String** | The type of the pending received document. |  |
+| **fields** | **String** | List of comma-separated fields. | [optional] |
+| **fieldset** | **String** | Name of the fieldset. | [optional] |
+| **sort** | **String** | List of comma-separated fields for result sorting (minus for desc sorting). | [optional] |
+| **page** | **Integer** | The page to retrieve. | [optional][default to 1] |
+| **per_page** | **Integer** | The size of the page. | [optional][default to 5] |
+| **q** | **String** | Query for filtering the results. | [optional] |
+
+### Return type
+
+[**ListPendingReceivedDocumentsResponse**](ListPendingReceivedDocumentsResponse.md)
+
+### Authorization
+
+[OAuth2AuthenticationCodeFlow](../README.md#OAuth2AuthenticationCodeFlow)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## list_received_documents
 
 > <ListReceivedDocumentsResponse> list_received_documents(company_id, type, opts)
@@ -903,7 +1067,7 @@ end
 
 > recover_bin_received_document(company_id, document_id)
 
-
+Recover Received Document From The Bin
 
 Recover Received Document From The Bin
 
@@ -923,7 +1087,7 @@ company_id = 12345 # Integer | The ID of the company.
 document_id = 56 # Integer | The ID of the document.
 
 begin
-  # 
+  # Recover Received Document From The Bin
   api_instance.recover_bin_received_document(company_id, document_id)
 rescue FattureInCloud_Ruby_Sdk::ApiError => e
   puts "Error when calling ReceivedDocumentsApi->recover_bin_received_document: #{e}"
@@ -938,7 +1102,7 @@ This returns an Array which contains the response data (`nil` in this case), sta
 
 ```ruby
 begin
-  # 
+  # Recover Received Document From The Bin
   data, status_code, headers = api_instance.recover_bin_received_document_with_http_info(company_id, document_id)
   p status_code # => 2xx
   p headers # => { ... }
@@ -966,7 +1130,7 @@ nil (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: application/json
 
 
 ## upload_received_document_attachment

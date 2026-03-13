@@ -19,108 +19,108 @@ require 'date'
 # Please update as you see appropriate
 describe FattureInCloud_Ruby_Sdk::ListBinReceivedDocuments do
   instance = FattureInCloud_Ruby_Sdk::ListBinReceivedDocuments.new
-    instance.data = [
-    {
-      id: 12345,
-      type: 'expense',
-      description: 'Soggiorno di lavoro',
-      amortization: 1,
-      rc_center: '',
-      invoice_number: '',
-      is_marked: false,
-      is_detailed: false,
-      e_invoice: false,
-      created_at: '2021-08-15 14:02:02',
-      updated_at: '2021-08-15 14:02:02',
-      entity: {
-        id: 111,
-        name: 'Hotel Rubino Palace'
-      },
-      date: '2021-08-15',
-      next_due_date: '2021-08-15',
-      currency: {
-        id: 'EUR',
-        exchange_rate: '1.00000',
-        symbol: '€'
-      },
-      amount_net: 592,
-      amount_vat: 0,
-      amount_gross: 592,
-      amount_withholding_tax: 0,
-      amount_other_withholding_tax: 0,
-      tax_deductibility: 50,
-      vat_deductibility: 100,
-      payments_list: [
-        {
-          amount: 592,
-          due_date: '2021-08-15',
-          paid_date: '2021-08-15',
-          id: 777,
-          payment_terms: {
-            days: 0,
-            type: 'standard'
-          },
-          status: 'paid',
-          payment_account: {
-            id: 222,
-            name: 'Contanti',
-            virtual: false
-          }
-        }
-      ],
-      attachment_url: 'spesa_ger5i783t45hu6ti.pdf',
+  instance.data = [
+  {
+    id: 12345,
+    type: 'expense',
+    description: 'Soggiorno di lavoro',
+    amortization: 1,
+    rc_center: '',
+    invoice_number: '',
+    is_marked: false,
+    is_detailed: false,
+    e_invoice: false,
+    created_at: '2021-08-15 14:02:02',
+    updated_at: '2021-08-15 14:02:02',
+    entity: {
+      id: 111,
+      name: 'Hotel Rubino Palace'
     },
-    {
-      id: 12346,
-      type: 'expense',
-      description: 'Assicurazione RCA',
-      amortization: 1,
-      rc_center: '',
-      invoice_number: '',
-      is_marked: false,
-      is_detailed: false,
-      e_invoice: false,
-      created_at: '2021-08-09 14:02:02',
-      updated_at: '2021-08-09 14:02:02',
-      entity: {
-        id: 89,
-        name: 'Indesa Assicurazioni S.P.A.'
-      },
-      date: '2021-08-08',
-      next_due_date: '2021-08-08',
-      currency: {
-        id: 'EUR',
-        exchange_rate: '1.00000',
-        symbol: '€'
-      },
-      amount_net: 645.69,
-      amount_vat: 0,
-      amount_gross: 645.69,
-      amount_withholding_tax: 0,
-      amount_other_withholding_tax: 0,
-      tax_deductibility: 50,
-      vat_deductibility: 100,
-      payments_list: [
-        {
-          amount: 645.69,
-          due_date: '2021-08-08',
-          paid_date: '2021-08-08',
-          id: 999,
-          payment_terms: {
-            days: 0,
-            type: 'standard'
-          },
-          status: 'paid',
-          payment_account: {
-            id: 333,
-            name: 'Carta conto',
-            virtual: false
-          }
+    date: '2021-08-15',
+    next_due_date: '2021-08-15',
+    currency: {
+      id: 'EUR',
+      exchange_rate: '1.00000',
+      symbol: '€'
+    },
+    amount_net: 592,
+    amount_vat: 0,
+    amount_gross: 592,
+    amount_withholding_tax: 0,
+    amount_other_withholding_tax: 0,
+    tax_deductibility: 50,
+    vat_deductibility: 100,
+    payments_list: [
+      {
+        amount: 592,
+        due_date: '2021-08-15',
+        paid_date: '2021-08-15',
+        id: 777,
+        payment_terms: {
+          days: 0,
+          type: 'standard'
+        },
+        status: 'paid',
+        payment_account: {
+          id: 222,
+          name: 'Contanti',
+          virtual: false
         }
-      ],
-      attachment_url: 'spesa_gjsd567e5hu6ti.pdf',
-    }
-  ]
+      }
+    ],
+    attachment_url: 'spesa_ger5i783t45hu6ti.pdf',
+  },
+  {
+    id: 12346,
+    type: 'expense',
+    description: 'Assicurazione RCA',
+    amortization: 1,
+    rc_center: '',
+    invoice_number: '',
+    is_marked: false,
+    is_detailed: false,
+    e_invoice: false,
+    created_at: '2021-08-09 14:02:02',
+    updated_at: '2021-08-09 14:02:02',
+    entity: {
+      id: 89,
+      name: 'Indesa Assicurazioni S.P.A.'
+    },
+    date: '2021-08-08',
+    next_due_date: '2021-08-08',
+    currency: {
+      id: 'EUR',
+      exchange_rate: '1.00000',
+      symbol: '€'
+    },
+    amount_net: 645.69,
+    amount_vat: 0,
+    amount_gross: 645.69,
+    amount_withholding_tax: 0,
+    amount_other_withholding_tax: 0,
+    tax_deductibility: 50,
+    vat_deductibility: 100,
+    payments_list: [
+      {
+        amount: 645.69,
+        due_date: '2021-08-08',
+        paid_date: '2021-08-08',
+        id: 999,
+        payment_terms: {
+          days: 0,
+          type: 'standard'
+        },
+        status: 'paid',
+        payment_account: {
+          id: 333,
+          name: 'Carta conto',
+          virtual: false
+        }
+      }
+    ],
+    attachment_url: 'spesa_gjsd567e5hu6ti.pdf',
+  }
+]
 
   describe 'test an instance of ListBinReceivedDocuments' do
     it 'should create an instance of ListBinReceivedDocuments' do
@@ -130,7 +130,7 @@ describe FattureInCloud_Ruby_Sdk::ListBinReceivedDocuments do
 
   describe 'test attribute "data"' do
     it 'should work' do
-        expect(instance.data).to be_a_kind_of(Array)
+      expect(instance.data).to be_a_kind_of(Array)
     end
   end
 

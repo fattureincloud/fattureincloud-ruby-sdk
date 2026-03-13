@@ -80,43 +80,43 @@ describe FattureInCloud_Ruby_Sdk::EntityClientPreCreateInfo do
 
   describe 'test attribute "countries_list"' do
     it 'should work' do
-        expect(instance.countries_list).to be_a_kind_of(Array)
+      expect(instance.countries_list).to be_a_kind_of(Array)
     end
   end
 
   describe 'test attribute "payment_methods_list"' do
     it 'should work' do
-        expect(instance.payment_methods_list).to be_a_kind_of(Array)
+      expect(instance.payment_methods_list).to be_a_kind_of(Array)
     end
   end
 
   describe 'test attribute "payment_accounts_list"' do
     it 'should work' do
-        expect(instance.payment_accounts_list).to be_a_kind_of(Array)
+      expect(instance.payment_accounts_list).to be_a_kind_of(Array)
     end
   end
 
   describe 'test attribute "vat_types_list"' do
     it 'should work' do
-        expect(instance.vat_types_list).to be_a_kind_of(Array)
+      expect(instance.vat_types_list).to be_a_kind_of(Array)
     end
   end
 
   describe 'test attribute "price_lists"' do
     it 'should work' do
-        expect(instance.price_lists).to be_a_kind_of(Array)
+      expect(instance.price_lists).to be_a_kind_of(Array)
     end
   end
 
   describe 'test attribute "limit"' do
     it 'should work' do
-        expect(instance.limit).to be_a_kind_of(Numeric)
+      expect(instance.limit).to be_a_kind_of(Numeric)
     end
   end
 
   describe 'test attribute "usage"' do
     it 'should work' do
-        expect(instance.limit).to be_a_kind_of(Numeric)
+      expect(instance.limit).to be_a_kind_of(Numeric)
     end
   end
 

@@ -48,7 +48,7 @@ describe FattureInCloud_Ruby_Sdk::ListPriceListsResponse do
 
   describe 'test attribute "data"' do
     it 'should work' do
-        expect(instance.data).to be_a_kind_of(Array)
+      expect(instance.data).to be_a_kind_of(Array)
     end
   end
 

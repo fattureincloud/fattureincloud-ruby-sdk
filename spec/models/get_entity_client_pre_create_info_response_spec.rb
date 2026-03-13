@@ -19,57 +19,57 @@ require 'date'
 # Please update as you see appropriate
 describe FattureInCloud_Ruby_Sdk::GetEntityClientPreCreateInfoResponse do
   instance = FattureInCloud_Ruby_Sdk::GetEntityClientPreCreateInfoResponse.new
-    instance.data = {
-        countries_list: [
-          'Italy'
-        ],
-        payment_methods_list: [
-          {
-            id: 555,
-            name: 'Rimessa diretta',
-            is_default: false,
-            details: [],
-          }
-        ],
-        payment_accounts_list: [
-          {
-            id: 0,
-            name: 'Conto Banca Intesa',
-            type: 'standard',
-            iban: 'string',
-            sia: 'string',
-            cuc: 'string',
-            virtual: true
-          }
-        ],
-        vat_types_list: [
-          {
-            id: 0,
-            value: 22,
-            description: 'Non imponibile art. 123',
-            notes: 'IVA non imponibile ai sensi dell\'articolo 123, comma 2',
-            e_invoice: true,
-            ei_type: '2',
-            ei_description: 'string',
-            editable: true,
-            is_disabled: true,
-            default: true
-          }
-        ],
-        price_lists: [
-          {
-            id: 'string',
-            name: '123',
-            prices_type: 'net',
-            is_default: true,
-            valid_from: 'string',
-            valid_to: 'string',
-            type: 'sell'
-          }
-        ],
-        limit: 10,
-        usage: 10
-      }
+  instance.data = {
+      countries_list: [
+        'Italy'
+      ],
+      payment_methods_list: [
+        {
+          id: 555,
+          name: 'Rimessa diretta',
+          is_default: false,
+          details: [],
+        }
+      ],
+      payment_accounts_list: [
+        {
+          id: 0,
+          name: 'Conto Banca Intesa',
+          type: 'standard',
+          iban: 'string',
+          sia: 'string',
+          cuc: 'string',
+          virtual: true
+        }
+      ],
+      vat_types_list: [
+        {
+          id: 0,
+          value: 22,
+          description: 'Non imponibile art. 123',
+          notes: 'IVA non imponibile ai sensi dell\'articolo 123, comma 2',
+          e_invoice: true,
+          ei_type: '2',
+          ei_description: 'string',
+          editable: true,
+          is_disabled: true,
+          default: true
+        }
+      ],
+      price_lists: [
+        {
+          id: 'string',
+          name: '123',
+          prices_type: 'net',
+          is_default: true,
+          valid_from: 'string',
+          valid_to: 'string',
+          type: 'sell'
+        }
+      ],
+      limit: 10,
+      usage: 10
+    }
 
   describe 'test an instance of GetEntityClientPreCreateInfoResponse' do
     it 'should create an instance of GetEntityClientPreCreateInfoResponse' do
@@ -79,7 +79,7 @@ describe FattureInCloud_Ruby_Sdk::GetEntityClientPreCreateInfoResponse do
 
   describe 'test attribute "data"' do
     it 'should work' do
-        expect(instance.data).to be_a_kind_of(Object)
+      expect(instance.data).to be_a_kind_of(Object)
     end
   end
 

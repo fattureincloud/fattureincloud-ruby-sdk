@@ -14,4 +14,5 @@
 | **qty** | **Float** | Received document item quantity | [optional] |
 | **vat** | [**VatType**](VatType.md) |  | [optional] |
 | **stock** | **Float** | Received document item product number of items in stock | [optional] |
+| **deductibility_vat_percentage** | **Float** | Received document item deductibility vat percentage | [optional] |
 

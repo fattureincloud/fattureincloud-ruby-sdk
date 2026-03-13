@@ -29,7 +29,7 @@ describe FattureInCloud_Ruby_Sdk::PriceListItem do
 
   describe 'test attribute "price"' do
     it 'should work' do
-        expect(instance.price).to be_a_kind_of(Float)
+      expect(instance.price).to be_a_kind_of(Float)
     end
   end
 
