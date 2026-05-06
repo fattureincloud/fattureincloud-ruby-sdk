@@ -15,7 +15,7 @@ All URIs are relative to *https://api-v2.fattureincloud.it*
 | [**get_tax_profile**](SettingsApi.md#get_tax_profile) | **GET** /c/{company_id}/settings/tax_profile | Get Tax Profile |
 | [**get_template**](SettingsApi.md#get_template) | **GET** /c/{company_id}/settings/templates/{template_id} | Get Template |
 | [**get_vat_type**](SettingsApi.md#get_vat_type) | **GET** /c/{company_id}/settings/vat_types/{vat_type_id} | Get Vat Type |
-| [**list_templates**](SettingsApi.md#list_templates) | **GET** /c/{company_id}/settings/templates | List Templates |
+| [**list_default_templates**](SettingsApi.md#list_default_templates) | **GET** /c/{company_id}/settings/templates | List Templates |
 | [**modify_payment_account**](SettingsApi.md#modify_payment_account) | **PUT** /c/{company_id}/settings/payment_accounts/{payment_account_id} | Modify Payment Account |
 | [**modify_payment_method**](SettingsApi.md#modify_payment_method) | **PUT** /c/{company_id}/settings/payment_methods/{payment_method_id} | Modify Payment Method |
 | [**modify_vat_type**](SettingsApi.md#modify_vat_type) | **PUT** /c/{company_id}/settings/vat_types/{vat_type_id} | Modify Vat Type |
@@ -821,9 +821,9 @@ end
 - **Accept**: application/json
 
 
-## list_templates
+## list_default_templates
 
-> <ListTemplatesResponse> list_templates(company_id, opts)
+> <ListTemplatesResponse> list_default_templates(company_id, opts)
 
 List Templates
 
@@ -849,28 +849,28 @@ opts = {
 
 begin
   # List Templates
-  result = api_instance.list_templates(company_id, opts)
+  result = api_instance.list_default_templates(company_id, opts)
   p result
 rescue FattureInCloud_Ruby_Sdk::ApiError => e
-  puts "Error when calling SettingsApi->list_templates: #{e}"
+  puts "Error when calling SettingsApi->list_default_templates: #{e}"
 end
 ```
 
-#### Using the list_templates_with_http_info variant
+#### Using the list_default_templates_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ListTemplatesResponse>, Integer, Hash)> list_templates_with_http_info(company_id, opts)
+> <Array(<ListTemplatesResponse>, Integer, Hash)> list_default_templates_with_http_info(company_id, opts)
 
 ```ruby
 begin
   # List Templates
-  data, status_code, headers = api_instance.list_templates_with_http_info(company_id, opts)
+  data, status_code, headers = api_instance.list_default_templates_with_http_info(company_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListTemplatesResponse>
 rescue FattureInCloud_Ruby_Sdk::ApiError => e
-  puts "Error when calling SettingsApi->list_templates_with_http_info: #{e}"
+  puts "Error when calling SettingsApi->list_default_templates_with_http_info: #{e}"
 end
 ```
 

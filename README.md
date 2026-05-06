@@ -164,7 +164,7 @@ Class | Method | HTTP request | Description
 *FattureInCloud_Ruby_Sdk::SettingsApi* | [**get_tax_profile**](docs/SettingsApi.md#get_tax_profile) | **GET** /c/{company_id}/settings/tax_profile | Get Tax Profile
 *FattureInCloud_Ruby_Sdk::SettingsApi* | [**get_template**](docs/SettingsApi.md#get_template) | **GET** /c/{company_id}/settings/templates/{template_id} | Get Template
 *FattureInCloud_Ruby_Sdk::SettingsApi* | [**get_vat_type**](docs/SettingsApi.md#get_vat_type) | **GET** /c/{company_id}/settings/vat_types/{vat_type_id} | Get Vat Type
-*FattureInCloud_Ruby_Sdk::SettingsApi* | [**list_templates**](docs/SettingsApi.md#list_templates) | **GET** /c/{company_id}/settings/templates | List Templates
+*FattureInCloud_Ruby_Sdk::SettingsApi* | [**list_default_templates**](docs/SettingsApi.md#list_default_templates) | **GET** /c/{company_id}/settings/templates | List Templates
 *FattureInCloud_Ruby_Sdk::SettingsApi* | [**modify_payment_account**](docs/SettingsApi.md#modify_payment_account) | **PUT** /c/{company_id}/settings/payment_accounts/{payment_account_id} | Modify Payment Account
 *FattureInCloud_Ruby_Sdk::SettingsApi* | [**modify_payment_method**](docs/SettingsApi.md#modify_payment_method) | **PUT** /c/{company_id}/settings/payment_methods/{payment_method_id} | Modify Payment Method
 *FattureInCloud_Ruby_Sdk::SettingsApi* | [**modify_vat_type**](docs/SettingsApi.md#modify_vat_type) | **PUT** /c/{company_id}/settings/vat_types/{vat_type_id} | Modify Vat Type

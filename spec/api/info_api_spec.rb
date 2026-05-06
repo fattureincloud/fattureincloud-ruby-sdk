@@ -61,7 +61,7 @@ describe 'InfoApi' do
     allow(@api_instance).to receive(:list_revenue_centers) { @list_revenue_centers_response_obj }
   
     @list_templates_response_obj = { "data": [{ "id": 10, "name": "New Standard S1" }, { "id": 106, "name": "Minimalist" }] }
-    allow(@api_instance).to receive(:list_templates) { @list_templates_response_obj }
+    allow(@api_instance).to receive(:list_default_templates) { @list_templates_response_obj }
   
     @list_units_of_measure_response_obj = { "data": ["pezzi", "kg", "litri", "ore", "giorni", "km", "mesi"] }
     allow(@api_instance).to receive(:list_units_of_measure) { @list_units_of_measure_response_obj }
@@ -304,16 +304,16 @@ describe 'InfoApi' do
     end
   end
 
-  # unit tests for list_templates
-  # List Templates
-  # Lists the available templates.
+  # unit tests for list_default_templates
+  # List Default Templates
+  # Lists the available default templates.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :type Type of the templates.
   # @option opts [Boolean] :by_type [Only if type&#x3D;all] If true, splits the list in objects, grouping templates by type.
   # @return [ListTemplatesResponse]
-  describe 'list_templates test' do
+  describe 'list_default_templates test' do
     it 'should work' do
-      response = @api_instance.list_templates(2)
+      response = @api_instance.list_default_templates(2)
       response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @list_templates_response_obj.to_json
       actual_json = response.to_json

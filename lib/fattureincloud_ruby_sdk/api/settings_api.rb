@@ -805,32 +805,32 @@ module FattureInCloud_Ruby_Sdk
       return data, status_code, headers
     end
 
-    # List Templates
+    # List Default Templates
     # Gets all the standard and private templates.
     # @param company_id [Integer] The ID of the company.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :fields List of comma-separated fields.
     # @option opts [String] :fieldset Name of the fieldset.
     # @return [ListTemplatesResponse]
-    def list_templates(company_id, opts = {})
-      data, _status_code, _headers = list_templates_with_http_info(company_id, opts)
+    def list_default_templates(company_id, opts = {})
+      data, _status_code, _headers = list_default_templates_with_http_info(company_id, opts)
       data
     end
 
-    # List Templates
+    # List Default Templates
     # Gets all the standard and private templates.
     # @param company_id [Integer] The ID of the company.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :fields List of comma-separated fields.
     # @option opts [String] :fieldset Name of the fieldset.
     # @return [Array<(ListTemplatesResponse, Integer, Hash)>] ListTemplatesResponse data, response status code and response headers
-    def list_templates_with_http_info(company_id, opts = {})
+    def list_default_templates_with_http_info(company_id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: SettingsApi.list_templates ...'
+        @api_client.config.logger.debug 'Calling API: SettingsApi.list_default_templates ...'
       end
       # verify the required parameter 'company_id' is set
       if @api_client.config.client_side_validation && company_id.nil?
-        fail ArgumentError, "Missing the required parameter 'company_id' when calling SettingsApi.list_templates"
+        fail ArgumentError, "Missing the required parameter 'company_id' when calling SettingsApi.list_default_templates"
       end
       allowable_values = ["basic", "detailed", "fic_view"]
       if @api_client.config.client_side_validation && opts[:'fieldset'] && !allowable_values.include?(opts[:'fieldset'])
@@ -862,7 +862,7 @@ module FattureInCloud_Ruby_Sdk
       auth_names = opts[:debug_auth_names] || ['OAuth2AuthenticationCodeFlow']
 
       new_options = opts.merge(
-        :operation => :"SettingsApi.list_templates",
+        :operation => :"SettingsApi.list_default_templates",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -873,7 +873,7 @@ module FattureInCloud_Ruby_Sdk
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SettingsApi#list_templates\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SettingsApi#list_default_templates\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
