@@ -18,10 +18,11 @@ module FattureInCloud_Ruby_Sdk
     EXPENSE = "expense".freeze
     PASSIVE_CREDIT_NOTE = "passive_credit_note".freeze
     PASSIVE_DELIVERY_NOTE = "passive_delivery_note".freeze
-    SELF_INVOICE = "self_invoice".freeze
+    SELF_SUPPLIER_INVOICE = "self_supplier_invoice".freeze
+    SELF_OWN_INVOICE = "self_own_invoice".freeze
 
     def self.all_vars
-      @all_vars ||= [EXPENSE, PASSIVE_CREDIT_NOTE, PASSIVE_DELIVERY_NOTE, SELF_INVOICE].freeze
+      @all_vars ||= [EXPENSE, PASSIVE_CREDIT_NOTE, PASSIVE_DELIVERY_NOTE, SELF_SUPPLIER_INVOICE, SELF_OWN_INVOICE].freeze
     end
 
     # Builds the enum from string

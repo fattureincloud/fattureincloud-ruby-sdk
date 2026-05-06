@@ -699,7 +699,7 @@ module FattureInCloud_Ruby_Sdk
         fail ArgumentError, "Missing the required parameter 'type' when calling ReceivedDocumentsApi.get_received_document_pre_create_info"
       end
       # verify enum value
-      allowable_values = ["expense", "passive_credit_note", "passive_delivery_note", "self_invoice"]
+      allowable_values = ["expense", "passive_credit_note", "passive_delivery_note", "self_supplier_invoice", "self_own_invoice"]
       if @api_client.config.client_side_validation && !allowable_values.include?(type)
         fail ArgumentError, "invalid value for \"type\", must be one of #{allowable_values}"
       end
@@ -954,7 +954,7 @@ module FattureInCloud_Ruby_Sdk
         fail ArgumentError, "Missing the required parameter 'type' when calling ReceivedDocumentsApi.list_received_documents"
       end
       # verify enum value
-      allowable_values = ["expense", "passive_credit_note", "passive_delivery_note", "self_invoice"]
+      allowable_values = ["expense", "passive_credit_note", "passive_delivery_note", "self_supplier_invoice", "self_own_invoice"]
       if @api_client.config.client_side_validation && !allowable_values.include?(type)
         fail ArgumentError, "invalid value for \"type\", must be one of #{allowable_values}"
       end
