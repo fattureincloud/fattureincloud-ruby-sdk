@@ -14,6 +14,7 @@ require 'fattureincloud_ruby_sdk/api_client'
 require 'fattureincloud_ruby_sdk/api_error'
 require 'fattureincloud_ruby_sdk/version'
 require 'fattureincloud_ruby_sdk/configuration'
+require 'fattureincloud_ruby_sdk/api_model_base'
 
 # Models
 require 'fattureincloud_ruby_sdk/models/archive_document'
