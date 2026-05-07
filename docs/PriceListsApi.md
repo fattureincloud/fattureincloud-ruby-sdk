@@ -29,7 +29,7 @@ end
 
 api_instance = FattureInCloud_Ruby_Sdk::PriceListsApi.new
 company_id = 12345 # Integer | The ID of the company.
-price_list_id = 'price_list_id_example' # String | The ID of the price
+price_list_id = 'price_list_id_example' # String | The price list ID
 
 begin
   # Get PriceList Items List
@@ -63,7 +63,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **company_id** | **Integer** | The ID of the company. |  |
-| **price_list_id** | **String** | The ID of the price |  |
+| **price_list_id** | **String** | The price list ID |  |
 
 ### Return type
 

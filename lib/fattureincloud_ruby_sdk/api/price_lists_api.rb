@@ -22,7 +22,7 @@ module FattureInCloud_Ruby_Sdk
     # Get PriceList Items List
     # Retrieves all the Items of a PriceList
     # @param company_id [Integer] The ID of the company.
-    # @param price_list_id [String] The ID of the price
+    # @param price_list_id [String] The price list ID
     # @param [Hash] opts the optional parameters
     # @return [GetPriceListItemsResponse]
     def get_price_list_items(company_id, price_list_id, opts = {})
@@ -33,7 +33,7 @@ module FattureInCloud_Ruby_Sdk
     # Get PriceList Items List
     # Retrieves all the Items of a PriceList
     # @param company_id [Integer] The ID of the company.
-    # @param price_list_id [String] The ID of the price
+    # @param price_list_id [String] The price list ID
     # @param [Hash] opts the optional parameters
     # @return [Array<(GetPriceListItemsResponse, Integer, Hash)>] GetPriceListItemsResponse data, response status code and response headers
     def get_price_list_items_with_http_info(company_id, price_list_id, opts = {})
