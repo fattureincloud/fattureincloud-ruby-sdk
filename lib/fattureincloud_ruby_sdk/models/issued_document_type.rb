@@ -24,11 +24,10 @@ module FattureInCloud_Ruby_Sdk
     ORDER = "order".freeze
     WORK_REPORT = "work_report".freeze
     SUPPLIER_ORDER = "supplier_order".freeze
-    SELF_OWN_INVOICE = "self_own_invoice".freeze
-    SELF_SUPPLIER_INVOICE = "self_supplier_invoice".freeze
+    SELF_INVOICE = "self_invoice".freeze
 
     def self.all_vars
-      @all_vars ||= [INVOICE, QUOTE, PROFORMA, RECEIPT, DELIVERY_NOTE, CREDIT_NOTE, ORDER, WORK_REPORT, SUPPLIER_ORDER, SELF_OWN_INVOICE, SELF_SUPPLIER_INVOICE].freeze
+      @all_vars ||= [INVOICE, QUOTE, PROFORMA, RECEIPT, DELIVERY_NOTE, CREDIT_NOTE, ORDER, WORK_REPORT, SUPPLIER_ORDER, SELF_INVOICE].freeze
     end
 
     # Builds the enum from string

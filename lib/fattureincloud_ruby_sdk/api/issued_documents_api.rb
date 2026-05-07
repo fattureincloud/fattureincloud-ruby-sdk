@@ -619,7 +619,7 @@ module FattureInCloud_Ruby_Sdk
         fail ArgumentError, "Missing the required parameter 'type' when calling IssuedDocumentsApi.get_issued_document_pre_create_info"
       end
       # verify enum value
-      allowable_values = ["invoice", "quote", "proforma", "receipt", "delivery_note", "credit_note", "order", "work_report", "supplier_order", "self_own_invoice", "self_supplier_invoice"]
+      allowable_values = ["invoice", "quote", "proforma", "receipt", "delivery_note", "credit_note", "order", "work_report", "supplier_order", "self_invoice"]
       if @api_client.config.client_side_validation && !allowable_values.include?(type)
         fail ArgumentError, "invalid value for \"type\", must be one of #{allowable_values}"
       end
@@ -925,7 +925,7 @@ module FattureInCloud_Ruby_Sdk
         fail ArgumentError, "Missing the required parameter 'type' when calling IssuedDocumentsApi.list_issued_documents"
       end
       # verify enum value
-      allowable_values = ["invoice", "quote", "proforma", "receipt", "delivery_note", "credit_note", "order", "work_report", "supplier_order", "self_own_invoice", "self_supplier_invoice"]
+      allowable_values = ["invoice", "quote", "proforma", "receipt", "delivery_note", "credit_note", "order", "work_report", "supplier_order", "self_invoice"]
       if @api_client.config.client_side_validation && !allowable_values.include?(type)
         fail ArgumentError, "invalid value for \"type\", must be one of #{allowable_values}"
       end
