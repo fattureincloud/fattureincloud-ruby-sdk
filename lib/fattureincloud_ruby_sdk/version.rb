@@ -11,5 +11,5 @@ Generator version: 7.20.0
 =end
 
 module FattureInCloud_Ruby_Sdk
-  VERSION = '2.1.3'
+  VERSION = '2.1.4'
 end

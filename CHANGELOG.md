@@ -4,8 +4,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### 2.1.3 (2026-05-13)
 
-### 2.1.3 (2026-05-13)
-
 ### 2.1.2 (2025-08-18)
 
 ### 2.1.1 (2024-10-31)
@@ -44,31 +42,27 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### 2.0.6 (2022-03-16)
 
-
 ### Bug Fixes
 
-* added filter parameter and detailed countries method ([0f78c48](https://github.com/fattureincloud/fattureincloud-ruby-sdk/commit/0f78c487202d8cd8a2d68010a1876e45ee047000))
+- added filter parameter and detailed countries method ([0f78c48](https://github.com/fattureincloud/fattureincloud-ruby-sdk/commit/0f78c487202d8cd8a2d68010a1876e45ee047000))
 
 ### 2.0.5 (2022-03-01)
 
-
 ### Bug Fixes
 
-* models are now nullable ([a6a4b50](https://github.com/fattureincloud/fattureincloud-ruby-sdk/commit/a6a4b50a3d849b9bf3a706ef30e4cf290f36267a))
+- models are now nullable ([a6a4b50](https://github.com/fattureincloud/fattureincloud-ruby-sdk/commit/a6a4b50a3d849b9bf3a706ef30e4cf290f36267a))
 
 ### 2.0.4 (2022-02-08)
 
-
 ### Bug Fixes
 
-* added einvoice rejection reason and refactor cashbook ([615496c](https://github.com/fattureincloud/fattureincloud-ruby-sdk/commit/615496ca267c03509f8d24ba28c41f8f0972de64))
+- added einvoice rejection reason and refactor cashbook ([615496c](https://github.com/fattureincloud/fattureincloud-ruby-sdk/commit/615496ca267c03509f8d24ba28c41f8f0972de64))
 
 ### 2.0.3 (2022-01-25)
 
-
 ### Bug Fixes
 
-* added get xml method ([ad2e07a](https://github.com/fattureincloud/fattureincloud-ruby-sdk/commit/ad2e07afdd69397a01eabfb34f1fe3e1ba764eca))
+- added get xml method ([ad2e07a](https://github.com/fattureincloud/fattureincloud-ruby-sdk/commit/ad2e07afdd69397a01eabfb34f1fe3e1ba764eca))
 
 ### 2.0.2 (2022-01-10)
 
