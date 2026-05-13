@@ -84,11 +84,14 @@ jobs:
               sha: "${{ env.commit_sha }}"
             })
 
-      # - id: publish
-      #   name: Push to rubygems.org
-      #   if: ${{ !env.ACT }}
-      #   run: |
-      #     gem build *.gemspec
-      #     gem push *.gem
+      - id: configure-rubygems
+        name: Configure RubyGems credentials
+        if: ${{ !env.ACT }}
+        uses: rubygems/configure-rubygems-credentials@v2.0.0
 
-      - uses: rubygems/release-gem@v1
+      - id: publish
+        name: Push to rubygems.org
+        if: ${{ !env.ACT }}
+        run: |
+          gem build *.gemspec
+          gem push *.gem
