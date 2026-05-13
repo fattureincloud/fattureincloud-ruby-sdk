@@ -9,6 +9,7 @@ All URIs are relative to *https://api-v2.fattureincloud.it*
 | [**list_cost_centers**](InfoApi.md#list_cost_centers) | **GET** /c/{company_id}/info/cost_centers | List Cost Centers |
 | [**list_countries**](InfoApi.md#list_countries) | **GET** /info/countries | List Countries |
 | [**list_currencies**](InfoApi.md#list_currencies) | **GET** /info/currencies | List Currencies |
+| [**list_default_templates**](InfoApi.md#list_default_templates) | **GET** /info/templates | List Default Templates |
 | [**list_delivery_notes_default_causals**](InfoApi.md#list_delivery_notes_default_causals) | **GET** /info/dn_causals | List Delivery Notes Default Causals |
 | [**list_detailed_countries**](InfoApi.md#list_detailed_countries) | **GET** /info/detailed_countries | List Detailed Countries |
 | [**list_languages**](InfoApi.md#list_languages) | **GET** /info/languages | List Languages |
@@ -17,7 +18,6 @@ All URIs are relative to *https://api-v2.fattureincloud.it*
 | [**list_product_categories**](InfoApi.md#list_product_categories) | **GET** /c/{company_id}/info/product_categories | List Product Categories |
 | [**list_received_document_categories**](InfoApi.md#list_received_document_categories) | **GET** /c/{company_id}/info/received_document_categories | List Received Document Categories |
 | [**list_revenue_centers**](InfoApi.md#list_revenue_centers) | **GET** /c/{company_id}/info/revenue_centers | List Revenue Centers |
-| [**list_templates**](InfoApi.md#list_templates) | **GET** /info/templates | List Templates |
 | [**list_units_of_measure**](InfoApi.md#list_units_of_measure) | **GET** /info/measures | List Units of Measure |
 | [**list_vat_types**](InfoApi.md#list_vat_types) | **GET** /c/{company_id}/info/vat_types | List Vat Types |
 
@@ -354,6 +354,79 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**ListCurrenciesResponse**](ListCurrenciesResponse.md)
+
+### Authorization
+
+[OAuth2AuthenticationCodeFlow](../README.md#OAuth2AuthenticationCodeFlow)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## list_default_templates
+
+> <ListTemplatesResponse> list_default_templates(opts)
+
+List Default Templates
+
+Lists the default available templates.
+
+### Examples
+
+```ruby
+require 'time'
+require 'fattureincloud_ruby_sdk'
+# setup authorization
+FattureInCloud_Ruby_Sdk.configure do |config|
+  # Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
+  config.access_token = 'YOUR ACCESS TOKEN'
+end
+
+api_instance = FattureInCloud_Ruby_Sdk::InfoApi.new
+opts = {
+  type: 'all', # String | Type of the templates.
+  by_type: true # Boolean | [Only if type=all] If true, splits the list in objects, grouping templates by type.
+}
+
+begin
+  # List Default Templates
+  result = api_instance.list_default_templates(opts)
+  p result
+rescue FattureInCloud_Ruby_Sdk::ApiError => e
+  puts "Error when calling InfoApi->list_default_templates: #{e}"
+end
+```
+
+#### Using the list_default_templates_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<ListTemplatesResponse>, Integer, Hash)> list_default_templates_with_http_info(opts)
+
+```ruby
+begin
+  # List Default Templates
+  data, status_code, headers = api_instance.list_default_templates_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <ListTemplatesResponse>
+rescue FattureInCloud_Ruby_Sdk::ApiError => e
+  puts "Error when calling InfoApi->list_default_templates_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **type** | **String** | Type of the templates. | [optional][default to &#39;all&#39;] |
+| **by_type** | **Boolean** | [Only if type&#x3D;all] If true, splits the list in objects, grouping templates by type. | [optional][default to false] |
+
+### Return type
+
+[**ListTemplatesResponse**](ListTemplatesResponse.md)
 
 ### Authorization
 
@@ -915,79 +988,6 @@ end
 ### Return type
 
 [**ListRevenueCentersResponse**](ListRevenueCentersResponse.md)
-
-### Authorization
-
-[OAuth2AuthenticationCodeFlow](../README.md#OAuth2AuthenticationCodeFlow)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## list_templates
-
-> <ListTemplatesResponse> list_templates(opts)
-
-List Templates
-
-Lists the available templates.
-
-### Examples
-
-```ruby
-require 'time'
-require 'fattureincloud_ruby_sdk'
-# setup authorization
-FattureInCloud_Ruby_Sdk.configure do |config|
-  # Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
-
-api_instance = FattureInCloud_Ruby_Sdk::InfoApi.new
-opts = {
-  type: 'all', # String | Type of the templates.
-  by_type: true # Boolean | [Only if type=all] If true, splits the list in objects, grouping templates by type.
-}
-
-begin
-  # List Templates
-  result = api_instance.list_templates(opts)
-  p result
-rescue FattureInCloud_Ruby_Sdk::ApiError => e
-  puts "Error when calling InfoApi->list_templates: #{e}"
-end
-```
-
-#### Using the list_templates_with_http_info variant
-
-This returns an Array which contains the response data, status code and headers.
-
-> <Array(<ListTemplatesResponse>, Integer, Hash)> list_templates_with_http_info(opts)
-
-```ruby
-begin
-  # List Templates
-  data, status_code, headers = api_instance.list_templates_with_http_info(opts)
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => <ListTemplatesResponse>
-rescue FattureInCloud_Ruby_Sdk::ApiError => e
-  puts "Error when calling InfoApi->list_templates_with_http_info: #{e}"
-end
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **type** | **String** | Type of the templates. | [optional][default to &#39;all&#39;] |
-| **by_type** | **Boolean** | [Only if type&#x3D;all] If true, splits the list in objects, grouping templates by type. | [optional][default to false] |
-
-### Return type
-
-[**ListTemplatesResponse**](ListTemplatesResponse.md)
 
 ### Authorization
 

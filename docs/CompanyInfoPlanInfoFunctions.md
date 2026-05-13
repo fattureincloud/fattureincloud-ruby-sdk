@@ -15,7 +15,6 @@
 | **receipts** | **Boolean** |  | [optional] |
 | **recurring** | **Boolean** |  | [optional] |
 | **smtp** | **Boolean** |  | [optional] |
-| **sofort** | **Boolean** |  | [optional] |
 | **stock** | **Boolean** |  | [optional] |
 | **subaccounts** | **Boolean** |  | [optional] |
 | **tessera_sanitaria** | **Boolean** |  | [optional] |

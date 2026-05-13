@@ -15,4 +15,6 @@
 | **ts_sent_date** | **Date** | Issued document ts sent date | [optional] |
 | **ts_full_amount** | **Boolean** | Issued document ts total amount | [optional] |
 | **imported_by** | **String** | Issued document imported by software | [optional] |
+| **debt_vat_detect** | **Boolean** | Issued document debt VAT detect | [optional] |
+| **revenue_detect** | **Boolean** | Issued document revenue detect | [optional] |
 

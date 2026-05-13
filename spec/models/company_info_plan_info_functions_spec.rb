@@ -32,7 +32,6 @@ describe FattureInCloud_Ruby_Sdk::CompanyInfoPlanInfoFunctions do
   instance.subaccounts = true
   instance.tessera_sanitaria = true
   instance.recurring = true
-  instance.sofort = false
   instance.cerved = true
   instance.ts_digital = true
   instance.ts_pay = true
@@ -105,12 +104,6 @@ describe FattureInCloud_Ruby_Sdk::CompanyInfoPlanInfoFunctions do
   describe 'test attribute "smtp"' do
     it 'should work' do
       expect(instance.smtp).to be(true).or be(false)
-    end
-  end
-
-  describe 'test attribute "sofort"' do
-    it 'should work' do
-      expect(instance.sofort).to be(true).or be(false)
     end
   end
 
