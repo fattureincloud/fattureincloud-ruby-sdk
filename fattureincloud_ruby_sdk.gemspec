@@ -28,7 +28,7 @@ Gem::Specification.new do |s|
   s.metadata = {}
 
   s.add_runtime_dependency 'typhoeus', '~> 1.0', '>= 1.0.1'
-  s.add_dependency 'ostruct', '>= 0'
+  s.add_dependency 'ostruct', '~> 0.6'
 
   s.add_development_dependency 'rspec', '~> 3.6', '>= 3.6.0'
 
