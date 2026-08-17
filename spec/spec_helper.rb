@@ -10,6 +10,8 @@ Generator version: 7.24.0
 
 =end
 
+require 'ostruct'
+
 # load the gem
 require 'fattureincloud_ruby_sdk'
 

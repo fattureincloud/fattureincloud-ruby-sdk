@@ -12,6 +12,7 @@ Generator version: 7.24.0
 # Common files
 require 'fattureincloud_ruby_sdk/api_client'
 require 'fattureincloud_ruby_sdk/api_error'
+require 'fattureincloud_ruby_sdk/api_model_base'
 require 'fattureincloud_ruby_sdk/version'
 require 'fattureincloud_ruby_sdk/configuration'
 
