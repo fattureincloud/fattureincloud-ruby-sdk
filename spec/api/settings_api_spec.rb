@@ -74,7 +74,6 @@ describe 'SettingsApi' do
     it 'should work' do
       opts = { "data": { "name": "Indesa", "type": "bank", "iban": "IT17Q0051343200000003497636", "sia": "T1234", "virtual": false } }
       response = @api_instance.create_payment_account(2, opts)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @create_payment_account_response_obj.to_json
       actual_json = response.to_json
 
@@ -93,7 +92,6 @@ describe 'SettingsApi' do
     it 'should work' do
       opts = { "data": { "name": "Bonifico bancario", "is_default": true, "type": "standard", "details": [{ "title": "Banca", "description": "Sao Paulo" }], "default_payment_account": { "id": 12345, "name": "conto banca SP" } } }
       response = @api_instance.create_payment_method(2, opts)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @create_payment_method_response_obj.to_json
       actual_json = response.to_json
 
@@ -112,7 +110,6 @@ describe 'SettingsApi' do
     it 'should work' do
       opts = { "data": { "id": 0, "value": 22, "description": "Non imponibile art. 123", "notes": "IVA non imponibile ai sensi dell'articolo 123, comma 2", "e_invoice": true, "ei_type": 2, "ei_description": "string", "editable": true, "is_disabled": true } }
       response = @api_instance.create_vat_type(2, opts)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @create_vat_type_response_obj.to_json
       actual_json = response.to_json
 
@@ -171,7 +168,6 @@ describe 'SettingsApi' do
   describe 'get_payment_account test' do
     it 'should work' do
       response = @api_instance.get_payment_account(2, 22)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @get_payment_account_response_obj.to_json
       actual_json = response.to_json
 
@@ -191,7 +187,6 @@ describe 'SettingsApi' do
   describe 'get_payment_method test' do
     it 'should work' do
       response = @api_instance.get_payment_method(2, 22)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @get_payment_method_response_obj.to_json
       actual_json = response.to_json
 
@@ -209,7 +204,6 @@ describe 'SettingsApi' do
   describe 'get_vat_type test' do
     it 'should work' do
       response = @api_instance.get_vat_type(2, 22)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @get_vat_type_response_obj.to_json
       actual_json = response.to_json
 
@@ -229,7 +223,6 @@ describe 'SettingsApi' do
     it 'should work' do
       opts = { "data": { "name": "Indesa", "type": "bank", "iban": "IT17Q0051343200000003497636", "sia": "T1234", "virtual": false } }
       response = @api_instance.modify_payment_account(2, 22, opts)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @modify_payment_account_response_obj.to_json
       actual_json = response.to_json
 
@@ -249,7 +242,6 @@ describe 'SettingsApi' do
     it 'should work' do
       opts = { "data": { "name": "Bonifico bancario", "is_default": true, "type": "standard", "details": [{ "title": "Banca", "description": "Sao Paulo" }], "default_payment_account": { "id": 12345, "name": "conto banca SP" } } }
       response = @api_instance.modify_payment_method(2, 22, opts)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @modify_payment_method_response_obj.to_json
       actual_json = response.to_json
 
@@ -269,7 +261,6 @@ describe 'SettingsApi' do
     it 'should work' do
       opts = { "data": { "id": 0, "value": 22, "description": "Non imponibile art. 123", "notes": "IVA non imponibile ai sensi dell'articolo 123, comma 2", "e_invoice": true, "ei_type": 2, "ei_description": "string", "editable": true, "is_disabled": true } }
       response = @api_instance.modify_vat_type(2, 22, opts)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @modify_vat_type_response_obj.to_json
       actual_json = response.to_json
 
@@ -286,7 +277,6 @@ describe 'SettingsApi' do
   describe 'get_tax_profile test' do
     it 'should work' do
       response = @api_instance.get_tax_profile(2)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @get_tax_profile_response_obj.to_json
       actual_json = response.to_json
 

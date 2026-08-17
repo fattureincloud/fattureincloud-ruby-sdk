@@ -68,7 +68,6 @@ describe 'ReceivedDocumentsApi' do
     it 'should work' do
       opts = { "data": { "type": "expense", "description": "Soggiorno di lavoro", "amortization": 1, "rc_center": "", "invoice_number": "", "is_marked": false, "is_detailed": false, "e_invoice": false, "entity": { "id": 111, "name": "Hotel Rubino Palace" }, "date": "2021-08-15", "next_due_date": "2021-08-15", "currency": { "id": "EUR", "exchange_rate": "1.00000", "symbol": "\u20ac" }, "amount_net": 592, "amount_vat": 0, "amount_gross": 592, "amount_withholding_tax": 0, "amount_other_withholding_tax": 0, "tax_deductibility": 50, "vat_deductibility": 100, "items_list": nil, "payments_list": [{ "amount": 592, "due_date": "2021-08-15", "paid_date": "2021-08-15", "id": 777, "payment_terms": { "days": 0, "type": "standard" }, "status": "paid", "payment_account": { "id": 21, "name": "Contanti", "virtual": false, "attachment_token": "N3RmNTYycGMzZTRob3JkNWg2Nzg2Ympscjd1bW00dDIvbm9tZV9maWxl" } }] } }
       response = @api_instance.create_received_document(2, opts)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @create_received_document_response_obj.to_json
       actual_json = response.to_json
 
@@ -113,7 +112,6 @@ describe 'ReceivedDocumentsApi' do
   describe 'get_existing_received_document_totals test' do
     it 'should work' do
       response = @api_instance.get_existing_received_document_totals(2, 22)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @get_existing_received_document_totals_response_obj.to_json
       actual_json = response.to_json
 
@@ -132,7 +130,6 @@ describe 'ReceivedDocumentsApi' do
     it 'should work' do
       opts = { "data": { "type": "expense", "description": "Soggiorno di lavoro", "amortization": 1, "rc_center": "", "invoice_number": "", "is_marked": false, "is_detailed": false, "e_invoice": false, "entity": { "id": 111, "name": "Hotel Rubino Palace" }, "date": "2021-08-15", "next_due_date": "2021-08-15", "currency": { "id": "EUR", "exchange_rate": "1.00000", "symbol": "\u20ac" }, "amount_net": 592, "amount_vat": 0, "amount_gross": 592, "amount_withholding_tax": 0, "amount_other_withholding_tax": 0, "tax_deductibility": 50, "vat_deductibility": 100, "items_list": nil, "payments_list": [{ "amount": 592, "due_date": "2021-08-15", "paid_date": "2021-08-15", "id": 777, "payment_terms": { "days": 0, "type": "standard" }, "status": "paid", "payment_account": { "id": 21, "name": "Contanti", "virtual": false, "attachment_token": "N3RmNTYycGMzZTRob3JkNWg2Nzg2Ympscjd1bW00dDIvbm9tZV9maWxl" } }] } }
       response = @api_instance.get_new_received_document_totals(2, opts)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @get_new_received_document_totals_response_obj.to_json
       actual_json = response.to_json
 
@@ -152,7 +149,6 @@ describe 'ReceivedDocumentsApi' do
   describe 'get_received_document test' do
     it 'should work' do
       response = @api_instance.get_received_document(2, 22)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @get_received_document_response_obj.to_json
       actual_json = response.to_json
 
@@ -170,7 +166,6 @@ describe 'ReceivedDocumentsApi' do
   describe 'get_received_document_pre_create_info test' do
     it 'should work' do
       response = @api_instance.get_received_document_pre_create_info(2, 22)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @get_received_document_pre_create_info_response_obj.to_json
       actual_json = response.to_json
 
@@ -194,7 +189,6 @@ describe 'ReceivedDocumentsApi' do
   describe 'list_received_documents test' do
     it 'should work' do
       response = @api_instance.list_received_documents(2, 22)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @list_received_documents_response_obj.to_json
       actual_json = response.to_json
 
@@ -214,7 +208,6 @@ describe 'ReceivedDocumentsApi' do
     it 'should work' do
       opts = { "data": { "type": "expense", "description": "Soggiorno di lavoro", "amortization": 1, "rc_center": "", "invoice_number": "", "is_marked": false, "is_detailed": false, "e_invoice": false, "entity": { "id": 111, "name": "Hotel Rubino Palace" }, "date": "2021-08-15", "next_due_date": "2021-08-15", "currency": { "id": "EUR", "exchange_rate": "1.00000", "symbol": "\u20ac" }, "amount_net": 592, "amount_vat": 0, "amount_gross": 592, "amount_withholding_tax": 0, "amount_other_withholding_tax": 0, "tax_deductibility": 50, "vat_deductibility": 100, "items_list": nil, "payments_list": [{ "amount": 592, "due_date": "2021-08-15", "paid_date": "2021-08-15", "id": 777, "payment_terms": { "days": 0, "type": "standard" }, "status": "paid", "payment_account": { "id": 21, "name": "Contanti", "virtual": false, "attachment_token": "N3RmNTYycGMzZTRob3JkNWg2Nzg2Ympscjd1bW00dDIvbm9tZV9maWxl" } }] } }
       response = @api_instance.modify_received_document(2, opts)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @modify_received_document_response_obj.to_json
       actual_json = response.to_json
 
@@ -233,7 +226,6 @@ describe 'ReceivedDocumentsApi' do
   describe 'upload_received_document_attachment test' do
     it 'should work' do
       response = @api_instance.upload_received_document_attachment(2, {})
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @upload_received_document_attachment_response_obj.to_json
       actual_json = response.to_json
 

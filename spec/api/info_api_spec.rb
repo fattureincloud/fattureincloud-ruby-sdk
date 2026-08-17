@@ -89,7 +89,6 @@ describe 'InfoApi' do
   describe 'list_archive_categories test' do
     it 'should work' do
       response = @api_instance.list_archive_categories(2)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @list_archive_categories_response_obj.to_json
       actual_json = response.to_json
 
@@ -107,7 +106,6 @@ describe 'InfoApi' do
   describe 'list_cities test' do
     it 'should work' do
       response = @api_instance.list_cities(2)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @list_cities_response_obj.to_json
       actual_json = response.to_json
 
@@ -124,7 +122,6 @@ describe 'InfoApi' do
   describe 'list_cost_centers test' do
     it 'should work' do
       response = @api_instance.list_cost_centers(2)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @list_cost_centers_response_obj.to_json
       actual_json = response.to_json
 
@@ -140,7 +137,6 @@ describe 'InfoApi' do
   describe 'list_countries test' do
     it 'should work' do
       response = @api_instance.list_countries(2)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @list_countries_response_obj.to_json
       actual_json = response.to_json
 
@@ -156,7 +152,6 @@ describe 'InfoApi' do
   describe 'list_detailed_countries test' do
     it 'should work' do
       response = @api_instance.list_detailed_countries(2)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @list_detailed_countries_response_obj.to_json
       actual_json = response.to_json
 
@@ -172,7 +167,6 @@ describe 'InfoApi' do
   describe 'list_currencies test' do
     it 'should work' do
       response = @api_instance.list_currencies(2)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @list_currencies_response_obj.to_json
       actual_json = response.to_json
 
@@ -188,7 +182,6 @@ describe 'InfoApi' do
   describe 'list_delivery_notes_default_causals test' do
     it 'should work' do
       response = @api_instance.list_delivery_notes_default_causals(2)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @list_delivery_notes_default_causals_response_obj.to_json
       actual_json = response.to_json
 
@@ -204,7 +197,6 @@ describe 'InfoApi' do
   describe 'list_languages test' do
     it 'should work' do
       response = @api_instance.list_languages(2)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @list_languages_response_obj.to_json
       actual_json = response.to_json
 
@@ -224,7 +216,6 @@ describe 'InfoApi' do
   describe 'list_payment_accounts test' do
     it 'should work' do
       response = @api_instance.list_payment_accounts(2)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @list_payment_accounts_response_obj.to_json
       actual_json = response.to_json
 
@@ -244,7 +235,6 @@ describe 'InfoApi' do
   describe 'list_payment_methods test' do
     it 'should work' do
       response = @api_instance.list_payment_methods(2)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @list_payment_methods_response_obj.to_json
       actual_json = response.to_json
 
@@ -262,7 +252,6 @@ describe 'InfoApi' do
   describe 'list_product_categories test' do
     it 'should work' do
       response = @api_instance.list_product_categories(2, "issued_documents")
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @list_product_categories_response_obj.to_json
       actual_json = response.to_json
 
@@ -279,7 +268,6 @@ describe 'InfoApi' do
   describe 'list_received_document_categories test' do
     it 'should work' do
       response = @api_instance.list_received_document_categories(2)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @list_received_document_categories_response_obj.to_json
       actual_json = response.to_json
 
@@ -296,7 +284,6 @@ describe 'InfoApi' do
   describe 'list_revenue_centers test' do
     it 'should work' do
       response = @api_instance.list_revenue_centers(2)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @list_revenue_centers_response_obj.to_json
       actual_json = response.to_json
 
@@ -314,7 +301,6 @@ describe 'InfoApi' do
   describe 'list_default_templates test' do
     it 'should work' do
       response = @api_instance.list_default_templates(2)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @list_templates_response_obj.to_json
       actual_json = response.to_json
 
@@ -330,7 +316,6 @@ describe 'InfoApi' do
   describe 'list_units_of_measure test' do
     it 'should work' do
       response = @api_instance.list_units_of_measure(2)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @list_units_of_measure_response_obj.to_json
       actual_json = response.to_json
 
@@ -348,7 +333,6 @@ describe 'InfoApi' do
   describe 'list_vat_types test' do
     it 'should work' do
       response = @api_instance.list_vat_types(2)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @list_vat_types_response_obj.to_json
       actual_json = response.to_json
 

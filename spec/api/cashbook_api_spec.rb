@@ -56,7 +56,6 @@ describe 'CashbookApi' do
     it 'should work' do
       opts = { "data": { "date": "2021-08-24", "amount_in": 122, "payment_account_in": { "id": 21 }, "description": "Fattura n. 201\/2021", "entity_name": "Rossi S.r.l.", "kind": "issued_document", "document": { "id": 54321 }, "type": "in" } }
       response = @api_instance.create_cashbook_entry(2, opts)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @create_cashbook_entry_response_obj.to_json
       actual_json = response.to_json
 
@@ -89,7 +88,6 @@ describe 'CashbookApi' do
   describe 'get_cashbook_entry test' do
     it 'should work' do
       response = @api_instance.get_cashbook_entry(2, 22)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @get_cashbook_entry_response_obj.to_json
       actual_json = response.to_json
 
@@ -111,7 +109,6 @@ describe 'CashbookApi' do
   describe 'list_cashbook_entries test' do
     it 'should work' do
       response = @api_instance.list_cashbook_entries(2, "2020-12-12", "2021-12-12")
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @list_cashbook_entries_response_obj.to_json
       actual_json = response.to_json
 
@@ -131,7 +128,6 @@ describe 'CashbookApi' do
     it 'should work' do
       opts = { "data": { "date": "2021-08-24", "amount_in": 122, "payment_account_in": { "id": 21 }, "description": "Fattura n. 201\/2021", "entity_name": "Rossi S.r.l.", "kind": "issued_document", "document": { "id": 54321 }, "type": "in" } }
       response = @api_instance.modify_cashbook_entry(2, opts)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @modify_cashbook_entry_response_obj.to_json
       actual_json = response.to_json
 

@@ -47,7 +47,6 @@ describe 'UserApi' do
   describe 'get_user_info test' do
     it 'should work' do
       response = @api_instance.get_user_info()
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @get_user_info_response_obj.to_json
       actual_json = response.to_json
 
@@ -63,7 +62,6 @@ describe 'UserApi' do
   describe 'list_user_companies test' do
     it 'should work' do
       response = @api_instance.list_user_companies()
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @list_user_companies_response_obj.to_json
       actual_json = response.to_json
 

@@ -59,7 +59,6 @@ describe 'TaxesApi' do
     it 'should work' do
       opts = { "data": { "amount": 840.36, "description": "PAGAMENTO IVA 2021", "due_date": "2021-12-31", "status": "paid", "payment_account": { "id": 21, "name": "Indesa - carta conto" } } }
       response = @api_instance.create_f24(2, opts)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @create_f24_response_obj.to_json
       actual_json = response.to_json
 
@@ -105,7 +104,6 @@ describe 'TaxesApi' do
   describe 'get_f24 test' do
     it 'should work' do
       response = @api_instance.get_f24(2, 22)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @get_f24_response_obj.to_json
       actual_json = response.to_json
 
@@ -128,7 +126,6 @@ describe 'TaxesApi' do
   describe 'list_f24 test' do
     it 'should work' do
       response = @api_instance.list_f24(2)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @list_f24_response_obj.to_json
       actual_json = response.to_json
 
@@ -148,7 +145,6 @@ describe 'TaxesApi' do
     it 'should work' do
       opts = { "data": { "amount": 840.36, "description": "PAGAMENTO IVA 2021", "due_date": "2021-12-31", "status": "paid", "payment_account": { "id": 21, "name": "Indesa - carta conto" } } }
       response = @api_instance.modify_f24(2, 22, opts)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @modify_f24_response_obj.to_json
       actual_json = response.to_json
 
@@ -167,7 +163,6 @@ describe 'TaxesApi' do
   describe 'upload_f24_attachment test' do
     it 'should work' do
       response = @api_instance.upload_f24_attachment(2, {})
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @upload_f24_attachment_response_obj.to_json
       actual_json = response.to_json
 

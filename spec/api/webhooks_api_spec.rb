@@ -56,7 +56,6 @@ describe 'WebhooksApi' do
     it 'should work' do
       opts = { data: { sink: 'https://endpoint.test', types: ['it.fattureincloud.webhooks.cashbook.create'] } }
       response = @api_instance.create_webhooks_subscription(2, opts)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @create_webhooks_subscription_response_obj.to_json
       actual_json = response.to_json
 
@@ -87,7 +86,6 @@ describe 'WebhooksApi' do
   describe 'get_webhooks_subscription test' do
     it 'should work' do
       response = @api_instance.get_webhooks_subscription(2, "SUB123")
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @get_webhooks_subscription_response_obj.to_json
       actual_json = response.to_json
 
@@ -104,7 +102,6 @@ describe 'WebhooksApi' do
   describe 'list_webhooks_subscriptions test' do
     it 'should work' do
       response = @api_instance.list_webhooks_subscriptions(2)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @list_webhooks_subscriptions_response_obj.to_json
       actual_json = response.to_json
 
@@ -123,7 +120,6 @@ describe 'WebhooksApi' do
   describe 'modify_webhooks_subscription test' do
     it 'should work' do
       response = @api_instance.modify_webhooks_subscription(2, "SUB123")
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @modify_webhooks_subscription_response_obj.to_json
       actual_json = response.to_json
 
