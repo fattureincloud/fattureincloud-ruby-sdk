@@ -568,16 +568,4 @@ lib/fattureincloud_ruby_sdk/models/webhooks_subscription_config.rb
 lib/fattureincloud_ruby_sdk/models/webhooks_subscription_mapping.rb
 lib/fattureincloud_ruby_sdk/models/webhooks_subscription_verification_method.rb
 lib/fattureincloud_ruby_sdk/version.rb
-spec/models/attachment_spec.rb
-spec/models/get_pending_received_document_response_spec.rb
-spec/models/get_templates_response_spec.rb
-spec/models/list_pending_received_documents_response_page_spec.rb
-spec/models/list_pending_received_documents_response_spec.rb
-spec/models/pending_received_document_extracted_data_mining_spec.rb
-spec/models/pending_received_document_extracted_data_spec.rb
-spec/models/pending_received_document_payments_list_item_payment_terms_spec.rb
-spec/models/pending_received_document_payments_list_item_spec.rb
-spec/models/pending_received_document_spec.rb
-spec/models/pending_received_document_type_spec.rb
-spec/models/template_type_spec.rb
 spec/spec_helper.rb
