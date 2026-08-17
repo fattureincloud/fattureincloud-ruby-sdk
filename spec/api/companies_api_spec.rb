@@ -44,7 +44,6 @@ describe 'CompaniesApi' do
   describe 'get_company_info test' do
     it 'should work' do
       response = @api_instance.get_company_info(2)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @get_company_info_response_obj.to_json
       actual_json = response.to_json
 

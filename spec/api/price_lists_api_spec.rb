@@ -49,7 +49,6 @@ describe 'PriceListsApi' do
   describe 'get_price_list_items test' do
     it 'should work' do
       response = @api_instance.get_price_list_items(2, '10')
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @get_price_list_items_response_obj.to_json
       actual_json = response.to_json
 
@@ -66,7 +65,6 @@ describe 'PriceListsApi' do
   describe 'get_price_lists test' do
     it 'should work' do
       response = @api_instance.get_price_lists(2)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @get_price_lists_response_obj.to_json
       actual_json = response.to_json
 

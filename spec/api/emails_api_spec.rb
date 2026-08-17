@@ -45,7 +45,6 @@ describe 'EmailsApi' do
   describe 'list_emails test' do
     it 'should work' do
       response = @api_instance.list_emails(2)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @list_emails_response_obj.to_json
       actual_json = response.to_json
 

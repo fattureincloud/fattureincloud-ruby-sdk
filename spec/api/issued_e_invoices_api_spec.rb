@@ -56,7 +56,6 @@ describe 'IssuedEInvoicesApi' do
   describe 'send_e_invoice test' do
     it 'should work' do
       response = @api_instance.send_e_invoice(2, 22)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @send_e_invoice_response_obj.to_json
       actual_json = response.to_json
 
@@ -74,7 +73,6 @@ describe 'IssuedEInvoicesApi' do
   describe 'verify_e_invoice_xml test' do
     it 'should work' do
       response = @api_instance.verify_e_invoice_xml(2, 22)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @verify_e_invoice_xml_response_obj.to_json
       actual_json = response.to_json
 
@@ -109,7 +107,6 @@ describe 'IssuedEInvoicesApi' do
   describe 'get_e_invoice_rejection_reason test' do
     it 'should work' do
       response = @api_instance.get_e_invoice_rejection_reason(2, 22)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @get_e_invoice_rejection_reason_response_obj.to_json
       actual_json = response.to_json
 

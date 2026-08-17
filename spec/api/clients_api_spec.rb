@@ -56,7 +56,6 @@ describe 'ClientsApi' do
     it 'should work' do
       opts = { "data": { "date": "2021-08-24", "amount_in": 122, "payment_account_in": { "id": 21 }, "description": "Fattura n. 201\/2021", "entity_name": "Rossi S.r.l.", "kind": "issued_document", "document": { "id": 54321 }, "type": "in" } }
       response = @api_instance.create_client(2, opts)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @create_client_response_obj.to_json
       actual_json = response.to_json
 
@@ -89,7 +88,6 @@ describe 'ClientsApi' do
   describe 'get_client test' do
     it 'should work' do
       response = @api_instance.get_client(2, 22)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @get_client_response_obj.to_json
       actual_json = response.to_json
 
@@ -112,7 +110,6 @@ describe 'ClientsApi' do
   describe 'list_clients test' do
     it 'should work' do
       response = @api_instance.list_clients(2)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @list_clients_response_obj.to_json
       actual_json = response.to_json
 
@@ -132,7 +129,6 @@ describe 'ClientsApi' do
     it 'should work' do
       opts = { "data": { "date": "2021-08-24", "amount_in": 122, "payment_account_in": { "id": 21 }, "description": "Fattura n. 201\/2021", "entity_name": "Rossi S.r.l.", "kind": "issued_document", "document": { "id": 54321 }, "type": "in" } }
       response = @api_instance.modify_client(2, opts)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @modify_client_response_obj.to_json
       actual_json = response.to_json
 

@@ -56,7 +56,6 @@ describe 'ProductsApi' do
     it 'should work' do
       opts = { "data": { "name": "Tavolo di marmo", "code": "TAVOLOso003", "net_price": 240, "gross_price": 280, "use_gross_price": false, "net_cost": 0, "measure": "", "description": "Tavolo in marmo pregiato", "category": "arredamento", "in_stock": true, "default_vat": { "id": 1409, "value": 22, "description": "Non imponibile art. 123", "notes": "IVA non imponibile ai sensi dell'articolo 123, comma 2", "is_disabled": false } } }
       response = @api_instance.create_product(2, opts)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @create_product_response_obj.to_json
       actual_json = response.to_json
 
@@ -89,7 +88,6 @@ describe 'ProductsApi' do
   describe 'get_product test' do
     it 'should work' do
       response = @api_instance.get_product(2, 22)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @get_product_response_obj.to_json
       actual_json = response.to_json
 
@@ -112,7 +110,6 @@ describe 'ProductsApi' do
   describe 'list_products test' do
     it 'should work' do
       response = @api_instance.list_products(2, 22)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @list_products_response_obj.to_json
       actual_json = response.to_json
 
@@ -132,7 +129,6 @@ describe 'ProductsApi' do
     it 'should work' do
       opts = { "data": { "name": "Tavolo di marmo", "code": "TAVOLOso003", "net_price": 240, "gross_price": 280, "use_gross_price": false, "net_cost": 0, "measure": "", "description": "Tavolo in marmo pregiato", "category": "arredamento", "in_stock": true, "default_vat": { "id": 1409, "value": 22, "description": "Non imponibile art. 123", "notes": "IVA non imponibile ai sensi dell'articolo 123, comma 2", "is_disabled": false } } }
       response = @api_instance.modify_product(2, 22, opts)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @modify_product_response_obj.to_json
       actual_json = response.to_json
 

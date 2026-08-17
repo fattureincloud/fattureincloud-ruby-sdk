@@ -62,7 +62,6 @@ describe 'ReceiptsApi' do
     it 'should work' do
       opts = { "data": { "date": "2021-08-19", "number": 6, "numeration": "rreccc", "amount_net": 8.2, "amount_vat": 1.8, "amount_gross": 10, "use_gross_prices": true, "type": "sales_receipt", "description": "cassa 1", "rc_center": "", "payment_account": { "id": 21, "name": "contanti" }, "items_list": [{ "id": 888, "amount_net": 8.2, "amount_vat": 1.8, "amount_gross": 10, "category": "altro", "vat": { "id": 1409, "value": 22, "description": "iva" } }] } }
       response = @api_instance.create_receipt(2, opts)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @create_receipt_response_obj.to_json
       actual_json = response.to_json
 
@@ -95,7 +94,6 @@ describe 'ReceiptsApi' do
   describe 'get_receipt test' do
     it 'should work' do
       response = @api_instance.get_receipt(2, 22)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @get_receipt_response_obj.to_json
       actual_json = response.to_json
 
@@ -112,7 +110,6 @@ describe 'ReceiptsApi' do
   describe 'get_receipt_pre_create_info test' do
     it 'should work' do
       response = @api_instance.get_receipt_pre_create_info(2)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @get_receipt_pre_create_info_response_obj.to_json
       actual_json = response.to_json
 
@@ -131,7 +128,6 @@ describe 'ReceiptsApi' do
   describe 'get_receipts_monthly_totals test' do
     it 'should work' do
       response = @api_instance.get_receipts_monthly_totals(2, "sales_receipt", 2021)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @get_receipts_monthly_totals_response_obj.to_json
       actual_json = response.to_json
 
@@ -154,7 +150,6 @@ describe 'ReceiptsApi' do
   describe 'list_receipts test' do
     it 'should work' do
       response = @api_instance.list_receipts(2)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @list_receipts_response_obj.to_json
       actual_json = response.to_json
 
@@ -174,7 +169,6 @@ describe 'ReceiptsApi' do
     it 'should work' do
       opts = { "data": { "date": "2021-08-19", "number": 6, "numeration": "rreccc", "amount_net": 8.2, "amount_vat": 1.8, "amount_gross": 10, "use_gross_prices": true, "type": "sales_receipt", "description": "cassa 1", "rc_center": "", "payment_account": { "id": 21, "name": "contanti" }, "items_list": [{ "id": 888, "amount_net": 8.2, "amount_vat": 1.8, "amount_gross": 10, "category": "altro", "vat": { "id": 1409, "value": 22, "description": "iva" } }] } }
       response = @api_instance.modify_receipt(2, 22, opts)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @modify_receipt_response_obj.to_json
       actual_json = response.to_json
 

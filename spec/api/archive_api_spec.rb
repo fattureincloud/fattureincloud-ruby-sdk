@@ -58,7 +58,6 @@ describe 'ArchiveApi' do
     it 'should work' do
       opts = { "data": { "date": "2021-08-20", "category": "Altri documenti", "description": "spesa 1", "attachment_token": "YjFrbmNlc3E0NmNuaW5ocXQ0b2p0c202NG1ncWx6ZmsvZmlsZW5hbWU" } }
       response = @api_instance.create_archive_document(2, opts)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @create_archive_document_response_obj.to_json
       actual_json = response.to_json
 
@@ -91,7 +90,6 @@ describe 'ArchiveApi' do
   describe 'get_archive_document test' do
     it 'should work' do
       response = @api_instance.get_archive_document(2, 22)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @get_archive_document_response_obj.to_json
       actual_json = response.to_json
 
@@ -114,7 +112,6 @@ describe 'ArchiveApi' do
   describe 'list_archive_documents test' do
     it 'should work' do
       response = @api_instance.list_archive_documents(2)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @list_archive_documents_response_obj.to_json
       actual_json = response.to_json
 
@@ -133,7 +130,6 @@ describe 'ArchiveApi' do
   describe 'modify_archive_document test' do
     it 'should work' do
       response = @api_instance.modify_archive_document(2, 22)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @modify_archive_document_response_obj.to_json
       actual_json = response.to_json
 
@@ -153,7 +149,6 @@ describe 'ArchiveApi' do
     it 'should work' do
       opts = {}
       response = @api_instance.upload_archive_document_attachment(2, opts)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @upload_archive_document_attachment_response_obj.to_json
       actual_json = response.to_json
 

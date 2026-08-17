@@ -76,7 +76,6 @@ describe 'IssuedDocumentsApi' do
     it 'should work' do
       opts = { "data": { "date": "2021-08-24", "amount_in": 122, "payment_account_in": { "id": 21 }, "description": "Fattura n. 201\/2021", "entity_name": "Rossi S.r.l.", "kind": "issued_document", "document": { "id": 54321 }, "type": "in" } }
       response = @api_instance.create_issued_document(2, opts)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @create_issued_document_response_obj.to_json
       actual_json = response.to_json
 
@@ -120,7 +119,6 @@ describe 'IssuedDocumentsApi' do
   describe 'get_email_data test' do
     it 'should work' do
       response = @api_instance.get_email_data(2, 22)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @get_email_data_response_obj.to_json
       actual_json = response.to_json
 
@@ -139,7 +137,6 @@ describe 'IssuedDocumentsApi' do
   describe 'get_existing_issued_document_totals test' do
     it 'should work' do
       response = @api_instance.get_existing_issued_document_totals(2, 22)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @get_existing_issued_document_totals_response_obj.to_json
       actual_json = response.to_json
 
@@ -159,7 +156,6 @@ describe 'IssuedDocumentsApi' do
   describe 'get_issued_document test' do
     it 'should work' do
       response = @api_instance.get_issued_document(2, 22)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @get_issued_document_response_obj.to_json
       actual_json = response.to_json
 
@@ -177,7 +173,6 @@ describe 'IssuedDocumentsApi' do
   describe 'get_issued_document_pre_create_info test' do
     it 'should work' do
       response = @api_instance.get_issued_document_pre_create_info(2, 22)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @get_issued_document_pre_create_info_response_obj.to_json
       actual_json = response.to_json
 
@@ -196,7 +191,6 @@ describe 'IssuedDocumentsApi' do
     it 'should work' do
       opts = { "data": { "date": "2021-08-24", "amount_in": 122, "payment_account_in": { "id": 21 }, "description": "Fattura n. 201\/2021", "entity_name": "Rossi S.r.l.", "kind": "issued_document", "document": { "id": 54321 }, "type": "in" } }
       response = @api_instance.get_new_issued_document_totals(2, opts)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @get_new_issued_document_totals_response_obj.to_json
       actual_json = response.to_json
 
@@ -220,7 +214,6 @@ describe 'IssuedDocumentsApi' do
   describe 'list_issued_documents test' do
     it 'should work' do
       response = @api_instance.list_issued_documents(2, "invoices")
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @list_issued_documents_response_obj.to_json
       actual_json = response.to_json
 
@@ -240,7 +233,6 @@ describe 'IssuedDocumentsApi' do
     it 'should work' do
       opts = { "data": { "date": "2021-08-24", "amount_in": 122, "payment_account_in": { "id": 21 }, "description": "Fattura n. 201\/2021", "entity_name": "Rossi S.r.l.", "kind": "issued_document", "document": { "id": 54321 }, "type": "in" } }
       response = @api_instance.modify_issued_document(2, opts)
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @modify_issued_document_response_obj.to_json
       actual_json = response.to_json
 
@@ -273,7 +265,6 @@ describe 'IssuedDocumentsApi' do
   describe 'upload_issued_document_attachment test' do
     it 'should work' do
       response = @api_instance.upload_issued_document_attachment(2, {})
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @upload_issued_document_attachment_response_obj.to_json
       actual_json = response.to_json
 
@@ -286,7 +277,6 @@ describe 'IssuedDocumentsApi' do
   describe 'transform_issued_document test' do
     it 'should work' do
       response = @api_instance.transform_issued_document(2, 54321, "proforma")
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @transform_issued_document_response_obj.to_json
       actual_json = response.to_json
 
@@ -299,7 +289,6 @@ describe 'IssuedDocumentsApi' do
   describe 'join_issued_documents test' do
     it 'should work' do
       response = @api_instance.join_issued_documents(2, {})
-      response_obj = JSON.parse(response.to_json, object_class: OpenStruct)
       expected_json = @join_issued_documents_response_obj.to_json
       actual_json = response.to_json
 
