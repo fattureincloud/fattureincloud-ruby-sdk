@@ -86,7 +86,7 @@ jobs:
       - id: configure-rubygems
         name: Configure RubyGems credentials
         if: ${{ !env.ACT }}
-        uses: rubygems/configure-rubygems-credentials@v2
+        uses: rubygems/configure-rubygems-credentials@v2.1.0
 
       - id: publish
         name: Push to rubygems.org
